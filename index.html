@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rinjani Wonderfull | Paket Pendakian & Tour Budaya Lombok</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Agen resmi pendakian Gunung Rinjani dan Tour keliling Pulau Lombok. Jelajahi Sembalun, desa adat Sade, masjid kuno Bayan, dan pantai eksotis Lombok.">
+    <meta name="keywords" content="Pendakian Rinjani, Tour Lombok, Wisata Desa Adat Lombok, Sembalun, Rinjani Wonderfull">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Flag Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css"/>
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#135c5b',
+                        primaryDark: '#0e4443',
+                        secondary: '#f5a623',
+                        secondaryHover: '#e0951a',
+                        lightBg: '#f8fafc',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .shape-divider-bottom {
+            position: absolute; bottom: 0; left: 0; width: 100%; overflow: hidden; line-height: 0; transform: rotate(180deg);
+        }
+        .shape-divider-bottom svg { position: relative; display: block; width: calc(100% + 1.3px); height: 60px; }
+        .shape-divider-bottom .shape-fill { fill: #f8fafc; }
+        .torn-paper-top {
+            position: absolute; top: -20px; left: 0; width: 100%; height: 40px;
+            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 40" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,40 C150,40 200,0 300,20 C400,40 500,0 600,20 C700,40 800,0 900,20 C1000,40 1100,0 1200,20 L1200,40 Z" fill="%23ffffff"/></svg>');
+            background-size: 100% 100%; z-index: 10;
+        }
+        .hero-bg {
+            /* Fallback to color if image fails to load */
+            background-color: #135c5b;
+            background-image: linear-gradient(rgba(19, 92, 91, 0.7), rgba(19, 92, 91, 0.8)), url('hero-bg.jpeg');
+            background-position: center; background-size: cover; background-repeat: no-repeat;
+        }
+        #lang-dropdown::-webkit-scrollbar { width: 6px; }
+        #lang-dropdown::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 4px; }
+        #lang-dropdown::-webkit-scrollbar-thumb { background: #135c5b; border-radius: 4px; }
+    </style>
+</head>
+<body class="font-sans text-gray-700 bg-lightBg antialiased relative">
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/6281234567890?text=Halo%20Rinjani%20Wonderfull,%20saya%20ingin%20bertanya%20tentang%20paket%20tour" target="_blank" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:bg-[#1ebe5d] transition-all hover:-translate-y-1 group">
+        <i class="ph-fill ph-whatsapp-logo text-3xl"></i>
+    </a>
+
+    <!-- Header -->
+    <header class="absolute top-0 left-0 w-full z-40 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex items-center justify-between py-4">
+                <a href="index.html" class="flex items-center gap-2">
+                    <img src="rinjaniwonderfull-logo.png" alt="Rinjani Wonderfull Logo" class="h-12 w-auto object-contain">
+                </a>
+                <nav class="hidden lg:flex items-center gap-8 text-white font-medium">
+                    <a href="#beranda" class="hover:text-secondary transition-colors">Beranda</a>
+                    <a href="#paket-rinjani" class="hover:text-secondary transition-colors">Trek Rinjani</a>
+                    <a href="#paket-budaya" class="hover:text-secondary transition-colors">Tour Budaya</a>
+                    <a href="itinerary.html" class="hover:text-secondary transition-colors">Itinerary Lengkap</a>
+                    <a href="#blog" class="hover:text-secondary transition-colors">Blog</a>
+                </nav>
+                <div class="hidden lg:flex items-center gap-4">
+                    <div class="relative">
+                        <button id="lang-btn" class="flex items-center gap-2 text-white bg-white/20 hover:bg-white/30 px-3 py-2 rounded-lg backdrop-blur-sm transition-all">
+                            <span class="fi fi-id rounded-sm"></span> ID <i class="ph ph-caret-down"></i>
+                        </button>
+                        <div id="lang-dropdown" class="absolute right-0 mt-2 w-48 bg-white rounded-xl shadow-xl py-2 hidden max-h-64 overflow-y-auto z-50 border border-gray-100">
+                            <a href="#" class="flex items-center gap-3 px-4 py-2 hover:bg-gray-50 text-gray-700 text-sm"><span class="fi fi-id"></span> Indonesia</a>
+                            <a href="#" class="flex items-center gap-3 px-4 py-2 hover:bg-gray-50 text-gray-700 text-sm"><span class="fi fi-id"></span> Basa Jawa</a>
+                            <a href="#" class="flex items-center gap-3 px-4 py-2 hover:bg-gray-50 text-gray-700 text-sm"><span class="fi fi-gb"></span> English</a>
+                            <a href="#" class="flex items-center gap-3 px-4 py-2 hover:bg-gray-50 text-gray-700 text-sm"><span class="fi fi-nl"></span> Nederlands</a>
+                        </div>
+                    </div>
+                    <a href="#kontak" class="bg-secondary text-white px-6 py-2.5 rounded-full font-semibold hover:bg-secondaryHover transition-all shadow-md">Konsultasi Gratis</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="beranda" class="relative pt-32 pb-40 md:pt-48 md:pb-56 hero-bg min-h-[90vh] flex items-center">
+        <div class="container mx-auto px-4 md:px-8 relative z-10 flex flex-col lg:flex-row items-center">
+            <div class="w-full lg:w-3/5 text-white pr-0 lg:pr-12">
+                <span class="inline-block py-1 px-3 rounded-full bg-white/20 backdrop-blur-md text-sm font-semibold tracking-wider mb-4">Mulai Petualangan Anda</span>
+                <h1 class="text-5xl md:text-7xl font-serif font-bold leading-tight mb-6 text-shadow-lg">
+                    Discover <br><span class="text-secondary italic">The World</span> of Rinjani
+                </h1>
+                <p class="text-lg md:text-xl opacity-90 mb-8 max-w-2xl font-light">
+                    Lebih dari sekadar pendakian. Kami menghadirkan perjalanan transformatif menyatu dengan alam agung Rinjani, eksotisme budaya Sasak, dan pesona surga tropis Lombok tanpa batas.
+                </p>
+                <a href="#paket-rinjani" class="inline-block bg-secondary text-white px-8 py-3.5 rounded-full font-bold text-lg hover:bg-secondaryHover hover:-translate-y-1 transition-all">Eksplorasi Sekarang</a>
+            </div>
+            <div class="hidden lg:block w-full lg:w-2/5 relative mt-16 lg:mt-0">
+                <img src="hero-decor.jpeg" alt="Pendaki Rinjani" class="rounded-3xl border-4 border-white shadow-2xl transform -rotate-3 hover:rotate-0 transition-all duration-500 bg-gray-300 w-full aspect-[4/5] object-cover">
+            </div>
+        </div>
+        <div class="shape-divider-bottom">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path></svg>
+        </div>
+    </section>
+
+    <!-- SECTION 1: RINJANI TREKKING PACKAGES -->
+    <section id="paket-rinjani" class="py-20 relative bg-lightBg overflow-hidden">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div class="max-w-2xl">
+                    <h2 class="text-secondary font-bold tracking-widest uppercase text-sm mb-2">Penaklukan Puncak</h2>
+                    <h3 class="text-3xl md:text-5xl font-serif font-bold text-primary mb-4">Paket Pendakian Rinjani</h3>
+                    <p class="text-gray-500">Pilih paket pendakian sesuai dengan waktu dan ketahanan fisik Anda. Kami menyediakan perlengkapan standar VIP, makanan bergizi, dan tenda premium.</p>
+                </div>
+                <div class="mt-6 md:mt-0">
+                    <a href="itinerary.html" class="text-primary font-bold hover:text-secondary flex items-center gap-2">Lihat Itinerary Detail <i class="ph-bold ph-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Rinjani Pkg 1 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-100 group">
+                    <div class="relative h-64 overflow-hidden bg-gray-200">
+                        <img src="2d1n.jpeg" alt="Puncak Rinjani 2D1N" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-bold text-gray-800 mb-3 font-serif">2 Days 1 Night (Summit)</h4>
+                        <ul class="text-sm text-gray-500 mb-6 space-y-2">
+                            <li class="flex items-start gap-2"><i class="ph-bold ph-check text-secondary mt-0.5"></i> Rute: Sembalun - Pelawangan Sembalun - Puncak - Sembalun</li>
+                            <li class="flex items-start gap-2"><i class="ph-bold ph-check text-secondary mt-0.5"></i> Target: Menaklukkan puncak 3.726 mdpl.</li>
+                        </ul>
+                        <a href="itinerary.html#paket-2d1n" class="block text-center w-full bg-primary/10 text-primary hover:bg-primary hover:text-white font-semibold py-3 rounded-xl transition-colors">Lihat Rute</a>
+                    </div>
+                </div>
+
+                <!-- Rinjani Pkg 2 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-100 group relative">
+                    <div class="absolute top-0 right-0 bg-secondary text-white text-xs font-bold px-4 py-1 rounded-bl-xl z-10">BEST SELLER</div>
+                    <div class="relative h-64 overflow-hidden bg-gray-200">
+                        <img src="3d2n.jpeg" alt="Rinjani 3D2N" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-bold text-gray-800 mb-3 font-serif">3 Days 2 Nights</h4>
+                        <ul class="text-sm text-gray-500 mb-6 space-y-2">
+                            <li class="flex items-start gap-2"><i class="ph-bold ph-check text-secondary mt-0.5"></i> Rute: Sembalun - Puncak - Danau - Senaru.</li>
+                            <li class="flex items-start gap-2"><i class="ph-bold ph-check text-secondary mt-0.5"></i> Paket ideal menikmati danau Segara Anak dan Pemandian Air Panas.</li>
+                        </ul>
+                        <a href="itinerary.html#paket-3d2n" class="block text-center w-full bg-primary text-white hover:bg-primaryDark font-semibold py-3 rounded-xl transition-colors">Lihat Rute</a>
+                    </div>
+                </div>
+
+                <!-- Rinjani Pkg 3 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-100 group">
+                    <div class="relative h-64 overflow-hidden bg-gray-200">
+                        <img src="4d3n.jpeg" alt="Rinjani 4D3N" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-bold text-gray-800 mb-3 font-serif">4 Days 3 Nights</h4>
+                        <ul class="text-sm text-gray-500 mb-6 space-y-2">
+                            <li class="flex items-start gap-2"><i class="ph-bold ph-check text-secondary mt-0.5"></i> Rute: Sembalun - Puncak - Danau - Senaru Rim - Senaru Village.</li>
+                            <li class="flex items-start gap-2"><i class="ph-bold ph-check text-secondary mt-0.5"></i> Eksplorasi mendalam, jalur santai, sangat cocok untuk pemula.</li>
+                        </ul>
+                        <a href="itinerary.html#paket-4d3n" class="block text-center w-full bg-primary/10 text-primary hover:bg-primary hover:text-white font-semibold py-3 rounded-xl transition-colors">Lihat Rute</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: LOMBOK BEACH & ISLAND TOURS -->
+    <section class="py-20 bg-primaryDark relative text-white">
+        <div class="torn-paper-top"></div>
+        <div class="container mx-auto px-4 md:px-8 pt-10">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-secondary font-bold tracking-widest uppercase text-sm mb-2">Pantai & Gili</h2>
+                <h3 class="text-3xl md:text-5xl font-serif font-bold mb-4">Eksotisme Pesisir Lombok</h3>
+                <p class="text-gray-300">Temukan kepingan surga di Lombok. Pasir putih, gradasi air laut biru tosca, hingga kehidupan bawah laut yang memukau.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Tour 1 -->
+                <div class="relative group rounded-2xl overflow-hidden cursor-pointer h-80 bg-gray-800">
+                    <img src="pantai1.jpeg" alt="Pantai Pink Lombok" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 w-full p-6">
+                        <h4 class="text-2xl font-bold font-serif mb-1 group-hover:text-secondary transition-colors">Pink Beach & Tenggara</h4>
+                        <p class="text-sm text-gray-300 line-clamp-2">Jelajahi keunikan pasir merah muda Pantai Pink dan snorkeling di Gili Petelu.</p>
+                    </div>
+                </div>
+                <!-- Tour 2 -->
+                <div class="relative group rounded-2xl overflow-hidden cursor-pointer h-80 bg-gray-800">
+                    <img src="pantai2.jpeg" alt="Gili Trawangan" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 w-full p-6">
+                        <h4 class="text-2xl font-bold font-serif mb-1 group-hover:text-secondary transition-colors">Eksplor 3 Gili Utara</h4>
+                        <p class="text-sm text-gray-300 line-clamp-2">Berenang bersama penyu di Gili Meno, Air, dan Trawangan.</p>
+                    </div>
+                </div>
+                <!-- Tour 3 -->
+                <div class="relative group rounded-2xl overflow-hidden cursor-pointer h-80 bg-gray-800">
+                    <img src="pantai3.jpeg" alt="Pantai Mandalika" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 w-full p-6">
+                        <h4 class="text-2xl font-bold font-serif mb-1 group-hover:text-secondary transition-colors">Mandalika & Pantai Kuta</h4>
+                        <p class="text-sm text-gray-300 line-clamp-2">Saksikan sirkuit internasional dan pasir merica khas Pantai Kuta.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: CULTURAL TOURS -->
+    <section id="paket-budaya" class="py-24 relative bg-lightBg">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <div class="w-full md:w-1/2 relative">
+                    <div class="grid grid-cols-2 gap-4">
+                        <img src="sawah1.jpeg" alt="Sawah Terasering" class="rounded-3xl w-full h-64 object-cover bg-gray-300">
+                        <img src="desa1.jpeg" alt="Desa Adat Lombok" class="rounded-3xl w-full h-48 object-cover mt-16 bg-gray-300">
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-secondary font-bold tracking-widest uppercase text-sm mb-2">Budaya & Sejarah Asli</h2>
+                    <h3 class="text-3xl md:text-5xl font-serif font-bold text-primary mb-6">Merasakan Denyut Nadi Kehidupan Lokal Lombok</h3>
+                    <div class="space-y-6 mt-8">
+                        <div class="flex gap-4 p-4 rounded-xl hover:bg-white hover:shadow-sm transition-all">
+                            <div class="w-14 h-14 bg-teal-50 text-primary rounded-xl flex items-center justify-center shrink-0">
+                                <i class="ph-fill ph-mountains text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-xl text-gray-800">Panorama Walk Sembalun</h4>
+                                <p class="text-sm text-gray-500 mt-1">Jalan santai melewati hamparan persawahan warga di kaki Gunung Rinjani.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 p-4 rounded-xl hover:bg-white hover:shadow-sm transition-all">
+                            <div class="w-14 h-14 bg-teal-50 text-primary rounded-xl flex items-center justify-center shrink-0">
+                                <i class="ph-fill ph-house-line text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-xl text-gray-800">Desa Adat Sade & Sukarara</h4>
+                                <p class="text-sm text-gray-500 mt-1">Melihat langsung arsitektur rumah tradisional Suku Sasak dan belajar menenun.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 p-4 rounded-xl hover:bg-white hover:shadow-sm transition-all">
+                            <div class="w-14 h-14 bg-teal-50 text-primary rounded-xl flex items-center justify-center shrink-0">
+                                <i class="ph-fill ph-mosque text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-xl text-gray-800">Napak Tilas Masjid Kuno Bayan</h4>
+                                <p class="text-sm text-gray-500 mt-1">Mengunjungi salah satu situs bersejarah penyebaran Islam tertua di Pulau Lombok.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT / BOOKING FORM -->
+    <section id="kontak" class="py-20 bg-primaryDark relative">
+        <div class="container mx-auto px-4 md:px-8 relative z-10 flex flex-col md:flex-row gap-12 items-center">
+            <div class="w-full md:w-1/2 text-white">
+                <h2 class="text-4xl md:text-5xl font-serif font-bold mb-6">Reach & Get in Touch With Us!</h2>
+                <p class="mb-8 opacity-90 text-lg">Mulai langkah pertama Anda menuju petualangan epik bersama kami.</p>
+                <div class="space-y-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center"><i class="ph-fill ph-instagram-logo text-xl"></i></div>
+                        <div>
+                            <p class="text-sm opacity-70">Instagram</p>
+                            <a href="https://instagram.com/rinjaniwonderfull" target="_blank" class="font-bold text-lg hover:text-secondary">@rinjaniwonderfull</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center"><i class="ph-fill ph-envelope-simple text-xl"></i></div>
+                        <div>
+                            <p class="text-sm opacity-70">Email Kami</p>
+                            <a href="mailto:rinjaniwonderfull@gmail.com" class="font-bold text-lg hover:text-secondary">rinjaniwonderfull@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center"><i class="ph-fill ph-whatsapp-logo text-xl"></i></div>
+                        <div>
+                            <p class="text-sm opacity-70">WhatsApp</p>
+                            <a href="https://wa.me/6281234567890" target="_blank" class="font-bold text-lg hover:text-secondary">+62 812-3456-7890</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2">
+                <div class="bg-white p-8 md:p-10 rounded-3xl shadow-2xl">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">Dapatkan Penawaran</h3>
+                    <form action="#" class="space-y-4">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-500 mb-1">Nama</label>
+                                <input type="text" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-primary" placeholder="Nama Anda">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-500 mb-1">WhatsApp</label>
+                                <input type="text" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-primary" placeholder="+62 812...">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-500 mb-1">Pilih Paket</label>
+                            <select class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-primary text-gray-600">
+                                <option>2 Days 1 Night (Summit)</option>
+                                <option>3 Days 2 Nights</option>
+                                <option>4 Days 3 Nights</option>
+                                <option>Tour Pantai / Budaya Lombok</option>
+                            </select>
+                        </div>
+                        <button type="button" class="w-full bg-secondary hover:bg-secondaryHover text-white font-bold py-4 rounded-xl transition-colors shadow-lg mt-2">
+                            Kirim Permintaan <i class="ph-bold ph-paper-plane-right ml-1"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-primaryDark text-white pt-10 pb-10 border-t border-white/10">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+                <div class="flex items-center gap-2 mb-4 md:mb-0">
+                    <img src="rinjaniwonderfull-logo.png" alt="Rinjani Wonderfull Logo" class="h-8 w-auto">
+                    <span>&copy; 2026 Rinjani Wonderfull. All rights reserved.</span>
+                </div>
+                <div class="flex items-center gap-6">
+                    <a href="https://instagram.com/rinjaniwonderfull" class="hover:text-secondary flex items-center gap-2"><i class="ph-fill ph-instagram-logo"></i> rinjaniwonderfull</a>
+                    <a href="mailto:rinjaniwonderfull@gmail.com" class="hover:text-secondary flex items-center gap-2"><i class="ph-fill ph-envelope-simple"></i> rinjaniwonderfull@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-primary', 'shadow-md');
+                navbar.classList.remove('py-4'); navbar.classList.add('py-2');
+            } else {
+                navbar.classList.remove('bg-primary', 'shadow-md');
+                navbar.classList.add('py-4'); navbar.classList.remove('py-2');
+            }
+        });
+        const langBtn = document.getElementById('lang-btn');
+        const langDropdown = document.getElementById('lang-dropdown');
+        langBtn.addEventListener('click', (e) => { e.stopPropagation(); langDropdown.classList.toggle('hidden'); });
+        document.addEventListener('click', (e) => {
+            if (!langDropdown.contains(e.target) && !langBtn.contains(e.target)) langDropdown.classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
