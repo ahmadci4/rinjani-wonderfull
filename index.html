@@ -103,7 +103,22 @@
     </header>
     
    <!-- HERO SECTION -->
+    <!-- HERO SECTION -->
     <section id="beranda" class="relative pt-32 pb-40 md:pt-48 md:pb-56 hero-bg min-h-[90vh] flex items-center">
+        
+        <!-- FLOATING PRICE BADGE (Pojok Kanan Atas) -->
+        <div class="absolute top-28 md:top-36 right-4 md:right-10 lg:right-16 xl:right-32 z-30">
+            <div class="bg-white/20 backdrop-blur-md border border-white/30 pl-5 pr-6 py-3 rounded-2xl shadow-[0_8px_32px_0_rgba(0,0,0,0.2)] flex items-center gap-4 hover:-translate-y-2 transition-transform duration-300 cursor-default">
+                <div class="bg-secondary text-white p-2.5 rounded-full shadow-md">
+                    <i class="ph-fill ph-tag text-xl md:text-2xl"></i>
+                </div>
+                <div>
+                    <p class="text-[10px] md:text-xs text-gray-100 font-semibold tracking-wide uppercase">Harga Paket Mulai Dari</p>
+                    <p class="text-2xl md:text-3xl font-bold text-white drop-shadow-md mt-0.5">USD 126</p>
+                </div>
+            </div>
+        </div>
+
         <div class="container mx-auto px-4 md:px-8 relative z-10 flex flex-col lg:flex-row items-center">
             <div class="w-full lg:w-3/5 text-white pr-0 lg:pr-12">
                 <span class="inline-block py-1 px-3 rounded-full bg-white/20 backdrop-blur-md text-sm font-semibold tracking-wider mb-4 border border-white/20">Mulai Petualangan Anda</span>
@@ -113,21 +128,8 @@
                 <p class="text-lg md:text-xl opacity-90 mb-8 max-w-2xl font-light">
                     Lebih dari sekadar pendakian. Kami menghadirkan perjalanan transformatif menyatu dengan alam agung Rinjani, eksotisme budaya Sasak, dan pesona surga tropis Lombok tanpa batas.
                 </p>
-                
-                <!-- CTA & Price Wrapper -->
-                <div class="flex flex-col sm:flex-row items-start sm:items-center gap-5">
-                    <a href="#paket-rinjani" class="inline-block bg-secondary text-white px-8 py-3.5 rounded-full font-bold text-lg hover:bg-secondaryHover hover:-translate-y-1 transition-all shadow-lg">Eksplorasi Sekarang</a>
-                    
-                    <!-- New Price Badge -->
-                    <div class="flex items-center gap-3 bg-white/20 backdrop-blur-md border border-white/30 px-5 py-2.5 rounded-full shadow-lg hover:-translate-y-1 transition-all cursor-default">
-                        <i class="ph-fill ph-tag text-2xl text-secondary"></i>
-                        <div class="flex flex-col">
-                            <span class="text-[10px] sm:text-xs font-semibold tracking-wider text-gray-200 uppercase">Start From</span>
-                            <span class="text-lg font-bold text-white leading-tight">USD. 126</span>
-                        </div>
-                    </div>
-                </div>
-
+                <!-- CTA Button Dikembalikan ke Awal -->
+                <a href="#paket-rinjani" class="inline-block bg-secondary text-white px-8 py-3.5 rounded-full font-bold text-lg hover:bg-secondaryHover hover:-translate-y-1 transition-all shadow-lg">Eksplorasi Sekarang</a>
             </div>
             <div class="hidden lg:block w-full lg:w-2/5 relative mt-16 lg:mt-0">
                 <img src="images/food2.jpeg" alt="Pendaki Rinjani" class="rounded-3xl border-4 border-white shadow-2xl transform -rotate-3 hover:rotate-0 transition-all duration-500 bg-gray-300 w-full aspect-[4/5] object-cover">
