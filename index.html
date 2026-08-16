@@ -72,202 +72,271 @@
     </a>
 
     <!-- Header -->
-    <header class="absolute top-0 left-0 w-full z-40 transition-all duration-300" id="navbar">
+    <header class="fixed top-0 left-0 w-full z-40 transition-all duration-300 bg-white shadow-sm" id="navbar">
         <div class="container mx-auto px-4 md:px-8">
-            <div class="flex items-center justify-between py-4">
-                <a href="index.html" class="flex items-center gap-2 z-50">
-                    <img src="images/rinjaniwonderfull-logo.png" alt="Rinjani Wonderfull Logo" class="h-12 w-auto object-contain bg-white rounded p-1">
+            <div class="flex items-center justify-between py-3 md:py-4">
+                <!-- Mobile Hamburger (Kiri) -->
+                <div class="lg:hidden w-10">
+                    <button id="mobile-menu-btn" class="text-gray-900 z-50 p-2 -ml-2">
+                        <i class="ph ph-list text-3xl" id="menu-icon"></i>
+                    </button>
+                </div>
+
+                <!-- Logo (Tengah di Mobile, Kiri di Desktop) -->
+                <a href="index.html" class="flex-1 lg:flex-none flex justify-center lg:justify-start z-50">
+                    <img src="images/rinjaniwonderfull-logo.png" alt="Rinjani Wonderfull Logo" class="h-16 md:h-24 w-auto object-contain">
                 </a>
+
+                <!-- Mobile Spacer (Kanan - untuk penyeimbang posisi tengah) -->
+                <div class="lg:hidden w-10"></div>
                 
                 <!-- Desktop Nav -->
-                <nav class="hidden lg:flex items-center gap-8 text-white font-medium">
-                    <a href="#home" class="hover:text-secondary transition-colors">Home</a>
-                    <a href="#trekking" class="hover:text-secondary transition-colors">Rinjani Trekking</a>
-                    <a href="#culture" class="hover:text-secondary transition-colors">Cultural Tours</a>
-                    <a href="itinerary.html" class="hover:text-secondary transition-colors">Full Itinerary</a>
+                <nav class="hidden lg:flex items-center gap-8 text-gray-600 font-semibold text-xs tracking-wider">
+                    <a href="#home" class="text-primary border-b-2 border-primary pb-1">HOME</a>
+                    <a href="#trekking" class="hover:text-primary transition-colors pb-1">PACKAGES</a>
+                    <a href="#culture" class="hover:text-primary transition-colors pb-1">DESTINATION</a>
+                    <a href="itinerary.html" class="hover:text-primary transition-colors pb-1">EXPERIENCE</a>
+                    <a href="#contact" class="hover:text-primary transition-colors pb-1">CONTACT</a>
                 </nav>
                 
                 <!-- Desktop Actions -->
                 <div class="hidden lg:flex items-center gap-4">
-                    <a href="#contact" class="bg-secondary text-white px-6 py-2.5 rounded-full font-semibold hover:bg-secondaryHover transition-all shadow-md">Book Now</a>
+                    <a href="#contact" class="bg-primary text-white px-6 py-2.5 rounded hover:bg-primaryDark transition-all shadow text-sm font-semibold tracking-wide">EXPLORE RINJANI</a>
                 </div>
-
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="lg:hidden text-white z-50 p-2">
-                    <i class="ph ph-list text-3xl" id="menu-icon"></i>
-                </button>
             </div>
         </div>
     </header>
 
     <!-- Mobile Menu Overlay -->
-    <div id="mobile-menu" class="fixed inset-0 bg-primaryDark z-40 lg:hidden flex flex-col justify-center items-center pt-20">
-        <nav class="flex flex-col items-center gap-6 text-white font-medium text-xl w-full px-6">
-            <a href="#home" class="mobile-link hover:text-secondary transition-colors py-2 border-b border-white/10 w-full text-center">Home</a>
-            <a href="#trekking" class="mobile-link hover:text-secondary transition-colors py-2 border-b border-white/10 w-full text-center">Rinjani Trekking</a>
-            <a href="#culture" class="mobile-link hover:text-secondary transition-colors py-2 border-b border-white/10 w-full text-center">Cultural Tours</a>
-            <a href="itinerary.html" class="mobile-link hover:text-secondary transition-colors py-2 border-b border-white/10 w-full text-center">Full Itinerary</a>
-            <a href="#contact" class="mobile-link bg-secondary text-white px-8 py-3 rounded-full font-semibold hover:bg-secondaryHover transition-all shadow-md mt-6">Book Now</a>
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-30 lg:hidden flex flex-col justify-center items-center pt-20">
+        <nav class="flex flex-col items-center gap-6 text-gray-800 font-medium text-xl w-full px-6">
+            <a href="#home" class="mobile-link hover:text-primary transition-colors py-2 border-b border-gray-100 w-full text-center">Home</a>
+            <a href="#trekking" class="mobile-link hover:text-primary transition-colors py-2 border-b border-gray-100 w-full text-center">Packages</a>
+            <a href="#culture" class="mobile-link hover:text-primary transition-colors py-2 border-b border-gray-100 w-full text-center">Destination</a>
+            <a href="itinerary.html" class="mobile-link hover:text-primary transition-colors py-2 border-b border-gray-100 w-full text-center">Experience</a>
+            <a href="#contact" class="mobile-link bg-primary text-white px-8 py-3 rounded font-semibold hover:bg-primaryDark transition-all shadow-md mt-6">Explore Rinjani</a>
         </nav>
     </div>
     
    <!-- HERO SECTION -->
-    <section id="home" class="relative pt-32 md:pt-40 min-h-[100vh] flex flex-col justify-between hero-bg overflow-hidden">
+    <section id="home" class="relative pt-32 pb-16 md:pt-48 md:pb-32 bg-cover bg-center min-h-[85vh] flex items-center mt-[70px] md:mt-[20px]" style="background-image: url('images/pelawangan-senaru.jpeg');">
+        <!-- White Gradient Overlay for text readability -->
+        <div class="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent"></div>
         
         <!-- Main Content -->
-        <div class="container mx-auto px-4 md:px-8 relative z-10 flex flex-col items-center text-center flex-grow justify-center pb-12 w-full">
-            
-            <!-- Badge -->
-            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/40 bg-white/15 backdrop-blur-md text-xs sm:text-sm font-semibold text-white tracking-wider mb-6 shadow-sm">
-                <i class="ph-fill ph-sparkle text-secondary"></i> OFFICIAL RINJANI TREKKING PARTNER
-            </div>
-
-            <!-- Title -->
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-white leading-tight mb-2 drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)] max-w-5xl">
-                Explore Rinjani <br class="hidden sm:block"> With Confidence
-            </h1>
-
-            <!-- Start From Price Tag -->
-            <div class="mb-6 sm:mb-8">
-                <span class="inline-block text-2xl sm:text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#f5a623] to-[#ffe58f] drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] tracking-wide">
-                    START FROM USD 126
-                </span>
-            </div>
-
-            <!-- Subtitle -->
-            <p class="text-base sm:text-lg md:text-xl text-gray-100 mb-8 sm:mb-10 max-w-2xl font-light drop-shadow-md px-4">
-                Seamless trekking planning, personalized experiences, and trusted booking — all in one place.
-            </p>
-
-            <!-- CTA Buttons -->
-            <div class="flex flex-row items-center justify-center gap-2 sm:gap-4 mb-12 sm:mb-16 w-full px-4">
-                <a href="#contact" class="flex-1 sm:flex-none bg-primary text-white px-4 sm:px-8 py-3.5 rounded-full font-bold text-xs sm:text-base hover:bg-primaryDark transition-all shadow-lg flex items-center justify-center gap-2 border border-primary whitespace-nowrap">
-                    Start Journey <i class="ph-bold ph-arrow-right"></i>
+        <div class="container mx-auto px-4 md:px-8 relative z-10 w-full">
+            <div class="max-w-2xl text-left">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-sans font-bold text-gray-900 leading-tight mb-4">
+                    Discover the Beauty <br> of <span class="text-primary">Rinjani</span>
+                </h1>
+                <p class="text-sm sm:text-base md:text-lg text-gray-700 mb-8 max-w-lg leading-relaxed">
+                    Rinjani is more than a mountain, it's an unforgettable experience. Explore stunning nature, rich culture, and the warmth of Lombok.
+                </p>
+                <a href="#contact" class="inline-flex items-center gap-2 bg-primary text-white px-6 sm:px-8 py-3 rounded font-semibold text-sm sm:text-base hover:bg-primaryDark transition-all shadow-lg tracking-wide">
+                    EXPLORE NOW <i class="ph-bold ph-arrow-right"></i>
                 </a>
-                <a href="#trekking" class="flex-1 sm:flex-none bg-white/10 backdrop-blur-md border border-white/40 text-white px-4 sm:px-8 py-3.5 rounded-full font-bold text-xs sm:text-base hover:bg-white/20 transition-all flex items-center justify-center gap-2 whitespace-nowrap">
-                    <i class="ph-bold ph-eye"></i> View Packages
-                </a>
-            </div>
-
-            <!-- Glassmorphism Booking Widget -->
-            <div class="w-full max-w-5xl mx-auto bg-white/15 backdrop-blur-xl border border-white/30 rounded-3xl p-4 sm:p-6 md:p-8 shadow-[0_8px_32px_0_rgba(0,0,0,0.4)] text-left">
-                
-                <!-- Tabs -->
-                <div class="flex gap-2 mb-4 sm:mb-6 border-b border-white/20 pb-3 sm:pb-4 overflow-x-auto hide-scrollbar flex-nowrap">
-                    <button class="bg-white text-primary px-5 sm:px-6 py-2 sm:py-2.5 rounded-full font-semibold flex items-center gap-2 whitespace-nowrap text-sm sm:text-base shadow-sm"><i class="ph-bold ph-mountains"></i> Trekking</button>
-                    <button class="text-white hover:bg-white/10 px-5 sm:px-6 py-2 sm:py-2.5 rounded-full font-medium flex items-center gap-2 transition whitespace-nowrap text-sm sm:text-base"><i class="ph-bold ph-house-line"></i> Cultural Tour</button>
-                    <button class="text-white hover:bg-white/10 px-5 sm:px-6 py-2 sm:py-2.5 rounded-full font-medium flex items-center gap-2 transition whitespace-nowrap text-sm sm:text-base"><i class="ph-bold ph-car-profile"></i> Transport</button>
-                </div>
-
-                <!-- Search Inputs Form (Forced Horizontal with scroll on mobile) -->
-                <div class="flex flex-row bg-white/95 backdrop-blur-sm rounded-2xl p-1 sm:p-2 items-center shadow-inner overflow-x-auto hide-scrollbar snap-x w-full">
-                    <!-- Package -->
-                    <div class="flex-none w-[140px] sm:flex-1 p-2 sm:p-3 border-r border-gray-200 snap-center">
-                        <label class="block text-[10px] sm:text-xs text-gray-500 font-semibold mb-1 uppercase tracking-wide">Select Package</label>
-                        <select class="w-full bg-transparent font-bold text-gray-800 focus:outline-none text-xs sm:text-base cursor-pointer">
-                            <option>3D2N Lake</option>
-                            <option>2D1N Summit</option>
-                            <option>4D3N Full</option>
-                        </select>
-                    </div>
-                    <!-- Date -->
-                    <div class="flex-none w-[130px] sm:flex-1 p-2 sm:p-3 border-r border-gray-200 snap-center">
-                        <label class="block text-[10px] sm:text-xs text-gray-500 font-semibold mb-1 uppercase tracking-wide">Start Date</label>
-                        <input type="date" class="w-full bg-transparent font-bold text-gray-800 focus:outline-none text-xs sm:text-base cursor-pointer">
-                    </div>
-                    <!-- Guests -->
-                    <div class="flex-none w-[130px] sm:flex-1 p-2 sm:p-3 snap-center border-r border-gray-200 md:border-none">
-                        <label class="block text-[10px] sm:text-xs text-gray-500 font-semibold mb-1 uppercase tracking-wide">Guests</label>
-                        <select class="w-full bg-transparent font-bold text-gray-800 focus:outline-none text-xs sm:text-base cursor-pointer">
-                            <option>2 People</option>
-                            <option>1 Person (Private)</option>
-                            <option>3-5 People</option>
-                            <option>Group (>5)</option>
-                        </select>
-                    </div>
-                    <!-- Search Button -->
-                    <div class="flex-none p-2 sm:p-3 snap-center pl-2">
-                        <button class="bg-primary text-white rounded-xl px-5 sm:px-8 py-2.5 sm:py-4 font-bold flex items-center justify-center gap-2 hover:bg-primaryDark transition shadow-md text-sm sm:text-base">
-                            Search
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Suggestions (Mini Cards) -->
-                <div class="mt-6 sm:mt-8">
-                    <div class="flex justify-between items-center mb-3 sm:mb-4 text-white">
-                        <span class="text-xs sm:text-sm font-semibold flex items-center gap-2"><i class="ph-fill ph-sparkle text-secondary"></i> POPULAR RECOMMENDATIONS</span>
-                        <a href="#trekking" class="text-xs sm:text-sm hover:text-secondary flex items-center gap-1 transition">View all <i class="ph-bold ph-arrow-right"></i></a>
-                    </div>
-                    <!-- Horizontal scroll on mobile -->
-                    <div class="flex flex-row overflow-x-auto hide-scrollbar gap-3 sm:gap-4 snap-x pb-2 w-full">
-                        <!-- Card 1 -->
-                        <div class="flex-none w-[200px] sm:flex-1 bg-white/95 backdrop-blur rounded-2xl p-2 sm:p-3 flex items-center gap-3 hover:-translate-y-1 transition-transform cursor-pointer shadow-sm snap-center">
-                            <img src="images/senaru-gate.jpeg" class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl object-cover shrink-0">
-                            <div>
-                                <h5 class="font-bold text-gray-800 text-xs sm:text-sm line-clamp-1">2D1N Summit</h5>
-                                <p class="text-[10px] sm:text-xs text-gray-500">From <span class="font-bold text-primary">USD 126</span></p>
-                            </div>
-                        </div>
-                        <!-- Card 2 -->
-                        <div class="flex-none w-[200px] sm:flex-1 bg-white/95 backdrop-blur rounded-2xl p-2 sm:p-3 flex items-center gap-3 hover:-translate-y-1 transition-transform cursor-pointer shadow-sm snap-center">
-                            <img src="images/hutan.jpeg" class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl object-cover shrink-0">
-                            <div>
-                                <h5 class="font-bold text-gray-800 text-xs sm:text-sm line-clamp-1">3D2N Segara Anak</h5>
-                                <p class="text-[10px] sm:text-xs text-gray-500">From <span class="font-bold text-primary">USD 175</span></p>
-                            </div>
-                        </div>
-                        <!-- Card 3 -->
-                        <div class="flex-none w-[200px] sm:flex-1 bg-white/95 backdrop-blur rounded-2xl p-2 sm:p-3 flex items-center gap-3 hover:-translate-y-1 transition-transform cursor-pointer shadow-sm snap-center">
-                            <img src="images/food3.jpeg" class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl object-cover shrink-0">
-                            <div>
-                                <h5 class="font-bold text-gray-800 text-xs sm:text-sm line-clamp-1">Beach & Gili Tour</h5>
-                                <p class="text-[10px] sm:text-xs text-gray-500">From <span class="font-bold text-primary">USD 45</span></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Features Bar (Bottom of Hero) -->
-        <div class="w-full bg-white py-4 sm:py-5 shadow-[0_-4px_20px_rgba(0,0,0,0.1)] relative z-20">
-            <div class="container mx-auto px-4 md:px-8 flex flex-col md:flex-row justify-center md:justify-between items-center gap-4 sm:gap-6">
-                <!-- Item 1 -->
-                <div class="flex items-center gap-3">
-                    <div class="text-primary text-2xl sm:text-3xl"><i class="ph-fill ph-shield-check"></i></div>
-                    <div class="text-center md:text-left">
-                        <h6 class="font-bold text-gray-800 text-xs sm:text-sm leading-tight">Best Price Guarantee</h6>
-                        <p class="text-[10px] sm:text-xs text-gray-500">Competitive & transparent</p>
-                    </div>
-                </div>
-                <!-- Item 2 -->
-                <div class="flex items-center gap-3">
-                    <div class="text-primary text-2xl sm:text-3xl"><i class="ph-fill ph-headset"></i></div>
-                    <div class="text-center md:text-left">
-                        <h6 class="font-bold text-gray-800 text-xs sm:text-sm leading-tight">24/7 Travel Support</h6>
-                        <p class="text-[10px] sm:text-xs text-gray-500">Always here to help you</p>
-                    </div>
-                </div>
-                <!-- Item 3 -->
-                <div class="flex items-center gap-3">
-                    <div class="text-primary text-2xl sm:text-3xl"><i class="ph-fill ph-lock-key"></i></div>
-                    <div class="text-center md:text-left">
-                        <h6 class="font-bold text-gray-800 text-xs sm:text-sm leading-tight">Secure Booking</h6>
-                        <p class="text-[10px] sm:text-xs text-gray-500">Safe & trusted booking</p>
-                    </div>
-                </div>
-                <!-- Item 4 (Hidden on small mobile) -->
-                <div class="hidden lg:flex items-center gap-3">
-                    <div class="text-primary text-2xl sm:text-3xl"><i class="ph-fill ph-star"></i></div>
-                    <div class="text-center md:text-left">
-                        <h6 class="font-bold text-gray-800 text-xs sm:text-sm leading-tight">Trusted by Hikers</h6>
-                        <p class="text-[10px] sm:text-xs text-gray-500">Thousands of happy hikers</p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
+
+    <!-- FEATURES BAR -->
+    <div class="w-full bg-white py-10 shadow-sm border-b border-gray-100">
+        <div class="container mx-auto px-4 md:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+            <!-- Feature 1 -->
+            <div class="flex items-start gap-4">
+                <div class="text-primary text-4xl mt-1"><i class="ph ph-mountains"></i></div>
+                <div>
+                    <h6 class="font-bold text-gray-900 text-base mb-1">Amazing Nature</h6>
+                    <p class="text-xs text-gray-500 leading-relaxed">Breathtaking landscapes and pristine natural beauty.</p>
+                </div>
+            </div>
+            <!-- Feature 2 -->
+            <div class="flex items-start gap-4">
+                <div class="text-primary text-4xl mt-1"><i class="ph ph-map-pin"></i></div>
+                <div>
+                    <h6 class="font-bold text-gray-900 text-base mb-1">Top Destinations</h6>
+                    <p class="text-xs text-gray-500 leading-relaxed">Explore the best spots around Mount Rinjani and Lombok.</p>
+                </div>
+            </div>
+            <!-- Feature 3 -->
+            <div class="flex items-start gap-4">
+                <div class="text-primary text-4xl mt-1"><i class="ph ph-camera"></i></div>
+                <div>
+                    <h6 class="font-bold text-gray-900 text-base mb-1">Unforgettable Moments</h6>
+                    <p class="text-xs text-gray-500 leading-relaxed">Create memories that will last a lifetime.</p>
+                </div>
+            </div>
+            <!-- Feature 4 -->
+            <div class="flex items-start gap-4">
+                <div class="text-primary text-4xl mt-1"><i class="ph ph-users"></i></div>
+                <div>
+                    <h6 class="font-bold text-gray-900 text-base mb-1">Local Experiences</h6>
+                    <p class="text-xs text-gray-500 leading-relaxed">Discover local culture and warm hospitality.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- SECTION 1: RINJANI TREKKING PACKAGES -->
+    <section id="trekking" class="py-16 sm:py-20 relative bg-lightBg overflow-hidden">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="mb-10 sm:mb-12">
+                <h2 class="text-primary font-bold tracking-widest uppercase text-xs sm:text-sm mb-2">EXPLORE</h2>
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
+                    <h3 class="text-3xl sm:text-4xl md:text-5xl font-sans font-bold text-gray-900">Popular Destinations</h3>
+                    <a href="itinerary.html" class="text-primary font-medium hover:underline flex items-center gap-2 text-sm sm:text-base">View All Destinations <i class="ph-bold ph-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+<!-- ... existing code ... -->
+    <!-- COMBINED JAVASCRIPT -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Navbar Scroll Effect (Updated for white header)
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('shadow-md');
+                    navbar.classList.remove('py-3', 'md:py-4'); 
+                    navbar.classList.add('py-2');
+                } else {
+                    if (!document.getElementById('mobile-menu').classList.contains('open')) {
+                        navbar.classList.remove('shadow-md');
+                        navbar.classList.add('py-3', 'md:py-4'); 
+                        navbar.classList.remove('py-2');
+                    }
+                }
+            });
+
+            // Mobile Menu Toggle (Hamburger)
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            if(mobileMenuBtn && mobileMenu && menuIcon) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('open');
+                    
+                    if (mobileMenu.classList.contains('open')) {
+                        menuIcon.classList.replace('ph-list', 'ph-x');
+                    } else {
+                        menuIcon.classList.replace('ph-x', 'ph-list');
+                    }
+                });
+<!-- ... existing code ... -->
+```
+
+Dan ini adalah *diff* untuk file **itinerary.html** agar struktur warna & menunya selaras dengan homepage.
+
+```html:Rinjani Wonderfull - Itinerary:itinerary.html
+<!-- ... existing code ... -->
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1565c0', // New Blue theme
+                        primaryDark: '#0f4a8f',
+                        secondary: '#f5a623',
+                        secondaryHover: '#e0951a',
+                        lightBg: '#f8fafc',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Mobile Menu Transitions */
+<!-- ... existing code ... -->
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/6287798277844?text=Hello%20Rinjani%20Wonderfull,%20I%20am%20interested%20in%20the%20trekking%20itinerary" target="_blank" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:bg-[#1ebe5d] transition-all hover:-translate-y-1 group">
+        <i class="ph-fill ph-whatsapp-logo text-3xl"></i>
+    </a>
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full z-40 transition-all duration-300 bg-white shadow-sm" id="navbar">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex items-center justify-between py-3 md:py-4">
+                <!-- Mobile Hamburger (Kiri) -->
+                <div class="lg:hidden w-10">
+                    <button id="mobile-menu-btn" class="text-gray-900 z-50 p-2 -ml-2">
+                        <i class="ph ph-list text-3xl" id="menu-icon"></i>
+                    </button>
+                </div>
+
+                <!-- Logo (Tengah di Mobile, Kiri di Desktop) -->
+                <a href="index.html" class="flex-1 lg:flex-none flex justify-center lg:justify-start z-50">
+                    <img src="images/rinjaniwonderfull-logo.png" alt="Rinjani Wonderfull Logo" class="h-16 md:h-24 w-auto object-contain">
+                </a>
+
+                <!-- Mobile Spacer (Kanan) -->
+                <div class="lg:hidden w-10"></div>
+                
+                <!-- Desktop Nav -->
+                <nav class="hidden lg:flex items-center gap-8 text-gray-600 font-semibold text-xs tracking-wider">
+                    <a href="index.html#home" class="hover:text-primary transition-colors pb-1">HOME</a>
+                    <a href="index.html#trekking" class="hover:text-primary transition-colors pb-1">PACKAGES</a>
+                    <a href="index.html#culture" class="hover:text-primary transition-colors pb-1">DESTINATION</a>
+                    <a href="#itinerary" class="text-primary border-b-2 border-primary pb-1">EXPERIENCE</a>
+                    <a href="index.html#contact" class="hover:text-primary transition-colors pb-1">CONTACT</a>
+                </nav>
+                
+                <!-- Desktop Actions -->
+                <div class="hidden lg:flex items-center gap-4">
+                    <a href="index.html#contact" class="bg-primary text-white px-6 py-2.5 rounded hover:bg-primaryDark transition-all shadow text-sm font-semibold tracking-wide">EXPLORE RINJANI</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-30 lg:hidden flex flex-col justify-center items-center pt-20">
+        <nav class="flex flex-col items-center gap-6 text-gray-800 font-medium text-xl w-full px-6">
+            <a href="index.html#home" class="mobile-link hover:text-primary transition-colors py-2 border-b border-gray-100 w-full text-center">Home</a>
+            <a href="index.html#trekking" class="mobile-link hover:text-primary transition-colors py-2 border-b border-gray-100 w-full text-center">Packages</a>
+            <a href="index.html#culture" class="mobile-link hover:text-primary transition-colors py-2 border-b border-gray-100 w-full text-center">Destination</a>
+            <a href="#itinerary" class="mobile-link text-primary py-2 border-b border-gray-100 w-full text-center">Experience</a>
+            <a href="index.html#contact" class="mobile-link bg-primary text-white px-8 py-3 rounded font-semibold hover:bg-primaryDark transition-all shadow-md mt-6">Explore Rinjani</a>
+        </nav>
+    </div>
+
+    <!-- Page Title -->
+    <section class="bg-primaryDark py-12 sm:py-20 text-center text-white relative mt-[70px] md:mt-[100px]">
+        <div class="container mx-auto px-4">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-sans font-bold mb-3 sm:mb-4">Rinjani Travel Itinerary</h1>
+            <p class="text-sm sm:text-base text-gray-300 max-w-2xl mx-auto">Detailed day-by-day travel plans to ensure your trekking experience is structured, safe, and memorable.</p>
+        </div>
+    </section>
+
+    <!-- ITINERARY CONTENT -->
+<!-- ... existing code ... -->
+    <!-- COMBINED JAVASCRIPT -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Navbar Scroll Effect
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('shadow-md');
+                    navbar.classList.remove('py-3', 'md:py-4'); 
+                    navbar.classList.add('py-2');
+                } else {
+                    navbar.classList.remove('shadow-md');
+                    navbar.classList.add('py-3', 'md:py-4'); 
+                    navbar.classList.remove('py-2');
+                }
+            });
+
+            // Mobile Menu Toggle (Hamburger)
+<!-- ... existing code ... -->
     
     <!-- SECTION 1: RINJANI TREKKING PACKAGES -->
     <section id="trekking" class="py-16 sm:py-20 relative bg-lightBg overflow-hidden">
