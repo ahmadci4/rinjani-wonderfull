@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mount Rinjani 2 Days 1 Night Summit - Rinjani Wonderfull</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Conquer the absolute summit of Mount Rinjani in a thrilling 2 Days and 1 Night expedition via the legendary Sembalun route.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1862be', 
+                        primaryDark: '#124d96',
+                        secondary: '#f8fafc',
+                        textDark: '#1e293b',
+                        textGray: '#475569'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Accordion transition for smooth open/close */
+        .accordion-content {
+            transition: max-height 0.4s ease-out, padding 0.4s ease, opacity 0.4s ease;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+        .accordion-content.expanded {
+            max-height: 2500px; /* Arbitrary large number to fit content */
+            opacity: 1;
+        }
+        .accordion-icon {
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .expanded + .accordion-icon, 
+        .accordion-header.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+        
+        /* Sticky sidebar offset */
+        .sticky-sidebar {
+            position: sticky;
+            top: 100px;
+        }
+
+        /* Floating Menu Transitions */
+        .chat-option {
+            opacity: 0;
+            transform: translateY(20px) scale(0.9);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            pointer-events: none;
+        }
+        .chat-menu-open .chat-option {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            pointer-events: auto;
+        }
+        .chat-menu-open .chat-option:nth-child(1) { transition-delay: 0.05s; }
+        .chat-menu-open .chat-option:nth-child(2) { transition-delay: 0.1s; }
+        .chat-menu-open .chat-option:nth-child(3) { transition-delay: 0.15s; }
+        .chat-menu-open .chat-option:nth-child(4) { transition-delay: 0.2s; }
+        .chat-menu-open .chat-option:nth-child(5) { transition-delay: 0.25s; }
+        
+        /* Mobile Menu Transitions */
+        #mobile-menu {
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateX(100%);
+        }
+        #mobile-menu.open {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body class="font-sans text-textGray bg-gray-50 antialiased relative overflow-x-hidden">
+
+    <!-- Floating Multi-Contact Menu -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
+        <!-- Menu Items -->
+        <div id="chat-menu" class="flex flex-col gap-3 mb-2">
+            <a href="https://tiktok.com/@rinjaniwonderfull" target="_blank" class="chat-option flex items-center justify-center w-12 h-12 bg-black text-white rounded-full shadow-lg hover:scale-110 hover:bg-gray-800 transition-transform">
+                <i class="ph-fill ph-tiktok-logo text-2xl"></i>
+            </a>
+            <a href="https://instagram.com/rinjaniwonderfull" target="_blank" class="chat-option flex items-center justify-center w-12 h-12 bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white rounded-full shadow-lg hover:scale-110 transition-transform">
+                <i class="ph-fill ph-instagram-logo text-2xl"></i>
+            </a>
+            <a href="mailto:rinjaniwonderfull@gmail.com" class="chat-option flex items-center justify-center w-12 h-12 bg-[#EA4335] text-white rounded-full shadow-lg hover:scale-110 hover:bg-[#d33c2f] transition-transform">
+                <i class="ph-fill ph-envelope-simple text-2xl"></i>
+            </a>
+            <a href="#" class="chat-option flex items-center justify-center w-12 h-12 bg-[#09B83E] text-white rounded-full shadow-lg hover:scale-110 transition-transform">
+                <i class="ph-fill ph-wechat-logo text-2xl"></i>
+            </a>
+            <a href="https://wa.me/6285929141746?text=Hello%20Rinjani%20Wonderfull,%20I%20would%20like%20to%20book%20the%20Mount%20Rinjani%202D1N%20Summit%20Package." target="_blank" class="chat-option flex items-center justify-center w-12 h-12 bg-[#25D366] text-white rounded-full shadow-lg hover:scale-110 hover:bg-[#1ebe5d] transition-transform">
+                <i class="ph-fill ph-whatsapp-logo text-2xl"></i>
+            </a>
+        </div>
+        
+        <!-- Main Toggle Button -->
+        <button id="chat-toggle" class="flex items-center justify-center w-14 h-14 bg-primary text-white rounded-full shadow-2xl hover:bg-primaryDark transition-all duration-300 hover:shadow-primary/50 group">
+            <i id="chat-icon" class="ph-fill ph-chat-teardrop-dots text-3xl group-hover:scale-110 transition-transform duration-300"></i>
+        </button>
+    </div>
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full z-40 transition-all duration-300 bg-white shadow-sm py-2" id="navbar">
+        <div class="container mx-auto px-4 lg:px-12">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex-shrink-0 z-50 py-2">
+                    <img src="images/logo.png" alt="Rinjani Wonderfull" class="h-12 w-auto object-contain onerror='this.style.display=\"none\";'">
+                    <div class="font-bold text-2xl text-textDark tracking-tight" style="display: none;">RINJANI<br><span class="text-xs font-normal tracking-widest text-textGray">WONDERFULL</span></div>
+                </a>
+
+                <nav class="hidden lg:flex items-center gap-8 text-textDark font-medium text-sm">
+                    <a href="index.html" class="hover:text-primary transition-colors pb-1">HOME</a>
+                    <a href="packages.html" class="text-primary font-bold border-b-2 border-primary pb-1">PACKAGES</a>
+                    <a href="blog.html" class="hover:text-primary transition-colors pb-1">BLOG</a>
+                    <a href="index.html#about" class="hover:text-primary transition-colors pb-1">ABOUT</a>
+                    <a href="index.html#contact" class="hover:text-primary transition-colors pb-1">BOOK NOW</a>
+                </nav>
+                
+                <div class="hidden lg:flex items-center">
+                    <a href="index.html#contact" class="bg-primary text-white px-6 py-2.5 rounded hover:bg-primaryDark transition-all text-sm font-semibold tracking-wide shadow-md">EXPLORE RINJANI</a>
+                </div>
+
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-textDark z-50 p-2">
+                        <i class="ph ph-list text-3xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-30 lg:hidden flex flex-col justify-center items-center pt-20">
+        <nav class="flex flex-col items-center gap-6 text-textDark font-medium text-xl w-full px-6">
+            <a href="index.html" class="mobile-link hover:text-primary transition-colors py-2 border-b border-gray-100 w-full text-center">Home</a>
+            <a href="packages.html" class="mobile-link text-primary font-bold py-2 border-b border-gray-100 w-full text-center">Packages</a>
+            <a href="blog.html" class="mobile-link hover:text-primary transition-colors py-2 border-b border-gray-100 w-full text-center">Blog</a>
+            <a href="index.html#about" class="mobile-link hover:text-primary transition-colors py-2 border-b border-gray-100 w-full text-center">About</a>
+            <a href="index.html#contact" class="mobile-link bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-primaryDark transition-all shadow-md mt-6">Book Now</a>
+        </nav>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main class="container mx-auto px-4 lg:px-12 pt-32 pb-20">
+        
+        <!-- Breadcrumb -->
+        <div class="text-[11px] font-bold text-gray-400 uppercase tracking-widest mb-3 flex items-center gap-2">
+            <a href="index.html" class="hover:text-primary transition-colors">Home</a> <i class="ph-bold ph-caret-right text-[10px]"></i>
+            <a href="packages.html" class="hover:text-primary transition-colors">Packages</a> <i class="ph-bold ph-caret-right text-[10px]"></i>
+            <span class="text-primary">Sembalun Route</span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-textDark mb-8 leading-tight max-w-4xl">
+            Mount Rinjani 2 Days and 1 Night Summit Sembalun Route
+        </h1>
+
+        <!-- Layout Grid: Left (Content) / Right (Sidebar Booking) -->
+        <div class="flex flex-col lg:flex-row gap-8 relative">
+            
+            <!-- LEFT COLUMN (Content) -->
+            <div class="w-full lg:w-2/3">
+                
+                <!-- Image Gallery Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mb-8 h-auto md:h-[450px]">
+                    <!-- Main Big Image -->
+                    <div class="md:col-span-2 h-64 md:h-full rounded-2xl overflow-hidden bg-gray-200 shadow-sm group">
+                        <img src="images/sembalun-2d1nsummit.jpg" alt="Rinjani Summit Trek" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <!-- Right Column Images -->
+                    <div class="flex flex-col gap-3 h-full">
+                        <div class="h-48 md:h-1/2 rounded-2xl overflow-hidden bg-gray-200 shadow-sm group">
+                            <img src="images/sembalun-panorama-walk.jpg" alt="Sembalun Trail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="h-48 md:h-1/2 rounded-2xl overflow-hidden bg-gray-200 shadow-sm group">
+                            <img src="images/senaru-2d1ncrater.jpg" alt="Camping Crater Rim" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Intro Description -->
+                <div class="text-textGray leading-relaxed mb-10 text-base">
+                    <p class="mb-4">
+                        Awaken the adventurer within. Your epic journey commences in the high-altitude agricultural heartland of Sembalun Village (1,100m). Trek across sweeping, sun-drenched savannas that offer vast, unobstructed panoramas before tackling the exhilarating ascent to the crater rim. To conquer the 2,639m rim, you will dig deep into your reserves to ascend the legendary "Regret Hills"—five steep inclines that test your spirit.
+                    </p>
+                    <p>
+                        On the second day, the true test of endurance begins under a blanket of stars at 2:00 AM. Push your limits on the volcanic scree to stand atop the absolute pinnacle of Mount Rinjani (3,726m). Reaching the top of Indonesia's second-highest peak just as the first light of dawn illuminates the archipelago is a triumph you will carry forever. Though the descent follows the same path, managing your energy on the steep, loose gravel offers a thrilling new challenge.
+                    </p>
+                </div>
+
+                <!-- Quick Info Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+                    <div class="border border-gray-200 rounded-xl p-5 bg-white shadow-sm flex flex-col justify-center">
+                        <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Duration</p>
+                        <p class="font-bold text-textDark text-sm">2 days / 3 days total</p>
+                        <p class="text-xs text-gray-500 mt-1">(one night hotel before trek)</p>
+                    </div>
+                    <div class="border border-gray-200 rounded-xl p-5 bg-white shadow-sm flex flex-col justify-center">
+                        <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Difficulty</p>
+                        <p class="font-bold text-textDark text-sm">Challenging</p>
+                    </div>
+                    <div class="border border-gray-200 rounded-xl p-5 bg-white shadow-sm flex flex-col justify-center">
+                        <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Starting Point</p>
+                        <p class="font-bold text-textDark text-sm">Sembalun Village</p>
+                    </div>
+                </div>
+
+                <!-- About this activity -->
+                <div class="border border-gray-200 rounded-2xl p-6 md:p-8 bg-white shadow-sm mb-10">
+                    <h3 class="text-2xl font-bold text-textDark mb-6">About this activity</h3>
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-4">
+                            <i class="ph-bold ph-check text-primary text-xl mt-0.5"></i>
+                            <div>
+                                <p class="font-bold text-textDark text-sm">Free cancellation</p>
+                                <p class="text-sm text-textGray mt-1">Cancel up to 24 hours in advance for a full refund. No questions asked.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <i class="ph-bold ph-check text-primary text-xl mt-0.5"></i>
+                            <div>
+                                <p class="font-bold text-textDark text-sm">Reserve now & pay later</p>
+                                <p class="text-sm text-textGray mt-1">Secure your spot effortlessly today and finalize payment upon arrival.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <i class="ph-bold ph-check text-primary text-xl mt-0.5"></i>
+                            <div>
+                                <p class="font-bold text-textDark text-sm">Duration 2 days / 3 days total (one night hotel before trek)</p>
+                                <p class="text-sm text-textGray mt-1">Exact timing and logistics will be meticulously confirmed after booking.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Package Options (Accordion Style) -->
+                <h3 class="text-2xl font-bold text-textDark mb-6">Package Options</h3>
+                <div class="space-y-4 mb-10">
+                    
+                    <!-- Private Package -->
+                    <div class="border border-green-500 rounded-2xl bg-green-50/30 overflow-hidden shadow-sm transition-all duration-300">
+                        <div class="accordion-header active flex items-center justify-between p-5 md:p-6 cursor-pointer bg-green-50 border-b border-green-200" onclick="toggleAccordion(this)">
+                            <div class="flex items-center gap-3">
+                                <div class="bg-green-500 text-white w-8 h-8 rounded-lg flex items-center justify-center"><i class="ph-bold ph-package"></i></div>
+                                <h4 class="font-bold text-textDark text-lg">Private Service</h4>
+                            </div>
+                            <div class="bg-green-500 text-white px-3 py-1.5 rounded text-xs font-bold flex items-center gap-1 transition-colors hover:bg-green-600">
+                                <span class="btn-text">Hide</span> <i class="ph-bold ph-caret-up accordion-icon"></i>
+                            </div>
+                        </div>
+                        <div class="accordion-content expanded px-5 md:px-8 py-6 md:py-8 border-x border-b border-green-200 rounded-b-2xl">
+                            <p class="text-sm text-textGray mb-6 leading-relaxed">
+                                If you desire a highly comfortable, personalized ascent up Mount Rinjani, our <span class="font-bold text-textDark">Private Service</span> is your ultimate choice. This elite package guarantees you trek exclusively with your partner, family, or chosen group—shielding you from the constraints of a larger crowd with varying fitness levels. Supported by a dedicated team of elite guides and porters, your entire expedition becomes incredibly flexible. You dictate the pace; adjust schedules based on how you feel in consultation with your expert guide. This is an entirely bespoke experience prioritizing your absolute comfort, safety, and joy.
+                            </p>
+                            
+                            <div class="mb-8">
+                                <h5 class="text-xl font-bold text-textDark mb-3">Guide and porters during the trek</h5>
+                                <p class="text-sm text-textGray leading-relaxed mb-3">
+                                    To ensure a flawlessly safe and comfortable 2-day summit adventure, our team allocation is masterfully structured based on your group size. 
+                                </p>
+                                <ul class="list-disc list-inside text-sm text-textGray space-y-2 ml-2">
+                                    <li>For a couple (2 people): <span class="font-bold text-textDark">1 Expert Guide + 2 Dedicated Porters</span>.</li>
+                                    <li>For 3-4 people: Maximum ratio of <span class="font-bold text-textDark">1 Guide + 4 Porters</span>.</li>
+                                    <li>For groups larger than 4: Automatically assigned <span class="font-bold text-textDark">2 Guides</span> for premium personalized attention.</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="bg-white rounded-xl border border-gray-200 overflow-hidden mb-6">
+                                <div class="bg-gray-50 border-b border-gray-200 p-4">
+                                    <h5 class="font-bold text-textDark text-base flex items-center gap-2"><i class="ph-fill ph-check-circle text-green-500 text-xl"></i> Include</h5>
+                                </div>
+                                <div class="p-5 md:p-6">
+                                    <ul class="text-sm text-textGray space-y-3">
+                                        <li class="flex gap-3"><i class="ph-bold ph-check text-green-500 mt-0.5 shrink-0"></i> <span>Private local transport: VIP pick-up and drop-off from absolutely anywhere in Lombok.</span></li>
+                                        <li class="flex gap-3"><i class="ph-bold ph-check text-green-500 mt-0.5 shrink-0"></i> <span>All logistical transfers (including transport from Senaru to Sembalun starting point).</span></li>
+                                        <li class="flex gap-3"><i class="ph-bold ph-check text-green-500 mt-0.5 shrink-0"></i> <span>1 Night pre-trek homestay/hotel accommodation upon your arrival day + 1 Night premium camping on the mountain.</span></li>
+                                        <li class="flex gap-3"><i class="ph-bold ph-check text-green-500 mt-0.5 shrink-0"></i> <span>Guided safely by our certified, professional, English-speaking mountain experts.</span></li>
+                                        <li class="flex gap-3"><i class="ph-bold ph-check text-green-500 mt-0.5 shrink-0"></i> <span>Dedicated porters who shoulder all camping equipment and food supplies.</span></li>
+                                        <li class="flex gap-3"><i class="ph-bold ph-check text-green-500 mt-0.5 shrink-0"></i> <span>Complete Premium Gear: Spacious tent, toilet tent, thick mattress, sleeping bags, pillows, camping chairs, and a dining table. You carry only your personal daypack.</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="bg-white rounded-xl border border-gray-200 overflow-hidden">
+                                <div class="bg-gray-50 border-b border-gray-200 p-4">
+                                    <h5 class="font-bold text-textDark text-base flex items-center gap-2"><i class="ph-fill ph-x-circle text-red-500 text-xl"></i> Exclude</h5>
+                                </div>
+                                <div class="p-5 md:p-6">
+                                    <ul class="text-sm text-textGray space-y-3">
+                                        <li class="flex gap-3"><i class="ph-bold ph-x text-red-500 mt-0.5 shrink-0"></i> <span>Entrance fee (e-Rinjani ticket) Rp 500k/person/day.</span></li>
+                                        <li class="flex gap-3"><i class="ph-bold ph-x text-red-500 mt-0.5 shrink-0"></i> <span>Extra personal porter (if you need someone to carry your daypack).</span></li>
+                                        <li class="flex gap-3"><i class="ph-bold ph-x text-red-500 mt-0.5 shrink-0"></i> <span>Tipping for your Guide and Porters (highly appreciated).</span></li>
+                                        <li class="flex gap-3"><i class="ph-bold ph-x text-red-500 mt-0.5 shrink-0"></i> <span>Airline tickets.</span></li>
+                                        <li class="flex gap-3"><i class="ph-bold ph-x text-red-500 mt-0.5 shrink-0"></i> <span>Personal small bag / daily pack.</span></li>
+                                        <li class="flex gap-3"><i class="ph-bold ph-x text-red-500 mt-0.5 shrink-0"></i> <span>Premium travel insurance.</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Standard/Sharing Package -->
+                    <div class="border border-primary/20 rounded-2xl bg-white overflow-hidden shadow-sm transition-all duration-300">
+                        <div class="accordion-header flex items-center justify-between p-5 md:p-6 cursor-pointer hover:bg-gray-50" onclick="toggleAccordion(this)">
+                            <div class="flex items-center gap-3">
+                                <div class="bg-blue-100 text-primary w-8 h-8 rounded-lg flex items-center justify-center"><i class="ph-bold ph-package"></i></div>
+                                <h4 class="font-bold text-textDark text-lg">Standard Service (Sharing)</h4>
+                            </div>
+                            <div class="bg-blue-100 text-primary px-3 py-1.5 rounded text-xs font-bold flex items-center gap-1 transition-colors hover:bg-blue-200">
+                                <span class="btn-text">Show</span> <i class="ph-bold ph-caret-down accordion-icon"></i>
+                            </div>
+                        </div>
+                        <div class="accordion-content px-5 md:px-8 border-x border-primary/20 rounded-b-2xl">
+                            <div class="py-6 md:py-8">
+                                <p class="text-sm text-textGray mb-4">
+                                    The perfect choice for solo travelers or those eager to forge new friendships. Join a shared group of like-minded adventurers. An incredibly cost-effective way to conquer the mountain without sacrificing safety or fundamental standard inclusions.
+                                </p>
+                                <div class="bg-blue-50 border border-blue-100 p-4 rounded-xl text-center">
+                                    <p class="text-sm text-primary font-medium">Please contact our team via WhatsApp to check group availability and precise inclusions for the Standard Service.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Itinerary Section -->
+                <div class="border border-gray-200 rounded-2xl bg-white shadow-sm overflow-hidden mb-10">
+                    <div class="p-6 md:p-8 border-b border-gray-100 flex items-center justify-between">
+                        <h3 class="text-2xl font-bold text-textDark flex items-center gap-3"><i class="ph-bold ph-map-trifold text-primary"></i> Itinerary</h3>
+                        <button class="text-primary text-xs font-bold uppercase tracking-widest hover:underline" onclick="toggleAllAccordions(this)">Expand All</button>
+                    </div>
+                    
+                    <!-- Day 1 -->
+                    <div class="border-b border-gray-100 itinerary-item">
+                        <div class="accordion-header flex items-center justify-between p-5 md:px-8 md:py-6 cursor-pointer hover:bg-gray-50" onclick="toggleAccordion(this)">
+                            <h4 class="font-bold text-textDark text-base flex flex-col md:flex-row md:items-center gap-1 md:gap-3">
+                                <span class="text-primary whitespace-nowrap">Day 1</span> 
+                                <span class="hidden md:inline">-</span>
+                                <span>Sembalun Village to Crater Rim</span>
+                            </h4>
+                            <i class="ph-bold ph-caret-down text-gray-400 accordion-icon shrink-0"></i>
+                        </div>
+                        <div class="accordion-content px-5 md:px-8 pb-0">
+                            <div class="pb-6 md:pb-8">
+                                <ul class="text-sm text-textGray space-y-4 relative pl-4 border-l-2 border-primary/20 ml-2">
+                                    <li class="relative before:absolute before:-left-[21px] before:top-1.5 before:w-2.5 before:h-2.5 before:bg-primary before:rounded-full">
+                                        <span class="font-bold text-textDark">06:00 – 06:30</span>: Energizing breakfast at the hotel to fuel the big day.
+                                    </li>
+                                    <li class="relative before:absolute before:-left-[21px] before:top-1.5 before:w-2.5 before:h-2.5 before:bg-primary before:rounded-full">
+                                        <span class="font-bold text-textDark">07:00 – 07:30</span>: Transfer to Sembalun Village (approx. 45-minute scenic drive).
+                                    </li>
+                                    <li class="relative before:absolute before:-left-[21px] before:top-1.5 before:w-2.5 before:h-2.5 before:bg-primary before:rounded-full">
+                                        <span class="font-bold text-textDark">08:30</span>: Registration at the Rinjani National Park Office and officially commence the trek.
+                                    </li>
+                                    <li class="relative before:absolute before:-left-[21px] before:top-1.5 before:w-2.5 before:h-2.5 before:bg-primary before:rounded-full">
+                                        <span class="font-bold text-textDark">12:00</span>: Rest and enjoy a chef-prepared Lunch break at Post II.
+                                    </li>
+                                    <li class="relative before:absolute before:-left-[21px] before:top-1.5 before:w-2.5 before:h-2.5 before:bg-primary before:rounded-full">
+                                        <span class="font-bold text-textDark">17:00</span>: Triumphant arrival at Sembalun Crater Rim (Plawangan Sembalun, 2,639m). Witness a breathtaking sunset, enjoy a warm dinner, and camp overnight above the clouds.
+                                    </li>
+                                </ul>
+                                
+                                <div class="mt-8 bg-gray-50 p-5 rounded-xl border border-gray-100">
+                                    <p class="text-[10px] font-bold text-gray-400 uppercase mb-3 tracking-widest">Overview trail at day 1 - Sembalun village to crater rim:</p>
+                                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+                                        <div><span class="text-gray-500 block text-[10px] uppercase">Distance</span><span class="font-bold text-textDark">10 km</span></div>
+                                        <div><span class="text-gray-500 block text-[10px] uppercase">Duration</span><span class="font-bold text-textDark">6–7 hours</span></div>
+                                        <div><span class="text-gray-500 block text-[10px] uppercase">Difficulty</span><span class="font-bold text-textDark">Moderate</span></div>
+                                        <div><span class="text-gray-500 block text-[10px] uppercase">Max Elevation</span><span class="font-bold text-textDark">2,639 m</span></div>
+                                    </div>
+                                    <div class="mt-4 pt-4 border-t border-gray-200">
+                                        <span class="text-gray-500 text-[10px] uppercase">Elevation Gain:</span> <span class="font-bold text-textDark text-sm">+1,539 m</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day 2 -->
+                    <div class="itinerary-item">
+                        <div class="accordion-header flex items-center justify-between p-5 md:px-8 md:py-6 cursor-pointer hover:bg-gray-50" onclick="toggleAccordion(this)">
+                            <h4 class="font-bold text-textDark text-base flex flex-col md:flex-row md:items-center gap-1 md:gap-3">
+                                <span class="text-primary whitespace-nowrap">Day 2</span> 
+                                <span class="hidden md:inline">-</span>
+                                <span>Summit Attack & Return to Sembalun</span>
+                            </h4>
+                            <i class="ph-bold ph-caret-down text-gray-400 accordion-icon shrink-0"></i>
+                        </div>
+                        <div class="accordion-content px-5 md:px-8 pb-0">
+                            <div class="pb-6 md:pb-8">
+                                <ul class="text-sm text-textGray space-y-4 relative pl-4 border-l-2 border-primary/20 ml-2">
+                                    <li class="relative before:absolute before:-left-[21px] before:top-1.5 before:w-2.5 before:h-2.5 before:bg-primary before:rounded-full">
+                                        <span class="font-bold text-textDark">02:00</span>: Wake up under a starlit sky. Light breakfast with hot tea/coffee to warm your body.
+                                    </li>
+                                    <li class="relative before:absolute before:-left-[21px] before:top-1.5 before:w-2.5 before:h-2.5 before:bg-primary before:rounded-full">
+                                        <span class="font-bold text-textDark">02:30</span>: The ultimate push begins. Navigate the steep volcanic scree towards the peak.
+                                    </li>
+                                    <li class="relative before:absolute before:-left-[21px] before:top-1.5 before:w-2.5 before:h-2.5 before:bg-primary before:rounded-full">
+                                        <span class="font-bold text-textDark">06:00</span>: Reach the absolute Summit (3,726m) for a glorious sunrise over the Indonesian archipelago.
+                                    </li>
+                                    <li class="relative before:absolute before:-left-[21px] before:top-1.5 before:w-2.5 before:h-2.5 before:bg-primary before:rounded-full">
+                                        <span class="font-bold text-textDark">07:00</span>: Descend back to the Crater Rim campsite.
+                                    </li>
+                                    <li class="relative before:absolute before:-left-[21px] before:top-1.5 before:w-2.5 before:h-2.5 before:bg-primary before:rounded-full">
+                                        <span class="font-bold text-textDark">09:30</span>: Enjoy a hearty, well-deserved heavy breakfast.
+                                    </li>
+                                    <li class="relative before:absolute before:-left-[21px] before:top-1.5 before:w-2.5 before:h-2.5 before:bg-primary before:rounded-full">
+                                        <span class="font-bold text-textDark">10:30 – 15:00</span>: Trek back down through the savannas to Sembalun Village. Lunch served midway.
+                                    </li>
+                                    <li class="relative before:absolute before:-left-[21px] before:top-1.5 before:w-2.5 before:h-2.5 before:bg-primary before:rounded-full">
+                                        <span class="font-bold text-textDark">15:00</span>: Arrival at Sembalun. Our transport transfers you to your next destination.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div> <!-- END LEFT COLUMN -->
+
+            <!-- RIGHT COLUMN (Sidebar Booking Widget) -->
+            <div class="w-full lg:w-1/3">
+                <div class="sticky-sidebar bg-white border border-gray-200 rounded-3xl p-6 shadow-xl">
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-bold text-textDark leading-tight mb-2">Book This Adventure</h3>
+                        <p class="text-sm text-textGray">Secure your spot effortlessly. Connect with our local experts on WhatsApp to check availability, confirm logistics, and finalize your tailor-made expedition.</p>
+                    </div>
+                    
+                    <hr class="border-gray-100 mb-6">
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center gap-3">
+                            <div class="bg-primary/10 p-2 rounded-full text-primary shrink-0"><i class="ph-fill ph-check-circle text-lg"></i></div>
+                            <span class="text-textDark font-semibold text-sm">Cancel up to 24 hours in advance for a full refund.</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="bg-primary/10 p-2 rounded-full text-primary shrink-0"><i class="ph-fill ph-calendar-plus text-lg"></i></div>
+                            <span class="text-textDark font-semibold text-sm">Keep your travel plans flexible. Reserve now & pay later.</span>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/6285929141746?text=Hello%20Rinjani%20Wonderfull,%20I%20am%20interested%20in%20booking%20the%20Mount%20Rinjani%202D1N%20Summit%20Sembalun%20Route." target="_blank" class="w-full bg-primary hover:bg-primaryDark text-white font-bold py-4 rounded-xl transition-all shadow-md flex justify-center items-center gap-2 mb-4 group">
+                        <i class="ph-bold ph-whatsapp-logo text-xl group-hover:scale-110 transition-transform"></i> Inquire & Book via WhatsApp
+                    </a>
+                    
+                    <p class="text-[11px] text-center text-gray-400 font-medium px-4">No payment required at this stage. Our experts usually reply within 5 minutes.</p>
+                </div>
+            </div> <!-- END RIGHT COLUMN -->
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-textDark text-white pt-10 pb-6 border-t border-gray-800 mt-10">
+        <div class="container mx-auto px-4 lg:px-12">
+            <div class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 gap-4">
+                <div class="font-bold text-xl text-white tracking-tight">RINJANI<span class="text-xs font-normal tracking-widest text-gray-400">WONDERFULL</span></div>
+                <div class="text-center">&copy; 2026 Rinjani Wonderfull. All rights reserved.</div>
+                <div class="flex justify-center items-center gap-6">
+                    <a href="https://instagram.com/rinjaniwonderfull" target="_blank" class="hover:text-white transition-colors"><i class="ph-fill ph-instagram-logo text-2xl"></i></a>
+                    <a href="https://tiktok.com/@rinjaniwonderfull" target="_blank" class="hover:text-white transition-colors"><i class="ph-fill ph-tiktok-logo text-2xl"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // Accordion Logic
+        function toggleAccordion(element) {
+            const header = element;
+            const content = header.nextElementSibling;
+            const icon = header.querySelector('.accordion-icon');
+            const btnText = header.querySelector('.btn-text');
+            
+            header.classList.toggle('active');
+            
+            if (content.classList.contains('expanded')) {
+                content.classList.remove('expanded');
+                if(btnText) btnText.textContent = "Show";
+                if(icon && !header.classList.contains('active')) icon.classList.replace('ph-caret-up', 'ph-caret-down');
+            } else {
+                content.classList.add('expanded');
+                if(btnText) btnText.textContent = "Hide";
+                if(icon) icon.classList.replace('ph-caret-down', 'ph-caret-up');
+            }
+        }
+
+        // Expand All Logic for Itinerary
+        function toggleAllAccordions(btn) {
+            const isExpanding = btn.textContent.trim() === "Expand All";
+            const headers = document.querySelectorAll('.itinerary-item .accordion-header');
+            
+            headers.forEach(header => {
+                const content = header.nextElementSibling;
+                const icon = header.querySelector('.accordion-icon');
+                
+                if (isExpanding) {
+                    header.classList.add('active');
+                    content.classList.add('expanded');
+                    if(icon) icon.classList.replace('ph-caret-down', 'ph-caret-up');
+                } else {
+                    header.classList.remove('active');
+                    content.classList.remove('expanded');
+                    if(icon) icon.classList.replace('ph-caret-up', 'ph-caret-down');
+                }
+            });
+            
+            btn.textContent = isExpanding ? "Collapse All" : "Expand All";
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Menu Toggle (Hamburger)
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            if(mobileMenuBtn && mobileMenu && menuIcon) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('open');
+                    if (mobileMenu.classList.contains('open')) {
+                        menuIcon.classList.replace('ph-list', 'ph-x');
+                    } else {
+                        menuIcon.classList.replace('ph-x', 'ph-list');
+                    }
+                });
+
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.remove('open');
+                        menuIcon.classList.replace('ph-x', 'ph-list');
+                    });
+                });
+            }
+
+            // Floating Chat Menu
+            const chatToggleBtn = document.getElementById('chat-toggle');
+            const chatMenu = document.getElementById('chat-menu');
+            const chatIcon = document.getElementById('chat-icon');
+
+            if(chatToggleBtn && chatMenu && chatIcon) {
+                chatToggleBtn.addEventListener('click', () => {
+                    chatMenu.classList.toggle('chat-menu-open');
+                    if (chatMenu.classList.contains('chat-menu-open')) {
+                        chatIcon.classList.replace('ph-chat-teardrop-dots', 'ph-x');
+                    } else {
+                        chatIcon.classList.replace('ph-x', 'ph-chat-teardrop-dots');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
