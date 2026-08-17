@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sembalun Panorama Walk - Rinjani Wonderfull</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Experience the serene beauty of the Sembalun Valley. A relaxing half or full-day panorama walk exploring strawberry farms, bamboo gardens, and local culture.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#135c5b',
+                        primaryDark: '#0e4443',
+                        secondary: '#f5a623',
+                        secondaryHover: '#e0951a',
+                        lightBg: '#f8fafc',
+                        textDark: '#1e293b',
+                        textGray: '#475569'
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Accordion transition for smooth open/close */
+        .accordion-content {
+            transition: max-height 0.4s ease-out, padding 0.4s ease, opacity 0.4s ease;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+        .accordion-content.expanded {
+            max-height: 2500px; /* Arbitrary large number to fit content */
+            opacity: 1;
+        }
+        .accordion-icon {
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .expanded + .accordion-icon, 
+        .accordion-header.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+        
+        /* Sticky sidebar offset */
+        .sticky-sidebar {
+            position: sticky;
+            top: 100px;
+        }
+
+        /* Floating Menu Transitions */
+        .chat-option {
+            opacity: 0;
+            transform: translateY(20px) scale(0.9);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            pointer-events: none;
+        }
+        .chat-menu-open .chat-option {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            pointer-events: auto;
+        }
+        .chat-menu-open .chat-option:nth-child(1) { transition-delay: 0.05s; }
+        .chat-menu-open .chat-option:nth-child(2) { transition-delay: 0.1s; }
+        .chat-menu-open .chat-option:nth-child(3) { transition-delay: 0.15s; }
+        .chat-menu-open .chat-option:nth-child(4) { transition-delay: 0.2s; }
+        .chat-menu-open .chat-option:nth-child(5) { transition-delay: 0.25s; }
+        
+        /* Mobile Menu Transitions */
+        #mobile-menu {
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateX(100%);
+        }
+        #mobile-menu.open {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body class="font-sans text-textGray bg-lightBg antialiased relative overflow-x-hidden">
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/6285929141746?text=Hello%20Rinjani%20Wonderfull,%20I%20am%20interested%20in%20the%20Sembalun%20Panorama%20Walk." target="_blank" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:bg-[#1ebe5d] transition-all hover:-translate-y-1 group">
+        <i class="ph-fill ph-whatsapp-logo text-3xl"></i>
+    </a>
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full z-40 transition-all duration-300 bg-white shadow-sm" id="navbar">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex items-center justify-between py-3 md:py-4">
+                <!-- Mobile Hamburger (Kiri) -->
+                <div class="lg:hidden w-10">
+                    <button id="mobile-menu-btn" class="text-gray-900 z-50 p-2 -ml-2">
+                        <i class="ph ph-list text-3xl" id="menu-icon"></i>
+                    </button>
+                </div>
+
+                <!-- Logo (Tengah di Mobile, Kiri di Desktop) -->
+                <a href="index.html" class="flex-1 lg:flex-none flex justify-center lg:justify-start z-50">
+                    <img src="images/rinjaniwonderfull-logo.png" alt="Rinjani Wonderfull Logo" class="h-16 md:h-24 w-auto object-contain">
+                </a>
+
+                <!-- Mobile Spacer (Kanan) -->
+                <div class="lg:hidden w-10"></div>
+                
+                <!-- Desktop Nav -->
+                <nav class="hidden lg:flex items-center gap-8 text-gray-600 font-semibold text-xs tracking-wider">
+                    <a href="index.html" class="hover:text-primary transition-colors pb-1">HOME</a>
+                    <a href="index.html#trekking" class="text-primary border-b-2 border-primary pb-1">PACKAGES</a>
+                    <a href="index.html#blog" class="hover:text-primary transition-colors pb-1">BLOG</a>
+                    <a href="index.html#about" class="hover:text-primary transition-colors pb-1">ABOUT</a>
+                    <a href="index.html#contact" class="hover:text-primary transition-colors pb-1">BOOK NOW</a>
+                </nav>
+                
+                <!-- Desktop Actions -->
+                <div class="hidden lg:flex items-center gap-4">
+                    <a href="index.html#contact" class="bg-primary text-white px-6 py-2.5 rounded hover:bg-primaryDark transition-all shadow text-sm font-semibold tracking-wide">EXPLORE RINJANI</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-30 lg:hidden flex flex-col justify-center items-center pt-20">
+        <nav class="flex flex-col items-center gap-6 text-gray-800 font-medium text-xl w-full px-6">
+            <a href="index.html" class="mobile-link hover:text-primary transition-colors py-2 border-b border-gray-100 w-full text-center">Home</a>
+            <a href="index.html#trekking" class="mobile-link text-primary py-2 border-b border-gray-100 w-full text-center">Packages</a>
+            <a href="index.html#blog" class="mobile-link hover:text-primary transition-colors py-2 border-b border-gray-100 w-full text-center">Blog</a>
+            <a href="index.html#about" class="mobile-link hover:text-primary transition-colors py-2 border-b border-gray-100 w-full text-center">About</a>
+            <a href="index.html#contact" class="mobile-link bg-primary text-white px-8 py-3 rounded font-semibold hover:bg-primaryDark transition-all shadow-md mt-6">Book Now</a>
+        </nav>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main class="container mx-auto px-4 lg:px-12 pt-32 pb-20">
+        
+        <!-- Breadcrumb -->
+        <div class="text-[11px] font-bold text-gray-400 uppercase tracking-widest mb-3 flex items-center gap-2">
+            <a href="index.html" class="hover:text-primary transition-colors">Home</a> <i class="ph-bold ph-caret-right text-[10px]"></i>
+            <a href="index.html#trekking" class="hover:text-primary transition-colors">Packages</a> <i class="ph-bold ph-caret-right text-[10px]"></i>
+            <span class="text-secondary">Cultural & Nature Tours</span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-textDark mb-8 leading-tight max-w-4xl">
+            Sembalun Panorama Walk: The Valley of Wonders
+        </h1>
+
+        <!-- Layout Grid: Left (Content) / Right (Sidebar Booking) -->
+        <div class="flex flex-col lg:flex-row gap-8 relative">
+            
+            <!-- LEFT COLUMN (Content) -->
+            <div class="w-full lg:w-2/3">
+                
+                <!-- Image Gallery Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mb-8 h-auto md:h-[450px]">
+                    <!-- Main Big Image -->
+                    <div class="md:col-span-2 h-64 md:h-full rounded-2xl overflow-hidden bg-gray-200 shadow-sm group relative">
+                        <div class="absolute top-4 left-4 z-10 bg-secondary text-white text-sm font-bold px-3 py-1.5 rounded shadow-md">
+                            Half / Full Day
+                        </div>
+                        <img src="images/sembalun-panorama-walk.jpg" alt="Sembalun Panorama Walk" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" onerror="this.src='https://placehold.co/800x600/135c5b/ffffff?text=Sembalun+Panorama'">
+                    </div>
+                    <!-- Right Column Images -->
+                    <div class="flex flex-col gap-3 h-full">
+                        <div class="h-48 md:h-1/2 rounded-2xl overflow-hidden bg-gray-200 shadow-sm group">
+                            <img src="images/strawberry-farm.jpg" alt="Strawberry Picking Sembalun" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" onerror="this.src='https://placehold.co/400x300/1e293b/ffffff?text=Strawberry+Farm'">
+                        </div>
+                        <div class="h-48 md:h-1/2 rounded-2xl overflow-hidden bg-gray-200 shadow-sm group">
+                            <img src="images/bamboo-garden.jpg" alt="Bamboo Garden" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" onerror="this.src='https://placehold.co/400x300/1e293b/ffffff?text=Bamboo+Garden'">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Intro Description -->
+                <div class="text-textGray leading-relaxed mb-10 text-base md:text-lg">
+                    <p class="mb-4">
+                        Step away from the strenuous alpine ascents and immerse yourself in the tranquil beauty of the Sembalun Valley. Situated at an elevation of 1,100 meters, this picturesque village is cradled by the majestic foothills of Mount Rinjani, offering a serene escape filled with agricultural wonders and local heritage.
+                    </p>
+                    <p>
+                        The Sembalun Panorama Walk is a beautifully curated, relaxed-pace journey designed for all ages. Wander through patchwork quilt fields, breathe in the crisp mountain air, and engage directly with the vibrant local farming community. From plucking fresh strawberries to exploring enchanting bamboo groves, this tour is a deep dive into the peaceful rhythm of Sasak mountain life.
+                    </p>
+                </div>
+
+                <!-- Quick Info Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+                    <div class="border border-gray-200 rounded-xl p-5 bg-white shadow-sm flex flex-col justify-center">
+                        <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">Duration</p>
+                        <p class="font-bold text-textDark text-base">3 - 6 Hours</p>
+                        <p class="text-xs text-gray-500 mt-1">(Half day or Full day options)</p>
+                    </div>
+                    <div class="border border-gray-200 rounded-xl p-5 bg-white shadow-sm flex flex-col justify-center">
+                        <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">Difficulty</p>
+                        <p class="font-bold text-green-600 text-lg">Easy / Relaxed <i class="ph-fill ph-leaf ml-1"></i></p>
+                    </div>
+                    <div class="border border-gray-200 rounded-xl p-5 bg-white shadow-sm flex flex-col justify-center">
+                        <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">Starting Point</p>
+                        <p class="font-bold text-primary text-lg">Sembalun Village</p>
+                    </div>
+                </div>
+
+                <!-- About this activity -->
+                <div class="border border-gray-200 rounded-2xl p-6 bg-white shadow-sm mb-10">
+                    <h3 class="text-2xl font-bold text-textDark mb-5 font-serif">Tour Highlights</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i class="ph-bold ph-check text-secondary text-xl mt-0.5"></i>
+                            <div>
+                                <p class="font-bold text-textDark text-sm">Scenic Hill Viewpoints</p>
+                                <p class="text-sm text-textGray">Enjoy unobstructed, panoramic views of the entire Sembalun caldera and the imposing Mount Rinjani backdrop.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-bold ph-check text-secondary text-xl mt-0.5"></i>
+                            <div>
+                                <p class="font-bold text-textDark text-sm">Local Strawberry Farms</p>
+                                <p class="text-sm text-textGray">Visit local plantations where you can pick and taste sweet, mountain-grown strawberries straight from the vine.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-bold ph-check text-secondary text-xl mt-0.5"></i>
+                            <div>
+                                <p class="font-bold text-textDark text-sm">Traditional Sasak Heritage</p>
+                                <p class="text-sm text-textGray">Discover traditional weaving techniques and learn about the unique agricultural lifestyle of the Sembalun people.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Package Options (Accordion Style) -->
+                <h3 class="text-3xl font-bold text-textDark mb-6 font-serif">Package Details</h3>
+                <div class="space-y-4 mb-10">
+                    
+                    <!-- Private Package -->
+                    <div class="border border-primary/20 rounded-2xl bg-white overflow-hidden shadow-sm transition-all duration-300">
+                        <div class="accordion-header active flex items-center justify-between p-5 cursor-pointer bg-primary/5 border-b border-primary/10" onclick="toggleAccordion(this)">
+                            <div class="flex items-center gap-3">
+                                <div class="bg-primary text-white w-8 h-8 rounded-lg flex items-center justify-center"><i class="ph-bold ph-flower-tulip"></i></div>
+                                <h4 class="font-bold text-textDark text-lg">Guided Nature Walk</h4>
+                            </div>
+                            <div class="bg-primary/10 text-primary px-3 py-1 rounded text-xs font-bold flex items-center gap-1">
+                                <span class="btn-text">Hide</span> <i class="ph-bold ph-caret-up accordion-icon"></i>
+                            </div>
+                        </div>
+                        <div class="accordion-content expanded px-6 py-6 border-x border-b border-primary/20 rounded-b-2xl">
+                            <p class="text-sm text-textGray mb-4 leading-relaxed">
+                                This tour is fully guided by a knowledgeable local expert who will share fascinating insights about the valley's history, flora, and fauna. You can customize the pace and spend as much time as you like at each location.
+                            </p>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                                <div class="bg-white p-4 rounded-xl border border-green-100">
+                                    <h5 class="font-bold text-green-700 mb-3 flex items-center gap-2"><i class="ph-fill ph-check-circle text-lg"></i> What's Included</h5>
+                                    <ul class="text-sm text-textGray space-y-2">
+                                        <li class="flex gap-2"><i class="ph-bold ph-check text-green-500 mt-1 shrink-0"></i> Professional, English-speaking local guide.</li>
+                                        <li class="flex gap-2"><i class="ph-bold ph-check text-green-500 mt-1 shrink-0"></i> Entrance fees to local community gardens/farms.</li>
+                                        <li class="flex gap-2"><i class="ph-bold ph-check text-green-500 mt-1 shrink-0"></i> Mineral water and local snacks during the walk.</li>
+                                        <li class="flex gap-2"><i class="ph-bold ph-check text-green-500 mt-1 shrink-0"></i> Traditional lunch (for the Full Day option).</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-white p-4 rounded-xl border border-red-100">
+                                    <h5 class="font-bold text-red-600 mb-3 flex items-center gap-2"><i class="ph-fill ph-x-circle text-lg"></i> What's Excluded</h5>
+                                    <ul class="text-sm text-textGray space-y-2">
+                                        <li class="flex gap-2"><i class="ph-bold ph-x text-red-500 mt-1 shrink-0"></i> Transport to/from Sembalun (Can be arranged separately).</li>
+                                        <li class="flex gap-2"><i class="ph-bold ph-x text-red-500 mt-1 shrink-0"></i> Personal purchases (e.g., buying kilos of strawberries to take home).</li>
+                                        <li class="flex gap-2"><i class="ph-bold ph-x text-red-500 mt-1 shrink-0"></i> Tipping for the local guide.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div> <!-- END LEFT COLUMN -->
+
+            <!-- RIGHT COLUMN (Sidebar Booking Widget) -->
+            <div class="w-full lg:w-1/3">
+                <div class="sticky-sidebar bg-white border border-gray-200 rounded-3xl p-6 shadow-xl">
+                    <div class="mb-4">
+                        <span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Leisure Tour</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-textDark leading-tight mb-2">Book This Experience</h3>
+                    <p class="text-sm text-textGray mb-6">Perfect for families or as a relaxing acclimatization day before your big trek. Contact us to arrange your walk.</p>
+                    
+                    <hr class="border-gray-100 mb-6">
+                    
+                    <div class="space-y-4 mb-6">
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-textGray font-medium"><i class="ph ph-clock text-primary mr-2"></i> Flexible Start Times</span>
+                        </div>
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-textGray font-medium"><i class="ph ph-baby text-primary mr-2"></i> Family & Kid Friendly</span>
+                        </div>
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-textGray font-medium"><i class="ph ph-camera text-primary mr-2"></i> Highly Photogenic</span>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/6285929141746?text=Hello%20Rinjani%20Wonderfull,%20I%20would%20like%20to%20inquire%20about%20the%20Sembalun%20Panorama%20Walk." target="_blank" class="w-full bg-primary hover:bg-primaryDark text-white font-bold py-4 rounded-xl transition-all shadow-md flex justify-center items-center gap-2 mb-3">
+                        <i class="ph-bold ph-whatsapp-logo text-xl"></i> Ask Price & Book via WA
+                    </a>
+                    
+                    <p class="text-xs text-center text-gray-400">No payment required at this stage. We reply within minutes.</p>
+                </div>
+            </div> <!-- END RIGHT COLUMN -->
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-primaryDark text-white pt-8 sm:pt-10 pb-8 sm:pb-10 border-t border-white/10 mt-10">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center text-xs sm:text-sm text-gray-400 gap-4 md:gap-0">
+                <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-center sm:text-left">
+                    <img src="images/rinjaniwonderfull-logo.png" alt="Rinjani Wonderfull Logo" class="h-6 sm:h-8 w-auto bg-white rounded p-0.5">
+                    <span>&copy; 2026 Rinjani Wonderfull. All rights reserved.</span>
+                </div>
+                <div class="flex flex-wrap justify-center items-center gap-4 sm:gap-6">
+                    <a href="https://instagram.com/rinjaniwonderfull" class="hover:text-secondary flex items-center gap-1 sm:gap-2"><i class="ph-fill ph-instagram-logo"></i> rinjaniwonderfull</a>
+                    <a href="mailto:rinjaniwonderfull@gmail.com" class="hover:text-secondary flex items-center gap-1 sm:gap-2"><i class="ph-fill ph-envelope-simple"></i> rinjaniwonderfull@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // Accordion Logic
+            window.toggleAccordion = function(element) {
+                const header = element;
+                const content = header.nextElementSibling;
+                const icon = header.querySelector('.accordion-icon');
+                const btnText = header.querySelector('.btn-text');
+                
+                // Toggle active class on header
+                header.classList.toggle('active');
+                
+                // Toggle expanded class on content
+                if (content.classList.contains('expanded')) {
+                    content.classList.remove('expanded');
+                    content.style.maxHeight = null;
+                    if(btnText) btnText.textContent = "Show";
+                    
+                    // Reset icon rotation
+                    if(icon && !header.classList.contains('active')) {
+                        icon.classList.replace('ph-caret-up', 'ph-caret-down');
+                    }
+                } else {
+                    content.classList.add('expanded');
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    if(btnText) btnText.textContent = "Hide";
+                    
+                    // Rotate icon
+                    if(icon) {
+                        icon.classList.replace('ph-caret-down', 'ph-caret-up');
+                    }
+                }
+            }
+
+            // Navbar Scroll Effect
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('shadow-md');
+                    navbar.classList.remove('py-3', 'md:py-4'); 
+                    navbar.classList.add('py-2');
+                } else {
+                    if (!document.getElementById('mobile-menu').classList.contains('open')) {
+                        navbar.classList.remove('shadow-md');
+                        navbar.classList.add('py-3', 'md:py-4'); 
+                        navbar.classList.remove('py-2');
+                    }
+                }
+            });
+
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+
+            if(mobileMenuBtn && mobileMenu && menuIcon) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('open');
+                    if (mobileMenu.classList.contains('open')) {
+                        menuIcon.classList.replace('ph-list', 'ph-x');
+                    } else {
+                        menuIcon.classList.replace('ph-x', 'ph-list');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
