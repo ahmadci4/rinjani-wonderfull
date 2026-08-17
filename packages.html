@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rinjani Wonderfull | Epic Trekking Packages</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Discover our premium Mount Rinjani trekking packages. Choose from Sembalun, Senaru, or Torean routes for an unforgettable adventure in Lombok.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1862be', 
+                        primaryDark: '#124d96',
+                        secondary: '#f8fafc',
+                        textDark: '#1e293b',
+                        textGray: '#475569'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(30, 41, 59, 0.7), rgba(30, 41, 59, 0.8)), url('images/hero.jpg');
+            background-position: center; 
+            background-size: cover; 
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        /* Mobile Menu Transitions */
+        #mobile-menu {
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateX(100%);
+        }
+        #mobile-menu.open {
+            transform: translateX(0);
+        }
+
+        /* Floating Menu Transitions */
+        .chat-option {
+            opacity: 0;
+            transform: translateY(20px) scale(0.9);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            pointer-events: none;
+        }
+        .chat-menu-open .chat-option {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            pointer-events: auto;
+        }
+        .chat-menu-open .chat-option:nth-child(1) { transition-delay: 0.05s; }
+        .chat-menu-open .chat-option:nth-child(2) { transition-delay: 0.1s; }
+        .chat-menu-open .chat-option:nth-child(3) { transition-delay: 0.15s; }
+        .chat-menu-open .chat-option:nth-child(4) { transition-delay: 0.2s; }
+        .chat-menu-open .chat-option:nth-child(5) { transition-delay: 0.25s; }
+
+        .line-clamp-3 {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;  
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="font-sans text-textGray bg-gray-50 antialiased relative overflow-x-hidden">
+
+    <!-- Floating Multi-Contact Menu -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
+        <!-- Menu Items -->
+        <div id="chat-menu" class="flex flex-col gap-3 mb-2">
+            <a href="https://tiktok.com/@rinjaniwonderfull" target="_blank" class="chat-option flex items-center justify-center w-12 h-12 bg-black text-white rounded-full shadow-lg hover:scale-110 hover:bg-gray-800 transition-transform">
+                <i class="ph-fill ph-tiktok-logo text-2xl"></i>
+            </a>
+            <a href="https://instagram.com/rinjaniwonderfull" target="_blank" class="chat-option flex items-center justify-center w-12 h-12 bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white rounded-full shadow-lg hover:scale-110 transition-transform">
+                <i class="ph-fill ph-instagram-logo text-2xl"></i>
+            </a>
+            <a href="mailto:rinjaniwonderfull@gmail.com" class="chat-option flex items-center justify-center w-12 h-12 bg-[#EA4335] text-white rounded-full shadow-lg hover:scale-110 hover:bg-[#d33c2f] transition-transform">
+                <i class="ph-fill ph-envelope-simple text-2xl"></i>
+            </a>
+            <a href="#" class="chat-option flex items-center justify-center w-12 h-12 bg-[#09B83E] text-white rounded-full shadow-lg hover:scale-110 transition-transform">
+                <i class="ph-fill ph-wechat-logo text-2xl"></i>
+            </a>
+            <a href="https://wa.me/6285929141746?text=Hello%20Rinjani%20Wonderfull,%20I%20would%20like%20to%20plan%20my%20adventure!" target="_blank" class="chat-option flex items-center justify-center w-12 h-12 bg-[#25D366] text-white rounded-full shadow-lg hover:scale-110 hover:bg-[#1ebe5d] transition-transform">
+                <i class="ph-fill ph-whatsapp-logo text-2xl"></i>
+            </a>
+        </div>
+        
+        <!-- Main Toggle Button -->
+        <button id="chat-toggle" class="flex items-center justify-center w-14 h-14 bg-primary text-white rounded-full shadow-2xl hover:bg-primaryDark transition-all duration-300 hover:shadow-primary/50 group">
+            <i id="chat-icon" class="ph-fill ph-chat-teardrop-dots text-3xl group-hover:scale-110 transition-transform duration-300"></i>
+        </button>
+    </div>
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full z-40 transition-all duration-300 bg-white shadow-sm py-2" id="navbar">
+        <div class="container mx-auto px-4 lg:px-12">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <a href="index.html" class="flex-shrink-0 z-50 py-2">
+                    <img src="images/logo.jpg" alt="Rinjani Wonderfull" class="h-12 w-auto object-contain onerror='this.style.display=\"none\";'">
+                    <div class="font-bold text-2xl text-textDark tracking-tight" style="display: none;">RINJANI<br><span class="text-xs font-normal tracking-widest text-textGray">WONDERFULL</span></div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden lg:flex items-center gap-8 text-textDark font-medium text-sm">
+                    <a href="index.html" class="hover:text-primary transition-colors pb-1">HOME</a>
+                    <a href="packages.html" class="text-primary font-bold border-b-2 border-primary pb-1">PACKAGES</a>
+                    <a href="blog.html" class="hover:text-primary transition-colors pb-1">BLOG</a>
+                    <a href="index.html#about" class="hover:text-primary transition-colors pb-1">ABOUT</a>
+                    <a href="index.html#contact" class="hover:text-primary transition-colors pb-1">BOOK NOW</a>
+                </nav>
+                
+                <!-- Desktop Actions -->
+                <div class="hidden lg:flex items-center">
+                    <a href="index.html#contact" class="bg-primary text-white px-6 py-2.5 rounded hover:bg-primaryDark transition-all text-sm font-semibold tracking-wide shadow-md">EXPLORE RINJANI</a>
+                </div>
+
+                <!-- Mobile Hamburger -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-textDark z-50 p-2">
+                        <i class="ph ph-list text-3xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-30 lg:hidden flex flex-col justify-center items-center pt-20">
+        <nav class="flex flex-col items-center gap-6 text-textDark font-medium text-xl w-full px-6">
+            <a href="index.html" class="mobile-link hover:text-primary transition-colors py-2 border-b border-gray-100 w-full text-center">Home</a>
+            <a href="packages.html" class="mobile-link text-primary font-bold py-2 border-b border-gray-100 w-full text-center">Packages</a>
+            <a href="blog.html" class="mobile-link hover:text-primary transition-colors py-2 border-b border-gray-100 w-full text-center">Blog</a>
+            <a href="index.html#about" class="mobile-link hover:text-primary transition-colors py-2 border-b border-gray-100 w-full text-center">About</a>
+            <a href="index.html#contact" class="mobile-link bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-primaryDark transition-all shadow-md mt-6">Book Now</a>
+        </nav>
+    </div>
+    
+    <!-- HERO SECTION -->
+    <section class="relative pt-32 pb-20 min-h-[50vh] flex items-center mt-[20px] hero-bg">
+        <div class="container mx-auto px-4 lg:px-12 relative z-20 text-center">
+            <h2 class="text-primary font-bold tracking-widest uppercase text-sm mb-4">Curated Expeditions</h2>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+                Choose Your <span class="text-primary">Epic Adventure</span>
+            </h1>
+            <p class="text-base md:text-lg text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Whether you seek the adrenaline of reaching the summit, the tranquility of the crater lake, or the rich culture of the valleys, our masterfully crafted packages guarantee an experience of a lifetime.
+            </p>
+            
+            <!-- Quick Navigation Pills -->
+            <div class="flex flex-wrap justify-center gap-3">
+                <a href="#sembalun" class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-5 py-2 rounded-full hover:bg-primary hover:border-primary transition-all text-sm font-medium">Sembalun Route</a>
+                <a href="#senaru" class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-5 py-2 rounded-full hover:bg-primary hover:border-primary transition-all text-sm font-medium">Senaru Route</a>
+                <a href="#torean" class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-5 py-2 rounded-full hover:bg-primary hover:border-primary transition-all text-sm font-medium">Torean Route</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEMBALUN ROUTE -->
+    <section id="sembalun" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 lg:px-12">
+            <div class="mb-12 border-l-4 border-primary pl-6">
+                <h3 class="text-3xl md:text-4xl font-bold text-textDark mb-3">Sembalun Route</h3>
+                <p class="text-textGray max-w-3xl leading-relaxed">
+                    Famed as the "Path to the Summit," Sembalun begins in a high-altitude savanna. This route offers sweeping, dramatic landscapes and serves as the most direct, exhilarating ascent to the absolute peak of Mount Rinjani (3,726m).
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Package 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-2xl transition-all duration-300 group flex flex-col">
+                    <div class="relative h-64 bg-gray-200 overflow-hidden">
+                        <img src="images/sembalun-2d1nsummit.jpg" alt="Sembalun Summit 2D1N" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 flex flex-col gap-2">
+                            <span class="bg-primary text-white text-xs font-bold px-3 py-1.5 rounded uppercase tracking-wider shadow-md">2 Days 1 Night</span>
+                            <span class="bg-black/70 backdrop-blur-sm text-white text-[10px] font-bold px-3 py-1 rounded uppercase tracking-wider w-max">Challenging</span>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h4 class="text-xl font-bold text-textDark mb-3 leading-tight group-hover:text-primary transition-colors">Conquer the Peak Expedition</h4>
+                        <p class="text-sm text-textGray mb-6 flex-grow line-clamp-3">A fast-paced, exhilarating ascent designed for the bold. Push your limits and stand atop the 3,726m summit to witness a sunrise that crowns the Indonesian archipelago.</p>
+                        <a href="https://wa.me/6285929141746?text=Hello,%20I%20want%20to%20book%20the%20Sembalun%20Conquer%20the%20Peak%20(2D1N)%20package." target="_blank" class="flex items-center justify-center gap-2 w-full bg-gray-50 text-textDark border border-gray-200 hover:bg-[#25D366] hover:text-white hover:border-[#25D366] font-bold py-3 rounded transition-all text-sm">
+                            <i class="ph-bold ph-whatsapp-logo text-lg"></i> Book via WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Package 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-2xl transition-all duration-300 group flex flex-col">
+                    <div class="relative h-64 bg-gray-200 overflow-hidden">
+                        <img src="images/sembalun-3d2nsummit.jpg" alt="Sembalun 3D2N" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 flex flex-col gap-2">
+                            <span class="bg-primary text-white text-xs font-bold px-3 py-1.5 rounded uppercase tracking-wider shadow-md">3 Days 2 Nights</span>
+                            <span class="bg-black/70 backdrop-blur-sm text-white text-[10px] font-bold px-3 py-1 rounded uppercase tracking-wider w-max">Strenuous</span>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h4 class="text-xl font-bold text-textDark mb-3 leading-tight group-hover:text-primary transition-colors">The Classic Summit Journey</h4>
+                        <p class="text-sm text-textGray mb-6 flex-grow line-clamp-3">Experience the full glory of Rinjani. Reach the absolute peak, then descend into the mystical crater to marvel at the turquoise Segara Anak Lake and rejuvenate in natural hot springs.</p>
+                        <a href="https://wa.me/6285929141746?text=Hello,%20I%20want%20to%20book%20the%20Sembalun%20Classic%20Summit%20(3D2N)%20package." target="_blank" class="flex items-center justify-center gap-2 w-full bg-gray-50 text-textDark border border-gray-200 hover:bg-[#25D366] hover:text-white hover:border-[#25D366] font-bold py-3 rounded transition-all text-sm">
+                            <i class="ph-bold ph-whatsapp-logo text-lg"></i> Book via WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Package 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-2xl transition-all duration-300 group flex flex-col">
+                    <div class="relative h-64 bg-gray-200 overflow-hidden">
+                        <img src="images/sembalun-4d3nsummit.jpg" alt="Sembalun 4D3N" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 flex flex-col gap-2">
+                            <span class="bg-primary text-white text-xs font-bold px-3 py-1.5 rounded uppercase tracking-wider shadow-md">4 Days 3 Nights</span>
+                            <span class="bg-black/70 backdrop-blur-sm text-white text-[10px] font-bold px-3 py-1 rounded uppercase tracking-wider w-max">Moderate</span>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h4 class="text-xl font-bold text-textDark mb-3 leading-tight group-hover:text-primary transition-colors">The Ultimate Odyssey</h4>
+                        <p class="text-sm text-textGray mb-6 flex-grow line-clamp-3">A comprehensive, unhurried expedition across Rinjani's diverse terrains. Offering maximum immersion, this route allows your body to acclimatize perfectly for the grand summit push.</p>
+                        <a href="https://wa.me/6285929141746?text=Hello,%20I%20want%20to%20book%20the%20Sembalun%20Ultimate%20Odyssey%20(4D3N)%20package." target="_blank" class="flex items-center justify-center gap-2 w-full bg-gray-50 text-textDark border border-gray-200 hover:bg-[#25D366] hover:text-white hover:border-[#25D366] font-bold py-3 rounded transition-all text-sm">
+                            <i class="ph-bold ph-whatsapp-logo text-lg"></i> Book via WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Package 4 (Cultural) -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-2xl transition-all duration-300 group flex flex-col relative">
+                    <div class="absolute top-0 right-0 bg-yellow-400 text-textDark text-[10px] font-bold px-3 py-1.5 rounded-bl-xl z-10 uppercase tracking-widest shadow-md">Nature Walk</div>
+                    <div class="relative h-64 bg-gray-200 overflow-hidden">
+                        <img src="images/sembalun-panorama-walk.jpg" alt="Sembalun Panorama Walk" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 flex flex-col gap-2">
+                            <span class="bg-primary text-white text-xs font-bold px-3 py-1.5 rounded uppercase tracking-wider shadow-md">Half / Full Day</span>
+                            <span class="bg-black/70 backdrop-blur-sm text-white text-[10px] font-bold px-3 py-1 rounded uppercase tracking-wider w-max">Relaxed</span>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h4 class="text-xl font-bold text-textDark mb-3 leading-tight group-hover:text-primary transition-colors">Valley of Wonders (Panorama Walk)</h4>
+                        <p class="text-sm text-textGray mb-6 flex-grow line-clamp-3">Immerse yourself in the breathtaking foothills. Stroll through vibrant strawberry plantations, sweeping savannas, and connect with the heart of local agricultural life without the strenuous climb.</p>
+                        <a href="https://wa.me/6285929141746?text=Hello,%20I%20want%20to%20book%20the%20Sembalun%20Panorama%20Walk%20package." target="_blank" class="flex items-center justify-center gap-2 w-full bg-gray-50 text-textDark border border-gray-200 hover:bg-[#25D366] hover:text-white hover:border-[#25D366] font-bold py-3 rounded transition-all text-sm">
+                            <i class="ph-bold ph-whatsapp-logo text-lg"></i> Book via WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SENARU ROUTE -->
+    <section id="senaru" class="py-20 bg-white border-t border-gray-100">
+        <div class="container mx-auto px-4 lg:px-12">
+            <div class="mb-12 border-l-4 border-primary pl-6">
+                <h3 class="text-3xl md:text-4xl font-bold text-textDark mb-3">Senaru Route</h3>
+                <p class="text-textGray max-w-3xl leading-relaxed">
+                    Celebrated as the "Green Canopy," Senaru guides you through lush, ancient rainforests and captivating waterfalls. It is the perfect gateway for striking sunset views over the crater rim and deep cultural encounters.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Package 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-2xl transition-all duration-300 group flex flex-col">
+                    <div class="relative h-64 bg-gray-200 overflow-hidden">
+                        <img src="images/senaru-2d1ncrater.jpg" alt="Senaru 2D1N" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 flex flex-col gap-2">
+                            <span class="bg-primary text-white text-xs font-bold px-3 py-1.5 rounded uppercase tracking-wider shadow-md">2 Days 1 Night</span>
+                            <span class="bg-black/70 backdrop-blur-sm text-white text-[10px] font-bold px-3 py-1 rounded uppercase tracking-wider w-max">Moderate</span>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h4 class="text-xl font-bold text-textDark mb-3 group-hover:text-primary transition-colors">Sunset Above the Clouds</h4>
+                        <p class="text-sm text-textGray mb-6 flex-grow line-clamp-3">A magical, highly rewarding trek for those short on time. Ascend through emerald rainforests to the Senaru Crater Rim and be gifted with a legendary, unobstructed sunset view overlooking the majestic lake.</p>
+                        <a href="https://wa.me/6285929141746?text=Hello,%20I%20want%20to%20book%20the%20Senaru%20Crater%20Rim%20(2D1N)%20package." target="_blank" class="flex items-center justify-center gap-2 w-full bg-gray-50 text-textDark border border-gray-200 hover:bg-[#25D366] hover:text-white hover:border-[#25D366] font-bold py-3 rounded transition-all text-sm">
+                            <i class="ph-bold ph-whatsapp-logo text-lg"></i> Book via WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Package 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-2xl transition-all duration-300 group flex flex-col">
+                    <div class="relative h-64 bg-gray-200 overflow-hidden">
+                        <img src="images/senaru-4d3nsummit.jpg" alt="Senaru 4D3N" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 flex flex-col gap-2">
+                            <span class="bg-primary text-white text-xs font-bold px-3 py-1.5 rounded uppercase tracking-wider shadow-md">4 Days 3 Nights</span>
+                            <span class="bg-black/70 backdrop-blur-sm text-white text-[10px] font-bold px-3 py-1 rounded uppercase tracking-wider w-max">Challenging</span>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h4 class="text-xl font-bold text-textDark mb-3 group-hover:text-primary transition-colors">The Green Route to Glory</h4>
+                        <p class="text-sm text-textGray mb-6 flex-grow line-clamp-3">Begin in the cool, shaded canopies of Senaru, traverse the crater lake, and make a triumphant push for the summit. A beautifully balanced expedition combining vibrant flora with high-altitude majesty.</p>
+                        <a href="https://wa.me/6285929141746?text=Hello,%20I%20want%20to%20book%20the%20Senaru%20Summit%20(4D3N)%20package." target="_blank" class="flex items-center justify-center gap-2 w-full bg-gray-50 text-textDark border border-gray-200 hover:bg-[#25D366] hover:text-white hover:border-[#25D366] font-bold py-3 rounded transition-all text-sm">
+                            <i class="ph-bold ph-whatsapp-logo text-lg"></i> Book via WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Package 3 (Cultural) -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-2xl transition-all duration-300 group flex flex-col relative">
+                    <div class="absolute top-0 right-0 bg-yellow-400 text-textDark text-[10px] font-bold px-3 py-1.5 rounded-bl-xl z-10 uppercase tracking-widest shadow-md">Culture & Nature</div>
+                    <div class="relative h-64 bg-gray-200 overflow-hidden">
+                        <img src="images/bayan-panorama-walk.jpg" alt="Bayan Panorama Walk" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 flex flex-col gap-2">
+                            <span class="bg-primary text-white text-xs font-bold px-3 py-1.5 rounded uppercase tracking-wider shadow-md">1 Day Tour</span>
+                            <span class="bg-black/70 backdrop-blur-sm text-white text-[10px] font-bold px-3 py-1 rounded uppercase tracking-wider w-max">Relaxed</span>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h4 class="text-xl font-bold text-textDark mb-3 group-hover:text-primary transition-colors">Echoes of Bayan (Panorama Walk)</h4>
+                        <p class="text-sm text-textGray mb-6 flex-grow line-clamp-3">Step into the rich heritage of Bayan. Walk through terraced rice fields, uncover local cultural arts, and witness the raw power of the roaring Sindang Gile and Tiu Kelep waterfalls.</p>
+                        <a href="https://wa.me/6285929141746?text=Hello,%20I%20want%20to%20book%20the%20Bayan%20Panorama%20Walk%20package." target="_blank" class="flex items-center justify-center gap-2 w-full bg-gray-50 text-textDark border border-gray-200 hover:bg-[#25D366] hover:text-white hover:border-[#25D366] font-bold py-3 rounded transition-all text-sm">
+                            <i class="ph-bold ph-whatsapp-logo text-lg"></i> Book via WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TOREAN ROUTE -->
+    <section id="torean" class="py-20 bg-gray-50 border-t border-gray-200">
+        <div class="container mx-auto px-4 lg:px-12">
+            <div class="mb-12 border-l-4 border-primary pl-6">
+                <h3 class="text-3xl md:text-4xl font-bold text-textDark mb-3">Torean Route</h3>
+                <p class="text-textGray max-w-3xl leading-relaxed">
+                    Widely acclaimed as the most dramatic and visually stunning trail. Torean is a journey into a mystical world, defined by towering vertical canyons, cascading rivers, and therapeutic natural hot springs.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Package 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-2xl transition-all duration-300 group flex flex-col">
+                    <div class="relative h-64 bg-gray-200 overflow-hidden">
+                        <img src="images/torean-3d2nlake.jpg" alt="Torean 3D2N" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 flex flex-col gap-2">
+                            <span class="bg-primary text-white text-xs font-bold px-3 py-1.5 rounded uppercase tracking-wider shadow-md">3 Days 2 Nights</span>
+                            <span class="bg-black/70 backdrop-blur-sm text-white text-[10px] font-bold px-3 py-1 rounded uppercase tracking-wider w-max">Moderate</span>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h4 class="text-xl font-bold text-textDark mb-3 group-hover:text-primary transition-colors">The Hidden Canyon Escape</h4>
+                        <p class="text-sm text-textGray mb-6 flex-grow line-clamp-3">Bypass the grueling summit push and dive straight into nature's spa. Trek through breathtaking Jurassic Park-like gorges to soak in therapeutic hot springs beside the mesmerizing crater lake.</p>
+                        <a href="https://wa.me/6285929141746?text=Hello,%20I%20want%20to%20book%20the%20Torean%20Lake%20&%20Hot%20Spring%20(3D2N)%20package." target="_blank" class="flex items-center justify-center gap-2 w-full bg-gray-50 text-textDark border border-gray-200 hover:bg-[#25D366] hover:text-white hover:border-[#25D366] font-bold py-3 rounded transition-all text-sm">
+                            <i class="ph-bold ph-whatsapp-logo text-lg"></i> Book via WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Package 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-2xl transition-all duration-300 group flex flex-col">
+                    <div class="relative h-64 bg-gray-200 overflow-hidden">
+                        <img src="images/torean-3d2nsummit.jpg" alt="Torean Summit 3D" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 flex flex-col gap-2">
+                            <span class="bg-primary text-white text-xs font-bold px-3 py-1.5 rounded uppercase tracking-wider shadow-md">3 Days 2 Nights</span>
+                            <span class="bg-black/70 backdrop-blur-sm text-white text-[10px] font-bold px-3 py-1 rounded uppercase tracking-wider w-max">Strenuous</span>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h4 class="text-xl font-bold text-textDark mb-3 group-hover:text-primary transition-colors">Fast-Track Grandeur</h4>
+                        <p class="text-sm text-textGray mb-6 flex-grow line-clamp-3">A highly efficient, adrenaline-pumping route. Combine the high-altitude thrill of conquering the summit from Sembalun with a fast, dramatic descent through the stunning vertical cliffs of Torean.</p>
+                        <a href="https://wa.me/6285929141746?text=Hello,%20I%20want%20to%20book%20the%20Torean%20Fast-Track%20Summit%20(3D2N)%20package." target="_blank" class="flex items-center justify-center gap-2 w-full bg-gray-50 text-textDark border border-gray-200 hover:bg-[#25D366] hover:text-white hover:border-[#25D366] font-bold py-3 rounded transition-all text-sm">
+                            <i class="ph-bold ph-whatsapp-logo text-lg"></i> Book via WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Package 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-2xl transition-all duration-300 group flex flex-col relative">
+                    <div class="absolute top-0 right-0 bg-yellow-400 text-textDark text-[10px] font-bold px-3 py-1.5 rounded-bl-xl z-10 uppercase tracking-widest shadow-md">Highly Rated</div>
+                    <div class="relative h-64 bg-gray-200 overflow-hidden">
+                        <img src="images/torean-4d3nsummit.jpg" alt="Torean Summit 4D" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 flex flex-col gap-2">
+                            <span class="bg-primary text-white text-xs font-bold px-3 py-1.5 rounded uppercase tracking-wider shadow-md">4 Days 3 Nights</span>
+                            <span class="bg-black/70 backdrop-blur-sm text-white text-[10px] font-bold px-3 py-1 rounded uppercase tracking-wider w-max">Challenging</span>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h4 class="text-xl font-bold text-textDark mb-3 group-hover:text-primary transition-colors">The Masterpiece Trail</h4>
+                        <p class="text-sm text-textGray mb-6 flex-grow line-clamp-3">Our crown jewel expedition. Summit the majestic peak and take your time absorbing the sheer beauty of the descent through the breathtaking, waterfall-laden valley of Torean. Perfection in pacing and scenery.</p>
+                        <a href="https://wa.me/6285929141746?text=Hello,%20I%20want%20to%20book%20the%20Torean%20Masterpiece%20Summit%20(4D3N)%20package." target="_blank" class="flex items-center justify-center gap-2 w-full bg-gray-50 text-textDark border border-gray-200 hover:bg-[#25D366] hover:text-white hover:border-[#25D366] font-bold py-3 rounded transition-all text-sm">
+                            <i class="ph-bold ph-whatsapp-logo text-lg"></i> Book via WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-textDark text-white pt-10 pb-6 border-t border-gray-800">
+        <div class="container mx-auto px-4 lg:px-12">
+            <div class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 gap-4">
+                <div class="font-bold text-xl text-white tracking-tight">RINJANI<span class="text-xs font-normal tracking-widest text-gray-400">WONDERFULL</span></div>
+                <div class="text-center">&copy; 2026 Rinjani Wonderfull. All rights reserved.</div>
+                <div class="flex justify-center items-center gap-6">
+                    <a href="#" class="hover:text-white transition-colors"><i class="ph-fill ph-facebook-logo text-2xl"></i></a>
+                    <a href="https://instagram.com/rinjaniwonderfull" target="_blank" class="hover:text-white transition-colors"><i class="ph-fill ph-instagram-logo text-2xl"></i></a>
+                    <a href="https://tiktok.com/@rinjaniwonderfull" target="_blank" class="hover:text-white transition-colors"><i class="ph-fill ph-tiktok-logo text-2xl"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Menu Toggle (Hamburger)
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            if(mobileMenuBtn && mobileMenu && menuIcon) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('open');
+                    if (mobileMenu.classList.contains('open')) {
+                        menuIcon.classList.replace('ph-list', 'ph-x');
+                    } else {
+                        menuIcon.classList.replace('ph-x', 'ph-list');
+                    }
+                });
+
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.remove('open');
+                        menuIcon.classList.replace('ph-x', 'ph-list');
+                    });
+                });
+            }
+
+            // Floating Chat Menu
+            const chatToggleBtn = document.getElementById('chat-toggle');
+            const chatMenu = document.getElementById('chat-menu');
+            const chatIcon = document.getElementById('chat-icon');
+
+            if(chatToggleBtn && chatMenu && chatIcon) {
+                chatToggleBtn.addEventListener('click', () => {
+                    chatMenu.classList.toggle('chat-menu-open');
+                    if (chatMenu.classList.contains('chat-menu-open')) {
+                        chatIcon.classList.replace('ph-chat-teardrop-dots', 'ph-x');
+                    } else {
+                        chatIcon.classList.replace('ph-x', 'ph-chat-teardrop-dots');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
