@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rinjani Wonderfull | Trekking Packages & Lombok Cultural Tours</title>
+    <title>Rinjani Wonderfull | Premium Mount Rinjani Trekking & Expeditions</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Official Mount Rinjani trekking agency and Lombok Island tour operator. Explore Sembalun, Sade traditional village, Bayan ancient mosque, and exotic beaches.">
-    <meta name="keywords" content="Rinjani Trekking, Lombok Tour, Lombok Traditional Village, Sembalun, Rinjani Wonderfull">
+    <meta name="description" content="Embark on a journey of a lifetime. Official Mount Rinjani trekking agency offering premium expeditions via Sembalun, Senaru, and the majestic Torean route.">
+    <meta name="keywords" content="Rinjani Trekking, Mount Rinjani Summit, Sembalun Route, Senaru Route, Torean Route, Lombok Tour">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,69 +39,117 @@
         }
     </script>
     <style>
-        .shape-divider-bottom {
-            position: absolute; bottom: 0; left: 0; width: 100%; overflow: hidden; line-height: 0; transform: rotate(180deg);
-        }
-        .shape-divider-bottom svg { position: relative; display: block; width: calc(100% + 1.3px); height: 60px; }
-        .shape-divider-bottom .shape-fill { fill: #f8fafc; }
         .hero-bg {
             background-color: #135c5b;
-            background-image: linear-gradient(to bottom, rgba(14, 68, 67, 0.3), rgba(14, 68, 67, 0.7)), url('images/pelawangan-senaru.jpeg');
-            background-position: center; background-size: cover; background-repeat: no-repeat;
+            background-image: linear-gradient(to bottom, rgba(14, 68, 67, 0.4), rgba(19, 92, 91, 0.8)), url('https://images.unsplash.com/photo-1559059698-1e4ce4e8925d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+            background-position: center; 
+            background-size: cover; 
+            background-repeat: no-repeat;
+            background-attachment: fixed;
         }
         
         /* Mobile Menu Transitions */
         #mobile-menu {
-            transition: transform 0.3s ease-in-out;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             transform: translateX(100%);
         }
         #mobile-menu.open {
             transform: translateX(0);
         }
-        
-        /* Hiding scrollbars for horizontally scrolling containers (like the mobile hero widget) */
-        .hide-scrollbar::-webkit-scrollbar { display: none; }
-        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* Floating Menu Transitions */
+        .chat-option {
+            opacity: 0;
+            transform: translateY(20px) scale(0.9);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            pointer-events: none;
+        }
+        .chat-menu-open .chat-option {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            pointer-events: auto;
+        }
+        /* Staggered animation delays for chat menu */
+        .chat-menu-open .chat-option:nth-child(1) { transition-delay: 0.05s; }
+        .chat-menu-open .chat-option:nth-child(2) { transition-delay: 0.1s; }
+        .chat-menu-open .chat-option:nth-child(3) { transition-delay: 0.15s; }
+        .chat-menu-open .chat-option:nth-child(4) { transition-delay: 0.2s; }
+        .chat-menu-open .chat-option:nth-child(5) { transition-delay: 0.25s; }
+
+        .line-clamp-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;  
+            overflow: hidden;
+        }
     </style>
 </head>
 <body class="font-sans text-gray-700 bg-lightBg antialiased relative overflow-x-hidden">
 
-    <!-- Floating WhatsApp -->
-    <a href="https://wa.me/6281770570669?text=Hello%20Rinjani%20Wonderfull,%20I%20would%20like%20to%20ask%20about%20your%20tour%20packages" target="_blank" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:bg-[#1ebe5d] transition-all hover:-translate-y-1 group">
-        <i class="ph-fill ph-whatsapp-logo text-3xl"></i>
-    </a>
+    <!-- Floating Multi-Contact Menu -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
+        <!-- Menu Items (Hidden by default) -->
+        <div id="chat-menu" class="flex flex-col gap-3 mb-2">
+            <!-- TikTok -->
+            <a href="https://tiktok.com/@rinjaniwonderfull" target="_blank" class="chat-option flex items-center justify-center w-12 h-12 bg-black text-white rounded-full shadow-lg hover:scale-110 hover:bg-gray-800 transition-transform">
+                <i class="ph-fill ph-tiktok-logo text-2xl"></i>
+            </a>
+            <!-- WeChat -->
+            <a href="#" target="_blank" class="chat-option flex items-center justify-center w-12 h-12 bg-[#07C160] text-white rounded-full shadow-lg hover:scale-110 hover:bg-[#06ad56] transition-transform" title="WeChat ID: rinjaniwonderfull">
+                <i class="ph-fill ph-wechat-logo text-2xl"></i>
+            </a>
+            <!-- Instagram -->
+            <a href="https://instagram.com/rinjaniwonderfull" target="_blank" class="chat-option flex items-center justify-center w-12 h-12 bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white rounded-full shadow-lg hover:scale-110 transition-transform">
+                <i class="ph-fill ph-instagram-logo text-2xl"></i>
+            </a>
+            <!-- Email -->
+            <a href="mailto:rinjaniwonderfull@gmail.com" class="chat-option flex items-center justify-center w-12 h-12 bg-[#EA4335] text-white rounded-full shadow-lg hover:scale-110 hover:bg-[#d33c2f] transition-transform">
+                <i class="ph-fill ph-envelope-simple text-2xl"></i>
+            </a>
+            <!-- WhatsApp -->
+            <a href="https://wa.me/6281770570669?text=Hello%20Rinjani%20Wonderfull,%20I%20would%20like%20to%20plan%20my%20adventure!" target="_blank" class="chat-option flex items-center justify-center w-12 h-12 bg-[#25D366] text-white rounded-full shadow-lg hover:scale-110 hover:bg-[#1ebe5d] transition-transform">
+                <i class="ph-fill ph-whatsapp-logo text-2xl"></i>
+            </a>
+        </div>
+        
+        <!-- Main Toggle Button -->
+        <button id="chat-toggle" class="flex items-center justify-center w-14 h-14 bg-primary text-white rounded-full shadow-2xl hover:bg-primaryDark transition-all duration-300 hover:shadow-primary/50 group">
+            <i id="chat-icon" class="ph-fill ph-chat-teardrop-dots text-3xl group-hover:scale-110 transition-transform duration-300"></i>
+        </button>
+    </div>
 
     <!-- Header -->
-    <header class="fixed top-0 left-0 w-full z-40 transition-all duration-300 bg-white shadow-sm" id="navbar">
+    <header class="fixed top-0 left-0 w-full z-40 transition-all duration-300 bg-white/95 backdrop-blur-md shadow-sm" id="navbar">
         <div class="container mx-auto px-4 md:px-8">
             <div class="flex items-center justify-between py-3 md:py-4">
-                <!-- Mobile Hamburger (Kiri) -->
+                <!-- Mobile Hamburger -->
                 <div class="lg:hidden w-10">
                     <button id="mobile-menu-btn" class="text-gray-900 z-50 p-2 -ml-2">
                         <i class="ph ph-list text-3xl" id="menu-icon"></i>
                     </button>
                 </div>
 
-                <!-- Logo (Tengah di Mobile, Kiri di Desktop) -->
+                <!-- Logo -->
                 <a href="index.html" class="flex-1 lg:flex-none flex justify-center lg:justify-start z-50">
-                    <img src="images/rinjaniwonderfull-logo.png" alt="Rinjani Wonderfull Logo" class="h-16 md:h-24 w-auto object-contain">
+                    <!-- Using placeholder for logo to ensure it loads visually, replace with your actual logo image -->
+                    <div class="font-serif font-bold text-2xl text-primary tracking-tight">Rinjani<span class="text-secondary">Wonderfull</span></div>
                 </a>
 
-                <!-- Mobile Spacer (Kanan - untuk penyeimbang posisi tengah) -->
+                <!-- Mobile Spacer -->
                 <div class="lg:hidden w-10"></div>
                 
                 <!-- Desktop Nav -->
-                <nav class="hidden lg:flex items-center gap-8 text-gray-600 font-semibold text-xs tracking-wider">
+                <nav class="hidden lg:flex items-center gap-8 text-gray-700 font-semibold text-xs tracking-wider">
                     <a href="#home" class="text-primary border-b-2 border-primary pb-1">HOME</a>
-                    <a href="#trekking" class="hover:text-primary transition-colors pb-1">PACKAGES</a>
-                    <a href="#culture" class="hover:text-primary transition-colors pb-1">DESTINATION</a>
-                    <a href="itinerary.html" class="hover:text-primary transition-colors pb-1">EXPERIENCE</a>
+                    <a href="#routes" class="hover:text-primary transition-colors pb-1">TREKKING ROUTES</a>
+                    <a href="#transport" class="hover:text-primary transition-colors pb-1">TRANSPORT</a>
+                    <a href="#destinations" class="hover:text-primary transition-colors pb-1">DESTINATIONS</a>
                     <a href="#contact" class="hover:text-primary transition-colors pb-1">CONTACT</a>
                 </nav>
                 
                 <!-- Desktop Actions -->
                 <div class="hidden lg:flex items-center gap-4">
-                    <a href="#contact" class="bg-primary text-white px-6 py-2.5 rounded hover:bg-primaryDark transition-all shadow text-sm font-semibold tracking-wide">EXPLORE RINJANI</a>
+                    <a href="#routes" class="bg-primary text-white px-7 py-3 rounded-full hover:bg-primaryDark transition-all shadow-md text-sm font-semibold tracking-wide">BOOK YOUR TREK</a>
                 </div>
             </div>
         </div>
@@ -111,379 +159,307 @@
     <div id="mobile-menu" class="fixed inset-0 bg-white z-30 lg:hidden flex flex-col justify-center items-center pt-20">
         <nav class="flex flex-col items-center gap-6 text-gray-800 font-medium text-xl w-full px-6">
             <a href="#home" class="mobile-link hover:text-primary transition-colors py-2 border-b border-gray-100 w-full text-center">Home</a>
-            <a href="#trekking" class="mobile-link hover:text-primary transition-colors py-2 border-b border-gray-100 w-full text-center">Packages</a>
-            <a href="#culture" class="mobile-link hover:text-primary transition-colors py-2 border-b border-gray-100 w-full text-center">Destination</a>
-            <a href="itinerary.html" class="mobile-link hover:text-primary transition-colors py-2 border-b border-gray-100 w-full text-center">Experience</a>
-            <a href="#contact" class="mobile-link bg-primary text-white px-8 py-3 rounded font-semibold hover:bg-primaryDark transition-all shadow-md mt-6">Explore Rinjani</a>
+            <a href="#routes" class="mobile-link hover:text-primary transition-colors py-2 border-b border-gray-100 w-full text-center">Trekking Routes</a>
+            <a href="#transport" class="mobile-link hover:text-primary transition-colors py-2 border-b border-gray-100 w-full text-center">Transport</a>
+            <a href="#destinations" class="mobile-link hover:text-primary transition-colors py-2 border-b border-gray-100 w-full text-center">Destinations</a>
+            <a href="#contact" class="mobile-link bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-primaryDark transition-all shadow-md mt-6">Book Your Trek</a>
         </nav>
     </div>
     
-   <!-- HERO SECTION -->
-    <section id="home" class="relative pt-32 pb-16 md:pt-48 md:pb-32 bg-cover bg-center min-h-[85vh] flex items-center mt-[70px] md:mt-[20px]" style="background-image: url('images/pelawangan-senaru.jpeg');">
-        <!-- White Gradient Overlay for text readability -->
-        <div class="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent"></div>
+    <!-- HERO SECTION -->
+    <section id="home" class="relative pt-32 pb-16 md:pt-48 md:pb-32 hero-bg min-h-[90vh] flex items-center mt-[60px] md:mt-[20px]">
+        <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"></div>
         
         <!-- Main Content -->
         <div class="container mx-auto px-4 md:px-8 relative z-10 w-full">
-            <div class="max-w-2xl text-left">
-                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-sans font-bold text-gray-900 leading-tight mb-4">
-                    Discover the Beauty <br> of <span class="text-primary">Rinjani</span>
+            <div class="max-w-3xl text-left">
+                <span class="inline-block py-1 px-3 rounded-full bg-secondary/20 text-secondary border border-secondary/30 text-xs font-bold tracking-widest uppercase mb-4 backdrop-blur-sm">
+                    The Ultimate Expedition
+                </span>
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-white leading-tight mb-6">
+                    Conquer the Majestic <br> <span class="text-secondary">Mount Rinjani</span>
                 </h1>
-                <p class="text-sm sm:text-base md:text-lg text-gray-700 mb-8 max-w-lg leading-relaxed">
-                    Rinjani is more than a mountain, it's an unforgettable experience. Explore stunning nature, rich culture, and the warmth of Lombok.
+                <p class="text-sm sm:text-base md:text-lg text-gray-200 mb-10 max-w-xl leading-relaxed font-light">
+                    Elevate your soul and embark on a journey of a lifetime. Experience unparalleled vistas, lush ancient rainforests, and mystical crater lakes with Lombok's premier trekking experts.
                 </p>
-                <a href="#contact" class="inline-flex items-center gap-2 bg-primary text-white px-6 sm:px-8 py-3 rounded font-semibold text-sm sm:text-base hover:bg-primaryDark transition-all shadow-lg tracking-wide">
-                    EXPLORE NOW <i class="ph-bold ph-arrow-right"></i>
-                </a>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#routes" class="inline-flex items-center gap-2 bg-secondary text-white px-8 py-4 rounded-full font-bold text-sm sm:text-base hover:bg-secondaryHover transition-all shadow-lg hover:-translate-y-1">
+                        VIEW EXPEDITIONS <i class="ph-bold ph-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md text-white border border-white/30 px-8 py-4 rounded-full font-bold text-sm sm:text-base hover:bg-white/20 transition-all hover:-translate-y-1">
+                        TALK TO AN EXPERT
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- FEATURES BAR -->
-    <div class="w-full bg-white py-10 shadow-sm border-b border-gray-100">
+    <div class="w-full bg-white py-12 relative z-20 -mt-8 rounded-t-[40px] shadow-[0_-10px_40px_rgba(0,0,0,0.1)] border-b border-gray-100">
         <div class="container mx-auto px-4 md:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-            <!-- Feature 1 -->
             <div class="flex items-start gap-4">
-                <div class="text-primary text-4xl mt-1"><i class="ph ph-mountains"></i></div>
+                <div class="w-12 h-12 bg-primary/10 text-primary rounded-2xl flex items-center justify-center text-2xl shrink-0"><i class="ph-fill ph-mountains"></i></div>
                 <div>
-                    <h6 class="font-bold text-gray-900 text-base mb-1">Amazing Nature</h6>
-                    <p class="text-xs text-gray-500 leading-relaxed">Breathtaking landscapes and pristine natural beauty.</p>
+                    <h6 class="font-bold text-gray-900 text-base mb-1">Expert Local Guides</h6>
+                    <p class="text-xs text-gray-500 leading-relaxed">Certified professionals ensuring your absolute safety.</p>
                 </div>
             </div>
-            <!-- Feature 2 -->
             <div class="flex items-start gap-4">
-                <div class="text-primary text-4xl mt-1"><i class="ph ph-map-pin"></i></div>
+                <div class="w-12 h-12 bg-primary/10 text-primary rounded-2xl flex items-center justify-center text-2xl shrink-0"><i class="ph-fill ph-tent"></i></div>
                 <div>
-                    <h6 class="font-bold text-gray-900 text-base mb-1">Top Destinations</h6>
-                    <p class="text-xs text-gray-500 leading-relaxed">Explore the best spots around Mount Rinjani and Lombok.</p>
+                    <h6 class="font-bold text-gray-900 text-base mb-1">Premium Gear</h6>
+                    <p class="text-xs text-gray-500 leading-relaxed">Top-tier camping equipment for a comfortable rest.</p>
                 </div>
             </div>
-            <!-- Feature 3 -->
             <div class="flex items-start gap-4">
-                <div class="text-primary text-4xl mt-1"><i class="ph ph-camera"></i></div>
+                <div class="w-12 h-12 bg-primary/10 text-primary rounded-2xl flex items-center justify-center text-2xl shrink-0"><i class="ph-fill ph-bowl-food"></i></div>
                 <div>
-                    <h6 class="font-bold text-gray-900 text-base mb-1">Unforgettable Moments</h6>
-                    <p class="text-xs text-gray-500 leading-relaxed">Create memories that will last a lifetime.</p>
+                    <h6 class="font-bold text-gray-900 text-base mb-1">Nutritious Meals</h6>
+                    <p class="text-xs text-gray-500 leading-relaxed">Freshly cooked mountain cuisine by dedicated porters.</p>
                 </div>
             </div>
-            <!-- Feature 4 -->
             <div class="flex items-start gap-4">
-                <div class="text-primary text-4xl mt-1"><i class="ph ph-users"></i></div>
+                <div class="w-12 h-12 bg-primary/10 text-primary rounded-2xl flex items-center justify-center text-2xl shrink-0"><i class="ph-fill ph-leaf"></i></div>
                 <div>
-                    <h6 class="font-bold text-gray-900 text-base mb-1">Local Experiences</h6>
-                    <p class="text-xs text-gray-500 leading-relaxed">Discover local culture and warm hospitality.</p>
+                    <h6 class="font-bold text-gray-900 text-base mb-1">Eco-Friendly Trek</h6>
+                    <p class="text-xs text-gray-500 leading-relaxed">Committed to preserving the pristine beauty of Rinjani.</p>
                 </div>
             </div>
         </div>
     </div>
     
-    <!-- SECTION 1: RINJANI TREKKING PACKAGES -->
-    <section id="trekking" class="py-16 sm:py-20 relative bg-lightBg overflow-hidden">
+    <!-- TREKKING ROUTES SECTION -->
+    <section id="routes" class="py-20 bg-lightBg">
         <div class="container mx-auto px-4 md:px-8">
-            <div class="mb-10 sm:mb-12">
-                <h2 class="text-primary font-bold tracking-widest uppercase text-xs sm:text-sm mb-2">EXPLORE</h2>
-                <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
-                    <h3 class="text-3xl sm:text-4xl md:text-5xl font-sans font-bold text-gray-900">Popular Destinations</h3>
-                    <a href="itinerary.html" class="text-primary font-medium hover:underline flex items-center gap-2 text-sm sm:text-base">View All Destinations <i class="ph-bold ph-arrow-right"></i></a>
-                </div>
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-secondary font-bold tracking-widest uppercase text-sm mb-2">Choose Your Adventure</h2>
+                <h3 class="text-3xl md:text-5xl font-serif font-bold text-gray-900 mb-6">Signature Trekking Routes</h3>
+                <p class="text-base text-gray-600">Select the path that calls to you. Whether you seek the direct ascent to the absolute summit, a journey through lush rainforests, or an expedition through mystical canyons, we have the perfect itinerary.</p>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-<!-- ... existing code ... -->
-    <!-- COMBINED JAVASCRIPT -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Navbar Scroll Effect (Updated for white header)
-            const navbar = document.getElementById('navbar');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 50) {
-                    navbar.classList.add('shadow-md');
-                    navbar.classList.remove('py-3', 'md:py-4'); 
-                    navbar.classList.add('py-2');
-                } else {
-                    if (!document.getElementById('mobile-menu').classList.contains('open')) {
-                        navbar.classList.remove('shadow-md');
-                        navbar.classList.add('py-3', 'md:py-4'); 
-                        navbar.classList.remove('py-2');
-                    }
-                }
-            });
-
-            // Mobile Menu Toggle (Hamburger)
-            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const menuIcon = document.getElementById('menu-icon');
-            const mobileLinks = document.querySelectorAll('.mobile-link');
-
-            if(mobileMenuBtn && mobileMenu && menuIcon) {
-                mobileMenuBtn.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('open');
-                    
-                    if (mobileMenu.classList.contains('open')) {
-                        menuIcon.classList.replace('ph-list', 'ph-x');
-                    } else {
-                        menuIcon.classList.replace('ph-x', 'ph-list');
-                    }
-                });
-<!-- ... existing code ... -->
-```
-
-Dan ini adalah *diff* untuk file **itinerary.html** agar struktur warna & menunya selaras dengan homepage.
-
-```html:Rinjani Wonderfull - Itinerary:itinerary.html
-<!-- ... existing code ... -->
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#1565c0', // New Blue theme
-                        primaryDark: '#0f4a8f',
-                        secondary: '#f5a623',
-                        secondaryHover: '#e0951a',
-                        lightBg: '#f8fafc',
-                    },
-                    fontFamily: {
-                        sans: ['Poppins', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        /* Mobile Menu Transitions */
-<!-- ... existing code ... -->
-    <!-- Floating WhatsApp -->
-    <a href="https://wa.me/6287798277844?text=Hello%20Rinjani%20Wonderfull,%20I%20am%20interested%20in%20the%20trekking%20itinerary" target="_blank" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:bg-[#1ebe5d] transition-all hover:-translate-y-1 group">
-        <i class="ph-fill ph-whatsapp-logo text-3xl"></i>
-    </a>
-
-    <!-- Header -->
-    <header class="fixed top-0 left-0 w-full z-40 transition-all duration-300 bg-white shadow-sm" id="navbar">
-        <div class="container mx-auto px-4 md:px-8">
-            <div class="flex items-center justify-between py-3 md:py-4">
-                <!-- Mobile Hamburger (Kiri) -->
-                <div class="lg:hidden w-10">
-                    <button id="mobile-menu-btn" class="text-gray-900 z-50 p-2 -ml-2">
-                        <i class="ph ph-list text-3xl" id="menu-icon"></i>
-                    </button>
+            <!-- SEMBALUN ROUTE -->
+            <div class="mb-20">
+                <div class="flex items-center gap-4 mb-8">
+                    <h4 class="text-2xl md:text-3xl font-serif font-bold text-primary">1. Sembalun Route: <span class="text-gray-600 font-medium text-xl md:text-2xl">The Path to the Summit</span></h4>
+                    <div class="flex-grow h-px bg-gray-300"></div>
                 </div>
-
-                <!-- Logo (Tengah di Mobile, Kiri di Desktop) -->
-                <a href="index.html" class="flex-1 lg:flex-none flex justify-center lg:justify-start z-50">
-                    <img src="images/rinjaniwonderfull-logo.png" alt="Rinjani Wonderfull Logo" class="h-16 md:h-24 w-auto object-contain">
-                </a>
-
-                <!-- Mobile Spacer (Kanan) -->
-                <div class="lg:hidden w-10"></div>
+                <p class="text-gray-600 mb-8 max-w-4xl">Starting from a high-altitude plateau, the Sembalun route offers vast, sweeping landscapes of rolling savannas. Known as the most direct access to the absolute top (3,726m), it is the premier choice for hikers determined to conquer the summit.</p>
                 
-                <!-- Desktop Nav -->
-                <nav class="hidden lg:flex items-center gap-8 text-gray-600 font-semibold text-xs tracking-wider">
-                    <a href="index.html#home" class="hover:text-primary transition-colors pb-1">HOME</a>
-                    <a href="index.html#trekking" class="hover:text-primary transition-colors pb-1">PACKAGES</a>
-                    <a href="index.html#culture" class="hover:text-primary transition-colors pb-1">DESTINATION</a>
-                    <a href="#itinerary" class="text-primary border-b-2 border-primary pb-1">EXPERIENCE</a>
-                    <a href="index.html#contact" class="hover:text-primary transition-colors pb-1">CONTACT</a>
-                </nav>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Package 1 -->
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-100 group flex flex-col">
+                        <div class="relative h-48 overflow-hidden bg-gray-200">
+                            <img src="https://images.unsplash.com/photo-1522345091764-7e9c52cb93cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sembalun Summit 2D1N" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur text-primary text-xs font-bold px-3 py-1.5 rounded-full z-10"><i class="ph-fill ph-clock"></i> 2 Days 1 Night</div>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h5 class="text-lg font-bold text-gray-900 mb-2 leading-tight">Summit Express: Sembalun Route</h5>
+                            <p class="text-sm text-gray-500 mb-6 flex-grow">An adrenaline-pumping dash designed for fit hikers aiming purely for the majestic 3,726m peak.</p>
+                            <a href="https://trekkingmountrinjani.com/packages/mount-rinjani-2-days-and-1-night-summit-sembalun-route" target="_blank" class="block text-center w-full bg-primary/10 text-primary hover:bg-primary hover:text-white font-semibold py-3 rounded-xl transition-colors">View Details</a>
+                        </div>
+                    </div>
+                    <!-- Package 2 -->
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-100 group flex flex-col relative">
+                        <div class="absolute top-0 left-0 bg-secondary text-white text-xs font-bold px-4 py-1.5 rounded-br-xl z-20">MOST POPULAR</div>
+                        <div class="relative h-48 overflow-hidden bg-gray-200">
+                            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sembalun 4D3N" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur text-primary text-xs font-bold px-3 py-1.5 rounded-full z-10"><i class="ph-fill ph-clock"></i> 4 Days 3 Nights</div>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h5 class="text-lg font-bold text-gray-900 mb-2 leading-tight">The Grand Expedition: Sembalun to Senaru</h5>
+                            <p class="text-sm text-gray-500 mb-6 flex-grow">A relaxed, deeply immersive journey across the summit, crater lake, and lush emerald forests.</p>
+                            <a href="https://trekkingmountrinjani.com/packages/mount-rinjani-trekking-summit-4-days-sembalun-to-senaru" target="_blank" class="block text-center w-full bg-primary text-white hover:bg-primaryDark font-semibold py-3 rounded-xl transition-colors shadow-md">View Details</a>
+                        </div>
+                    </div>
+                    <!-- Package 3 -->
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-100 group flex flex-col">
+                        <div class="relative h-48 overflow-hidden bg-gray-200">
+                            <img src="https://images.unsplash.com/photo-1542224566-6e85f2e6772f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sembalun 3D2N" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur text-primary text-xs font-bold px-3 py-1.5 rounded-full z-10"><i class="ph-fill ph-clock"></i> 3 Days 2 Nights</div>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h5 class="text-lg font-bold text-gray-900 mb-2 leading-tight">Classic Traverse: Sembalun to Senaru</h5>
+                            <p class="text-sm text-gray-500 mb-6 flex-grow">Conquer the summit, rejuvenate in the natural hot springs, and descend through the ancient jungle.</p>
+                            <a href="https://trekkingmountrinjani.com/packages/mount-rinjani-trekking-summit-3-days-sembalun-to-senaru" target="_blank" class="block text-center w-full bg-primary/10 text-primary hover:bg-primary hover:text-white font-semibold py-3 rounded-xl transition-colors">View Details</a>
+                        </div>
+                    </div>
+                    <!-- Package 4 -->
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-100 group flex flex-col">
+                        <div class="relative h-48 overflow-hidden bg-gray-200">
+                            <img src="https://images.unsplash.com/photo-1516939884455-1445c8652f83?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sembalun Sharing Group" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur text-primary text-xs font-bold px-3 py-1.5 rounded-full z-10"><i class="ph-fill ph-users"></i> Sharing Group</div>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h5 class="text-lg font-bold text-gray-900 mb-2 leading-tight">Adventurers United: 3D2N Summit</h5>
+                            <p class="text-sm text-gray-500 mb-6 flex-grow">Join like-minded travelers from around the globe. Forge friendships and conquer the peak together.</p>
+                            <a href="https://trekkingmountrinjani.com/packages/3-days-and-2-nights-summit-sharing-group" target="_blank" class="block text-center w-full bg-primary/10 text-primary hover:bg-primary hover:text-white font-semibold py-3 rounded-xl transition-colors">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SENARU ROUTE -->
+            <div class="mb-20">
+                <div class="flex items-center gap-4 mb-8">
+                    <h4 class="text-2xl md:text-3xl font-serif font-bold text-primary">2. Senaru Route: <span class="text-gray-600 font-medium text-xl md:text-2xl">The Emerald Gateway</span></h4>
+                    <div class="flex-grow h-px bg-gray-300"></div>
+                </div>
+                <p class="text-gray-600 mb-8 max-w-4xl">Immerse yourself in the "Green Route". Let us lead you through a canopy of ancient, lush forests, cascading waterfalls, and vibrant cultural gems before arriving at the breathtaking Crater Rim.</p>
                 
-                <!-- Desktop Actions -->
-                <div class="hidden lg:flex items-center gap-4">
-                    <a href="index.html#contact" class="bg-primary text-white px-6 py-2.5 rounded hover:bg-primaryDark transition-all shadow text-sm font-semibold tracking-wide">EXPLORE RINJANI</a>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Package 1 -->
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-100 group flex flex-col">
+                        <div class="relative h-56 overflow-hidden bg-gray-200">
+                            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Senaru 4D3N" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur text-primary text-xs font-bold px-3 py-1.5 rounded-full z-10"><i class="ph-fill ph-clock"></i> 4 Days 3 Nights</div>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h5 class="text-xl font-bold text-gray-900 mb-2 leading-tight">The Forest Ascent: Senaru to Sembalun</h5>
+                            <p class="text-sm text-gray-500 mb-6 flex-grow">Begin your journey shrouded in nature's embrace. Trek from dense jungle up to the crater lake, and finally, conquer the summit.</p>
+                            <a href="https://trekkingmountrinjani.com/packages/mount-rinjani-trekking-summit-4-days-senaru-to-sembalun" target="_blank" class="block text-center w-full bg-primary/10 text-primary hover:bg-primary hover:text-white font-semibold py-3 rounded-xl transition-colors">Explore Itinerary</a>
+                        </div>
+                    </div>
+                    <!-- Package 2 -->
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-100 group flex flex-col">
+                        <div class="relative h-56 overflow-hidden bg-gray-200">
+                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Senaru 2D1N" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur text-primary text-xs font-bold px-3 py-1.5 rounded-full z-10"><i class="ph-fill ph-clock"></i> 2 Days 1 Night</div>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h5 class="text-xl font-bold text-gray-900 mb-2 leading-tight">Spectacular Crater Rim: Senaru Ascent</h5>
+                            <p class="text-sm text-gray-500 mb-6 flex-grow">The ultimate scenic escape. Hike through shaded forests to reach the crater edge for unparalleled sunset views over Segara Anak Lake.</p>
+                            <a href="https://trekkingmountrinjani.com/packages/mount-rinjani-2-days-and-1-night-to-senaru-crater-rim" target="_blank" class="block text-center w-full bg-primary/10 text-primary hover:bg-primary hover:text-white font-semibold py-3 rounded-xl transition-colors">Explore Itinerary</a>
+                        </div>
+                    </div>
+                    <!-- Package 3 -->
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-100 group flex flex-col">
+                        <div class="relative h-56 overflow-hidden bg-gray-200">
+                            <img src="https://images.unsplash.com/photo-1546811740-97061d4b68ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Senaru 1 Day Trek" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur text-primary text-xs font-bold px-3 py-1.5 rounded-full z-10"><i class="ph-fill ph-clock"></i> 1 Day Trek</div>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h5 class="text-xl font-bold text-gray-900 mb-2 leading-tight">The Waterfall Trail: Senaru to Torean</h5>
+                            <p class="text-sm text-gray-500 mb-6 flex-grow">A concentrated burst of natural beauty. Perfect for short visits, featuring stunning waterfalls and dense tropical foliage.</p>
+                            <a href="https://trekkingmountrinjani.com/packages/one-day-trek-senaru-to-torean" target="_blank" class="block text-center w-full bg-primary/10 text-primary hover:bg-primary hover:text-white font-semibold py-3 rounded-xl transition-colors">Explore Itinerary</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TOREAN ROUTE -->
+            <div>
+                <div class="flex items-center gap-4 mb-8">
+                    <h4 class="text-2xl md:text-3xl font-serif font-bold text-primary">3. Torean Route: <span class="text-gray-600 font-medium text-xl md:text-2xl">The Mythical Canyon</span></h4>
+                    <div class="flex-grow h-px bg-gray-300"></div>
+                </div>
+                <p class="text-gray-600 mb-8 max-w-4xl">Renowned for breathtaking vertical canyon cliffs, winding river streams, and hidden hot spring pathways. Often described as stepping into a prehistoric world, it offers Rinjani's most dramatic and visually stunning landscapes.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Package 1 -->
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-100 group flex flex-col">
+                        <div class="relative h-56 overflow-hidden bg-gray-200">
+                            <img src="https://images.unsplash.com/photo-1542204637-e81a34a123f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Torean 3D2N" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur text-primary text-xs font-bold px-3 py-1.5 rounded-full z-10"><i class="ph-fill ph-clock"></i> 3 Days 2 Nights</div>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h5 class="text-xl font-bold text-gray-900 mb-2 leading-tight">Mystical Lake & Hot Springs</h5>
+                            <p class="text-sm text-gray-500 mb-6 flex-grow">Wander the Senaru to Torean corridor. Focus entirely on the spiritual serenity of the crater lake and the healing thermal waters.</p>
+                            <a href="https://trekkingmountrinjani.com/packages/3-days-and-2-nights-lake-and-hot-spring-senaru-torean" target="_blank" class="block text-center w-full bg-primary/10 text-primary hover:bg-primary hover:text-white font-semibold py-3 rounded-xl transition-colors">Discover Magic</a>
+                        </div>
+                    </div>
+                    <!-- Package 2 -->
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-100 group flex flex-col relative">
+                        <div class="absolute top-0 right-0 bg-primaryDark text-white text-xs font-bold px-4 py-1.5 rounded-bl-xl z-20">EPIC SCENERY</div>
+                        <div class="relative h-56 overflow-hidden bg-gray-200">
+                            <img src="https://images.unsplash.com/photo-1518098268026-4e89f1a2cd8e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Torean 3D2N Summit" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute top-4 left-4 bg-white/90 backdrop-blur text-primary text-xs font-bold px-3 py-1.5 rounded-full z-10"><i class="ph-fill ph-clock"></i> 3 Days 2 Nights</div>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h5 class="text-xl font-bold text-gray-900 mb-2 leading-tight">Peak to Canyon: Sembalun to Torean</h5>
+                            <p class="text-sm text-gray-500 mb-6 flex-grow">Experience the stark contrast. Conquer the barren summit via Sembalun, then descend through Torean's lush, Jurassic-like gorge.</p>
+                            <a href="https://trekkingmountrinjani.com/packages/mount-rinjani-trekking-summit-3-days-sembalun-to-torean-route" target="_blank" class="block text-center w-full bg-primary/10 text-primary hover:bg-primary hover:text-white font-semibold py-3 rounded-xl transition-colors">Discover Magic</a>
+                        </div>
+                    </div>
+                    <!-- Package 3 -->
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-100 group flex flex-col">
+                        <div class="relative h-56 overflow-hidden bg-gray-200">
+                            <img src="https://images.unsplash.com/photo-1438786657495-640937046d18?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Torean 4D3N" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur text-primary text-xs font-bold px-3 py-1.5 rounded-full z-10"><i class="ph-fill ph-clock"></i> 4 Days 3 Nights</div>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h5 class="text-xl font-bold text-gray-900 mb-2 leading-tight">The Ultimate Journey: Sembalun to Torean</h5>
+                            <p class="text-sm text-gray-500 mb-6 flex-grow">A slow-paced, comprehensive immersion into Rinjani's diversity. Spend ample time at the lake before braving the canyon.</p>
+                            <a href="https://trekkingmountrinjani.com/packages/mount-rinjani-trekking-summit-4-days-sembalun-to-torean" target="_blank" class="block text-center w-full bg-primary/10 text-primary hover:bg-primary hover:text-white font-semibold py-3 rounded-xl transition-colors">Discover Magic</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </header>
-
-    <!-- Mobile Menu Overlay -->
-    <div id="mobile-menu" class="fixed inset-0 bg-white z-30 lg:hidden flex flex-col justify-center items-center pt-20">
-        <nav class="flex flex-col items-center gap-6 text-gray-800 font-medium text-xl w-full px-6">
-            <a href="index.html#home" class="mobile-link hover:text-primary transition-colors py-2 border-b border-gray-100 w-full text-center">Home</a>
-            <a href="index.html#trekking" class="mobile-link hover:text-primary transition-colors py-2 border-b border-gray-100 w-full text-center">Packages</a>
-            <a href="index.html#culture" class="mobile-link hover:text-primary transition-colors py-2 border-b border-gray-100 w-full text-center">Destination</a>
-            <a href="#itinerary" class="mobile-link text-primary py-2 border-b border-gray-100 w-full text-center">Experience</a>
-            <a href="index.html#contact" class="mobile-link bg-primary text-white px-8 py-3 rounded font-semibold hover:bg-primaryDark transition-all shadow-md mt-6">Explore Rinjani</a>
-        </nav>
-    </div>
-
-    <!-- Page Title -->
-    <section class="bg-primaryDark py-12 sm:py-20 text-center text-white relative mt-[70px] md:mt-[100px]">
-        <div class="container mx-auto px-4">
-            <h1 class="text-3xl sm:text-4xl md:text-5xl font-sans font-bold mb-3 sm:mb-4">Rinjani Travel Itinerary</h1>
-            <p class="text-sm sm:text-base text-gray-300 max-w-2xl mx-auto">Detailed day-by-day travel plans to ensure your trekking experience is structured, safe, and memorable.</p>
-        </div>
     </section>
 
-    <!-- ITINERARY CONTENT -->
-<!-- ... existing code ... -->
-    <!-- COMBINED JAVASCRIPT -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Navbar Scroll Effect
-            const navbar = document.getElementById('navbar');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 50) {
-                    navbar.classList.add('shadow-md');
-                    navbar.classList.remove('py-3', 'md:py-4'); 
-                    navbar.classList.add('py-2');
-                } else {
-                    navbar.classList.remove('shadow-md');
-                    navbar.classList.add('py-3', 'md:py-4'); 
-                    navbar.classList.remove('py-2');
-                }
-            });
-
-            // Mobile Menu Toggle (Hamburger)
-<!-- ... existing code ... -->
-    
-    <!-- SECTION 1: RINJANI TREKKING PACKAGES -->
-    <section id="trekking" class="py-16 sm:py-20 relative bg-lightBg overflow-hidden">
+    <!-- TRANSPORT SECTION -->
+    <section id="transport" class="py-16 md:py-24 bg-white relative overflow-hidden">
         <div class="container mx-auto px-4 md:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 sm:mb-12 gap-4">
-                <div class="max-w-2xl">
-                    <h2 class="text-secondary font-bold tracking-widest uppercase text-xs sm:text-sm mb-2">Conquer The Summit</h2>
-                    <h3 class="text-2xl sm:text-3xl md:text-5xl font-serif font-bold text-primary mb-3 sm:mb-4">Rinjani Trekking Packages</h3>
-                    <p class="text-sm sm:text-base text-gray-500">Choose a trekking package that suits your time and physical endurance. We provide VIP standard equipment, nutritious meals, and premium tents.</p>
-                </div>
-                <div>
-                    <a href="itinerary.html" class="text-primary font-bold hover:text-secondary flex items-center gap-2 text-sm sm:text-base">View Detailed Itinerary <i class="ph-bold ph-arrow-right"></i></a>
-                </div>
-            </div>
+            <div class="bg-primaryDark rounded-[40px] p-8 md:p-12 lg:p-16 relative overflow-hidden shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-10">
+                <!-- Background Decoration -->
+                <div class="absolute top-0 right-0 w-1/2 h-full opacity-20 pointer-events-none" style="background-image: radial-gradient(circle at center, #ffffff 1px, transparent 1px); background-size: 20px 20px;"></div>
+                <div class="absolute -bottom-20 -left-20 w-64 h-64 bg-primary rounded-full blur-3xl opacity-50 pointer-events-none"></div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-                <!-- Rinjani Pkg 1 -->
-                <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-100 group flex flex-col">
-                    <div class="relative h-48 sm:h-64 overflow-hidden bg-gray-200">
-                        <img src="images/senaru-gate.jpeg" alt="Rinjani Summit 2D1N" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                    </div>
-                    <div class="p-6 sm:p-8 flex-grow flex flex-col">
-                        <h4 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 font-serif">2 Days 1 Night (Summit)</h4>
-                        <ul class="text-xs sm:text-sm text-gray-500 mb-6 space-y-2 flex-grow">
-                            <li class="flex items-start gap-2"><i class="ph-bold ph-check text-secondary mt-0.5"></i> Route: Sembalun - Crater Rim - Summit - Sembalun</li>
-                            <li class="flex items-start gap-2"><i class="ph-bold ph-check text-secondary mt-0.5"></i> Target: Conquer the 3,726 masl peak.</li>
-                        </ul>
-                        <a href="itinerary.html#package-2d1n" class="block text-center w-full bg-primary/10 text-primary hover:bg-primary hover:text-white font-semibold py-2.5 sm:py-3 rounded-xl transition-colors mt-auto">View Route</a>
-                    </div>
+                <div class="relative z-10 w-full lg:w-1/2 text-white">
+                    <span class="inline-block py-1 px-3 rounded-full bg-white/10 border border-white/20 text-xs font-bold tracking-widest uppercase mb-4">Logistics & Mobility</span>
+                    <h2 class="text-3xl md:text-5xl font-serif font-bold mb-6 leading-tight">Seamless Journey to Paradise</h2>
+                    <p class="text-gray-300 text-lg mb-8 max-w-lg leading-relaxed">
+                        Your adventure starts the moment you land. We provide safe, comfortable, and highly reliable airport transfers and shuttle services across Lombok. Travel to Senaru or Sembalun with ultimate peace of mind in our modern fleet.
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3"><i class="ph-fill ph-check-circle text-secondary text-xl"></i> <span>Direct Airport Pick-up & Drop-off</span></li>
+                        <li class="flex items-center gap-3"><i class="ph-fill ph-check-circle text-secondary text-xl"></i> <span>Private & Comfortable Vehicles</span></li>
+                        <li class="flex items-center gap-3"><i class="ph-fill ph-check-circle text-secondary text-xl"></i> <span>Experienced Local Drivers</span></li>
+                    </ul>
+                    <a href="https://trekkingmountrinjani.com/booking-transport" target="_blank" class="inline-flex items-center justify-center gap-2 bg-secondary text-white px-8 py-4 rounded-full font-bold text-sm hover:bg-secondaryHover transition-all shadow-lg w-full sm:w-auto">
+                        BOOK YOUR TRANSPORT <i class="ph-bold ph-car-profile"></i>
+                    </a>
                 </div>
 
-                <!-- Rinjani Pkg 2 -->
-                <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-100 group relative flex flex-col">
-                    <div class="absolute top-0 right-0 bg-secondary text-white text-[10px] sm:text-xs font-bold px-3 sm:px-4 py-1 rounded-bl-xl z-10">BEST SELLER</div>
-                    <div class="relative h-48 sm:h-64 overflow-hidden bg-gray-200">
-                        <img src="images/hutan.jpeg" alt="Rinjani 3D2N" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                    </div>
-                    <div class="p-6 sm:p-8 flex-grow flex flex-col">
-                        <h4 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 font-serif">3 Days 2 Nights</h4>
-                        <ul class="text-xs sm:text-sm text-gray-500 mb-6 space-y-2 flex-grow">
-                            <li class="flex items-start gap-2"><i class="ph-bold ph-check text-secondary mt-0.5"></i> Route: Sembalun - Summit - Lake - Senaru.</li>
-                            <li class="flex items-start gap-2"><i class="ph-bold ph-check text-secondary mt-0.5"></i> Ideal package to enjoy Segara Anak lake & Hot Springs.</li>
-                        </ul>
-                        <a href="itinerary.html#package-3d2n" class="block text-center w-full bg-primary text-white hover:bg-primaryDark font-semibold py-2.5 sm:py-3 rounded-xl transition-colors mt-auto">View Route</a>
-                    </div>
-                </div>
-
-                <!-- Rinjani Pkg 3 -->
-                <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-100 group flex flex-col">
-                    <div class="relative h-48 sm:h-64 overflow-hidden bg-gray-200">
-                        <img src="images/tourist-porter.jpeg" alt="Rinjani 4D3N" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                    </div>
-                    <div class="p-6 sm:p-8 flex-grow flex flex-col">
-                        <h4 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 font-serif">4 Days 3 Nights</h4>
-                        <ul class="text-xs sm:text-sm text-gray-500 mb-6 space-y-2 flex-grow">
-                            <li class="flex items-start gap-2"><i class="ph-bold ph-check text-secondary mt-0.5"></i> Route: Sembalun - Summit - Lake - Senaru Rim - Village.</li>
-                            <li class="flex items-start gap-2"><i class="ph-bold ph-check text-secondary mt-0.5"></i> Deep exploration, relaxed pace, perfect for beginners.</li>
-                        </ul>
-                        <a href="itinerary.html#package-4d3n" class="block text-center w-full bg-primary/10 text-primary hover:bg-primary hover:text-white font-semibold py-2.5 sm:py-3 rounded-xl transition-colors mt-auto">View Route</a>
-                    </div>
+                <div class="relative z-10 w-full lg:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Lombok Transport" class="rounded-3xl shadow-2xl border-4 border-white/10 w-full object-cover h-[400px]">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION 2: LOMBOK BEACH & ISLAND TOURS -->
-    <section id="beach" class="py-16 sm:py-20 bg-primaryDark relative text-white">
-        <div class="container mx-auto px-4 md:px-8 pt-6 sm:pt-10">
-            <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
-                <h2 class="text-secondary font-bold tracking-widest uppercase text-xs sm:text-sm mb-2">Beaches & Gilis</h2>
-                <h3 class="text-2xl sm:text-3xl md:text-5xl font-serif font-bold mb-3 sm:mb-4">Exotic Coasts of Lombok</h3>
-                <p class="text-sm sm:text-base text-gray-300 px-4 sm:px-0">Discover pieces of paradise in Lombok. White sands, turquoise water gradients, and stunning underwater life.</p>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
-                <!-- Tour 1 -->
-                <div class="relative group rounded-2xl overflow-hidden cursor-pointer h-64 sm:h-80 bg-gray-800">
-                    <img src="images/food.jpeg" alt="Pink Beach Lombok" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 w-full p-4 sm:p-6">
-                        <h4 class="text-xl sm:text-2xl font-bold font-serif mb-1 group-hover:text-secondary transition-colors">Pink Beach & Southeast</h4>
-                        <p class="text-xs sm:text-sm text-gray-300 line-clamp-2">Explore the unique pink sands and snorkel around Gili Petelu.</p>
-                    </div>
-                </div>
-                <!-- Tour 2 -->
-                <div class="relative group rounded-2xl overflow-hidden cursor-pointer h-64 sm:h-80 bg-gray-800">
-                    <img src="images/food2.jpeg" alt="Gili Trawangan" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 w-full p-4 sm:p-6">
-                        <h4 class="text-xl sm:text-2xl font-bold font-serif mb-1 group-hover:text-secondary transition-colors">Explore 3 North Gilis</h4>
-                        <p class="text-xs sm:text-sm text-gray-300 line-clamp-2">Swim with turtles in Gili Meno, Air, and Trawangan.</p>
-                    </div>
-                </div>
-                <!-- Tour 3 -->
-                <div class="relative group rounded-2xl overflow-hidden cursor-pointer h-64 sm:h-80 bg-gray-800">
-                    <img src="images/food3.jpeg" alt="Mandalika Beach" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 w-full p-4 sm:p-6">
-                        <h4 class="text-xl sm:text-2xl font-bold font-serif mb-1 group-hover:text-secondary transition-colors">Mandalika & Kuta Beach</h4>
-                        <p class="text-xs sm:text-sm text-gray-300 line-clamp-2">Witness the international circuit and the unique pepper sands of Kuta.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 3: CULTURAL TOURS -->
-    <section id="culture" class="py-16 sm:py-24 relative bg-lightBg">
+    <!-- SECTION: LOMBOK BEACH & ISLAND TOURS -->
+    <section id="destinations" class="py-16 sm:py-24 relative bg-lightBg">
         <div class="container mx-auto px-4 md:px-8">
-            <div class="flex flex-col md:flex-row gap-8 sm:gap-12 items-center">
-                <div class="w-full md:w-1/2 relative order-2 md:order-1">
-                    <div class="grid grid-cols-2 gap-3 sm:gap-4">
-                        <img src="images/senaru-gate1.jpeg" alt="Rice Terraces" class="rounded-2xl sm:rounded-3xl w-full h-48 sm:h-64 object-cover bg-gray-300">
-                        <img src="images/bukit-rinjani.jpeg" alt="Lombok Traditional Village" class="rounded-2xl sm:rounded-3xl w-full h-36 sm:h-48 object-cover mt-8 sm:mt-16 bg-gray-300">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-secondary font-bold tracking-widest uppercase text-xs sm:text-sm mb-2">Beyond the Mountain</h2>
+                <h3 class="text-3xl md:text-5xl font-serif font-bold text-gray-900 mb-6">Exotic Coasts of Lombok</h3>
+                <p class="text-sm sm:text-base text-gray-600 px-4 sm:px-0">Discover pieces of paradise. Unwind on pristine white sands, swim in turquoise waters, and explore vibrant coral reefs after your epic climb.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="relative group rounded-3xl overflow-hidden cursor-pointer h-80 bg-gray-800 shadow-md">
+                    <img src="https://images.unsplash.com/photo-1583002626574-d096a6f1ea1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pink Beach" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80 group-hover:opacity-100">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 w-full p-6 text-white">
+                        <h4 class="text-2xl font-bold font-serif mb-2 group-hover:text-secondary transition-colors">Pink Beach Odyssey</h4>
+                        <p class="text-sm text-gray-300 line-clamp-2">Marvel at unique rosy sands and snorkel the hidden wonders of Gili Petelu.</p>
                     </div>
                 </div>
-                <div class="w-full md:w-1/2 order-1 md:order-2">
-                    <h2 class="text-secondary font-bold tracking-widest uppercase text-xs sm:text-sm mb-2 text-center md:text-left">Authentic Culture & History</h2>
-                    <h3 class="text-2xl sm:text-3xl md:text-5xl font-serif font-bold text-primary mb-4 sm:mb-6 text-center md:text-left">Feel the Pulse of Local Lombok Life</h3>
-                    <div class="space-y-4 sm:space-y-6 mt-6 sm:mt-8">
-                        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl hover:bg-white hover:shadow-sm transition-all items-center sm:items-start text-center sm:text-left">
-                            <div class="w-12 h-12 sm:w-14 sm:h-14 bg-teal-50 text-primary rounded-xl flex items-center justify-center shrink-0">
-                                <i class="ph-fill ph-mountains text-xl sm:text-2xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-lg sm:text-xl text-gray-800">Sembalun Panorama Walk</h4>
-                                <p class="text-xs sm:text-sm text-gray-500 mt-1">Take a leisurely walk through the vast rice fields at the foot of Mount Rinjani.</p>
-                            </div>
-                        </div>
-                        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl hover:bg-white hover:shadow-sm transition-all items-center sm:items-start text-center sm:text-left">
-                            <div class="w-12 h-12 sm:w-14 sm:h-14 bg-teal-50 text-primary rounded-xl flex items-center justify-center shrink-0">
-                                <i class="ph-fill ph-house-line text-xl sm:text-2xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-lg sm:text-xl text-gray-800">Sade & Sukarara Villages</h4>
-                                <p class="text-xs sm:text-sm text-gray-500 mt-1">See firsthand the architecture of traditional Sasak houses and learn to weave.</p>
-                            </div>
-                        </div>
-                        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl hover:bg-white hover:shadow-sm transition-all items-center sm:items-start text-center sm:text-left">
-                            <div class="w-12 h-12 sm:w-14 sm:h-14 bg-teal-50 text-primary rounded-xl flex items-center justify-center shrink-0">
-                                <i class="ph-fill ph-mosque text-xl sm:text-2xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-lg sm:text-xl text-gray-800">Bayan Ancient Mosque</h4>
-                                <p class="text-xs sm:text-sm text-gray-500 mt-1">Visit one of the oldest historical sites of Islamic spread on Lombok Island.</p>
-                            </div>
-                        </div>
+                <div class="relative group rounded-3xl overflow-hidden cursor-pointer h-80 bg-gray-800 shadow-md">
+                    <img src="https://images.unsplash.com/photo-1544325785-3c137456dce8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Gili Islands" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80 group-hover:opacity-100">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 w-full p-6 text-white">
+                        <h4 class="text-2xl font-bold font-serif mb-2 group-hover:text-secondary transition-colors">The 3 Gilis Escape</h4>
+                        <p class="text-sm text-gray-300 line-clamp-2">Swim alongside majestic sea turtles in the crystal-clear waters of Meno, Air, and Trawangan.</p>
+                    </div>
+                </div>
+                <div class="relative group rounded-3xl overflow-hidden cursor-pointer h-80 bg-gray-800 shadow-md">
+                    <img src="https://images.unsplash.com/photo-1560088032-441604a18f50?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mandalika" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80 group-hover:opacity-100">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 w-full p-6 text-white">
+                        <h4 class="text-2xl font-bold font-serif mb-2 group-hover:text-secondary transition-colors">Mandalika & Kuta</h4>
+                        <p class="text-sm text-gray-300 line-clamp-2">Ride the waves or stroll the unique pepper-like sands of the majestic southern coast.</p>
                     </div>
                 </div>
             </div>
@@ -491,63 +467,86 @@ Dan ini adalah *diff* untuk file **itinerary.html** agar struktur warna & menuny
     </section>
 
     <!-- CONTACT / BOOKING FORM -->
-    <section id="contact" class="py-16 sm:py-20 bg-primaryDark relative">
-        <div class="container mx-auto px-4 md:px-8 relative z-10 flex flex-col md:flex-row gap-10 sm:gap-12 items-center">
-            <div class="w-full md:w-1/2 text-white text-center md:text-left">
-                <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold mb-4 sm:mb-6">Reach & Get in Touch With Us!</h2>
-                <p class="mb-6 sm:mb-8 opacity-90 text-base sm:text-lg">Take the first step towards your epic adventure with us.</p>
-                <div class="space-y-4 sm:space-y-6 flex flex-col items-center md:items-start">
-                    <div class="flex items-center gap-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-white/10 rounded-full flex items-center justify-center shrink-0"><i class="ph-fill ph-instagram-logo text-lg sm:text-xl"></i></div>
+    <section id="contact" class="py-20 bg-primaryDark relative">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-5 pointer-events-none" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'#ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+        
+        <div class="container mx-auto px-4 md:px-8 relative z-10 flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
+            <div class="w-full lg:w-1/2 text-white text-center lg:text-left">
+                <span class="inline-block py-1 px-3 rounded-full bg-white/10 text-secondary border border-white/20 text-xs font-bold tracking-widest uppercase mb-4">Let's Connect</span>
+                <h2 class="text-4xl sm:text-5xl md:text-6xl font-serif font-bold mb-6">Begin Your Epic Journey Today.</h2>
+                <p class="mb-10 text-gray-300 text-lg max-w-xl mx-auto lg:mx-0">Reach out to our local experts. We're ready to curate a seamless, unforgettable expedition tailored just for you.</p>
+                
+                <div class="space-y-6 flex flex-col justify-center lg:justify-start items-center lg:items-start max-w-sm mx-auto lg:mx-0">
+                    <a href="mailto:rinjaniwonderfull@gmail.com" class="flex items-center gap-5 p-4 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/10 transition-colors w-full group">
+                        <div class="w-14 h-14 bg-secondary text-white rounded-full flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform"><i class="ph-fill ph-envelope-simple text-2xl"></i></div>
                         <div class="text-left">
-                            <p class="text-xs sm:text-sm opacity-70">Instagram</p>
-                            <a href="https://instagram.com/rinjaniwonderfull" target="_blank" class="font-bold text-base sm:text-lg hover:text-secondary break-all">@rinjaniwonderfull</a>
+                            <p class="text-xs text-gray-400 uppercase tracking-wider mb-1">Email Us Directly</p>
+                            <p class="font-bold text-lg">rinjaniwonderfull@gmail.com</p>
                         </div>
-                    </div>
-                    <div class="flex items-center gap-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-white/10 rounded-full flex items-center justify-center shrink-0"><i class="ph-fill ph-envelope-simple text-lg sm:text-xl"></i></div>
+                    </a>
+                    <a href="https://wa.me/6281770570669" target="_blank" class="flex items-center gap-5 p-4 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/10 transition-colors w-full group">
+                        <div class="w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform"><i class="ph-fill ph-whatsapp-logo text-2xl"></i></div>
                         <div class="text-left">
-                            <p class="text-xs sm:text-sm opacity-70">Email Us</p>
-                            <a href="mailto:rinjaniwonderfull@gmail.com" class="font-bold text-base sm:text-lg hover:text-secondary break-all">rinjaniwonderfull@gmail.com</a>
+                            <p class="text-xs text-gray-400 uppercase tracking-wider mb-1">Chat on WhatsApp</p>
+                            <p class="font-bold text-lg">+62 817 7057 0669</p>
                         </div>
-                    </div>
-                    <div class="flex items-center gap-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-white/10 rounded-full flex items-center justify-center shrink-0"><i class="ph-fill ph-whatsapp-logo text-lg sm:text-xl"></i></div>
-                        <div class="text-left">
-                            <p class="text-xs sm:text-sm opacity-70">WhatsApp</p>
-                            <a href="https://wa.me/6281770570669" target="_blank" class="font-bold text-base sm:text-lg hover:text-secondary">+6281770570669</a>
-                        </div>
-                    </div>
+                    </a>
                 </div>
             </div>
-            <div class="w-full md:w-1/2 max-w-md md:max-w-none mx-auto">
-                <div class="bg-white p-6 sm:p-8 md:p-10 rounded-3xl shadow-2xl">
-                    <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-4 sm:mb-6 text-center">Get a Quote</h3>
-                    <!-- Form fixed to prevent default submission visually -->
-                    <form id="booking-form" class="space-y-4">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            
+            <div class="w-full lg:w-1/2 max-w-lg lg:max-w-none mx-auto">
+                <div class="bg-white p-8 md:p-10 rounded-[32px] shadow-2xl relative">
+                    <div class="absolute -top-6 -right-6 w-20 h-20 bg-secondary rounded-full flex items-center justify-center shadow-lg transform rotate-12">
+                        <i class="ph-fill ph-paper-plane-tilt text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Request an Itinerary</h3>
+                    <p class="text-gray-500 text-sm mb-8">Fill out the form below and our team will get back to you with availability and details.</p>
+                    
+                    <form id="booking-form" class="space-y-5">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                             <div>
-                                <label class="block text-xs font-semibold text-gray-500 mb-1">Name</label>
-                                <input type="text" id="b-name" class="w-full px-4 py-2.5 sm:py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-primary text-sm" placeholder="Your Name" required>
+                                <label class="block text-xs font-bold text-gray-700 uppercase tracking-wide mb-2">Full Name</label>
+                                <input type="text" id="b-name" class="w-full px-5 py-3.5 bg-gray-50 border border-gray-200 rounded-2xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all text-sm" placeholder="John Doe" required>
                             </div>
                             <div>
-                                <label class="block text-xs font-semibold text-gray-500 mb-1">WhatsApp</label>
-                                <input type="tel" id="b-wa" class="w-full px-4 py-2.5 sm:py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-primary text-sm" placeholder="+62 812..." required>
+                                <label class="block text-xs font-bold text-gray-700 uppercase tracking-wide mb-2">WhatsApp Number</label>
+                                <input type="tel" id="b-wa" class="w-full px-5 py-3.5 bg-gray-50 border border-gray-200 rounded-2xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all text-sm" placeholder="+123 456..." required>
                             </div>
                         </div>
                         <div>
-                            <label class="block text-xs font-semibold text-gray-500 mb-1">Select Package</label>
-                            <select id="b-package" class="w-full px-4 py-2.5 sm:py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-primary text-gray-600 text-sm">
-                                <option>2 Days 1 Night (Summit)</option>
-                                <option>3 Days 2 Nights</option>
-                                <option>4 Days 3 Nights</option>
-                                <option>Lombok Beach / Cultural Tour</option>
-                            </select>
+                            <label class="block text-xs font-bold text-gray-700 uppercase tracking-wide mb-2">Select Expedition</label>
+                            <div class="relative">
+                                <select id="b-package" class="w-full px-5 py-3.5 bg-gray-50 border border-gray-200 rounded-2xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all text-gray-700 text-sm appearance-none font-medium">
+                                    <optgroup label="Sembalun Route">
+                                        <option>Summit Express (2D1N)</option>
+                                        <option>Grand Expedition (4D3N)</option>
+                                        <option>Classic Traverse (3D2N)</option>
+                                        <option>Sharing Group (3D2N)</option>
+                                    </optgroup>
+                                    <optgroup label="Senaru Route">
+                                        <option>Forest Ascent (4D3N)</option>
+                                        <option>Crater Rim (2D1N)</option>
+                                        <option>Waterfall Trail (1 Day)</option>
+                                    </optgroup>
+                                    <optgroup label="Torean Route">
+                                        <option>Lake & Hot Springs (3D2N)</option>
+                                        <option>Peak to Canyon (3D2N)</option>
+                                        <option>Ultimate Journey (4D3N)</option>
+                                    </optgroup>
+                                    <optgroup label="Other">
+                                        <option>Transport / Shuttle Service</option>
+                                        <option>Lombok Cultural/Beach Tour</option>
+                                    </optgroup>
+                                </select>
+                                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-5 text-gray-500">
+                                    <i class="ph-bold ph-caret-down"></i>
+                                </div>
+                            </div>
                         </div>
-                        <button type="submit" class="w-full bg-secondary hover:bg-secondaryHover text-white font-bold py-3 sm:py-4 rounded-xl transition-colors shadow-lg mt-2 text-sm sm:text-base flex justify-center items-center gap-2">
-                            <span>Send Request</span> <i class="ph-bold ph-paper-plane-right"></i>
+                        <button type="submit" class="w-full bg-primary hover:bg-primaryDark text-white font-bold py-4 rounded-2xl transition-colors shadow-lg shadow-primary/30 mt-4 text-sm tracking-wide flex justify-center items-center gap-2">
+                            <span>SEND INQUIRY VIA WHATSAPP</span> <i class="ph-bold ph-arrow-right"></i>
                         </button>
-                        <p id="form-msg" class="text-green-600 text-xs text-center hidden mt-2">Message sent via WhatsApp!</p>
                     </form>
                 </div>
             </div>
@@ -555,16 +554,18 @@ Dan ini adalah *diff* untuk file **itinerary.html** agar struktur warna & menuny
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-primaryDark text-white pt-8 sm:pt-10 pb-8 sm:pb-10 border-t border-white/10">
+    <footer class="bg-[#0a3130] text-white pt-12 pb-8 border-t border-white/5">
         <div class="container mx-auto px-4 md:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center text-xs sm:text-sm text-gray-400 gap-4 md:gap-0">
-                <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-center sm:text-left">
-                    <img src="images/rinjaniwonderfull-logo.png" alt="Rinjani Wonderfull Logo" class="h-6 sm:h-8 w-auto bg-white rounded p-0.5">
+            <div class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 gap-6 md:gap-0">
+                <div class="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+                    <div class="font-serif font-bold text-xl text-white tracking-tight opacity-50">Rinjani<span class="text-secondary">Wonderfull</span></div>
+                    <span class="hidden sm:block text-gray-600">|</span>
                     <span>&copy; 2026 Rinjani Wonderfull. All rights reserved.</span>
                 </div>
-                <div class="flex flex-wrap justify-center items-center gap-4 sm:gap-6">
-                    <a href="https://instagram.com/rinjaniwonderfull" class="hover:text-secondary flex items-center gap-1 sm:gap-2"><i class="ph-fill ph-instagram-logo"></i> rinjaniwonderfull</a>
-                    <a href="mailto:rinjaniwonderfull@gmail.com" class="hover:text-secondary flex items-center gap-1 sm:gap-2"><i class="ph-fill ph-envelope-simple"></i> rinjaniwonderfull@gmail.com</a>
+                <div class="flex justify-center items-center gap-6">
+                    <a href="#" class="hover:text-white transition-colors"><i class="ph-fill ph-facebook-logo text-2xl"></i></a>
+                    <a href="https://instagram.com/rinjaniwonderfull" target="_blank" class="hover:text-white transition-colors"><i class="ph-fill ph-instagram-logo text-2xl"></i></a>
+                    <a href="https://tiktok.com/@rinjaniwonderfull" target="_blank" class="hover:text-white transition-colors"><i class="ph-fill ph-tiktok-logo text-2xl"></i></a>
                 </div>
             </div>
         </div>
@@ -577,13 +578,12 @@ Dan ini adalah *diff* untuk file **itinerary.html** agar struktur warna & menuny
             const navbar = document.getElementById('navbar');
             window.addEventListener('scroll', () => {
                 if (window.scrollY > 50) {
-                    navbar.classList.add('bg-primary', 'shadow-md');
-                    navbar.classList.remove('py-4'); 
+                    navbar.classList.add('bg-white/95', 'backdrop-blur-md', 'shadow-md');
+                    navbar.classList.remove('bg-transparent', 'py-4'); 
                     navbar.classList.add('py-2');
                 } else {
-                    // Don't remove bg if mobile menu is open
                     if (!document.getElementById('mobile-menu').classList.contains('open')) {
-                        navbar.classList.remove('bg-primary', 'shadow-md');
+                        navbar.classList.remove('shadow-md');
                         navbar.classList.add('py-4'); 
                         navbar.classList.remove('py-2');
                     }
@@ -602,12 +602,9 @@ Dan ini adalah *diff* untuk file **itinerary.html** agar struktur warna & menuny
                     
                     if (mobileMenu.classList.contains('open')) {
                         menuIcon.classList.replace('ph-list', 'ph-x');
-                        navbar.classList.add('bg-primary'); // Ensure bg is dark when open
+                        navbar.classList.add('bg-white'); 
                     } else {
                         menuIcon.classList.replace('ph-x', 'ph-list');
-                        if (window.scrollY <= 50) {
-                            navbar.classList.remove('bg-primary');
-                        }
                     }
                 });
 
@@ -620,6 +617,34 @@ Dan ini adalah *diff* untuk file **itinerary.html** agar struktur warna & menuny
                 });
             }
 
+            // Floating Chat Menu Toggle Logic
+            const chatToggleBtn = document.getElementById('chat-toggle');
+            const chatMenu = document.getElementById('chat-menu');
+            const chatIcon = document.getElementById('chat-icon');
+
+            if(chatToggleBtn && chatMenu && chatIcon) {
+                chatToggleBtn.addEventListener('click', () => {
+                    chatMenu.classList.toggle('chat-menu-open');
+                    
+                    if (chatMenu.classList.contains('chat-menu-open')) {
+                        chatIcon.classList.replace('ph-chat-teardrop-dots', 'ph-x');
+                        chatToggleBtn.classList.replace('bg-primary', 'bg-gray-800');
+                    } else {
+                        chatIcon.classList.replace('ph-x', 'ph-chat-teardrop-dots');
+                        chatToggleBtn.classList.replace('bg-gray-800', 'bg-primary');
+                    }
+                });
+
+                // Optional: Close chat menu when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!chatToggleBtn.contains(e.target) && !chatMenu.contains(e.target)) {
+                        chatMenu.classList.remove('chat-menu-open');
+                        chatIcon.classList.replace('ph-x', 'ph-chat-teardrop-dots');
+                        chatToggleBtn.classList.replace('bg-gray-800', 'bg-primary');
+                    }
+                });
+            }
+
             // Fix Booking Form Submission
             const bookingForm = document.getElementById('booking-form');
             if(bookingForm) {
@@ -629,15 +654,10 @@ Dan ini adalah *diff* untuk file **itinerary.html** agar struktur warna & menuny
                     const name = document.getElementById('b-name').value;
                     const wa = document.getElementById('b-wa').value;
                     const pkg = document.getElementById('b-package').value;
-                    const msgEl = document.getElementById('form-msg');
                     
-                    // Format message for WhatsApp in English
-                    const text = `Hello Rinjani Wonderfull, I am ${name} (%2B${wa.replace(/\+/g, '')}). I am interested in the following package: ${pkg}. Please provide more information.`;
+                    // Format message for WhatsApp with enthusiastic copywriting
+                    const text = `Hello Rinjani Wonderfull Team! 🏔️%0A%0AMy name is ${name} (%2B${wa.replace(/\+/g, '')}).%0A%0AI am incredibly excited to conquer Rinjani and would love to get more details about the *${pkg}*.%0A%0ALooking forward to hearing from you!`;
                     const waUrl = `https://wa.me/6281770570669?text=${text}`;
-                    
-                    // Show success message temporarily
-                    msgEl.classList.remove('hidden');
-                    setTimeout(() => { msgEl.classList.add('hidden'); }, 3000);
                     
                     // Open WhatsApp in new tab
                     window.open(waUrl, '_blank');
