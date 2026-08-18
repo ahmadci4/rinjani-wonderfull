@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mount Rinjani 3 Days 2 Nights Lake & Hot Springs (Senaru - Torean) - Rinjani Wonderfull</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Explore the mystical vertical canyons of Torean and relax in natural hot springs by Segara Anak Lake in this 3 Days 2 Nights Senaru to Torean expedition.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1862be', 
+                        primaryDark: '#124d96',
+                        secondary: '#f8fafc',
+                        textDark: '#1e293b',
+                        textGray: '#475569'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Accordion transition for smooth open/close */
+        .accordion-content {
+            transition: max-height 0.4s ease-out, padding 0.4s ease, opacity 0.4s ease;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+        .accordion-content.expanded {
+            max-height: 3500px; 
+            opacity: 1;
+        }
+        .accordion-icon {
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .expanded + .accordion-icon, 
+        .accordion-header.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+        
+        /* Sticky sidebar offset */
+        .sticky-sidebar {
+            position: sticky;
+            top: 100px;
+        }
+
+        /* Floating Menu Transitions */
+        .chat-option {
+            opacity: 0;
+            transform: translateY(20px) scale(0.9);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            pointer-events: none;
+        }
+        .chat-menu-open .chat-option {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            pointer-events: auto;
+        }
+        .chat-menu-open .chat-option:nth-child(1) { transition-delay: 0.05s; }
+        .chat-menu-open .chat-option:nth-child(2) { transition-delay: 0.1s; }
+        .chat-menu-open .chat-option:nth-child(3) { transition-delay: 0.15s; }
+        .chat-menu-open .chat-option:nth-child(4) { transition-delay: 0.2s; }
+        .chat-menu-open .chat-option:nth-child(5) { transition-delay: 0.25s; }
+        
+        /* Mobile Menu Transitions */
+        #mobile-menu {
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateX(100%);
+        }
+        #mobile-menu.open {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body class="font-sans text-textGray bg-gray-50 antialiased relative overflow-x-hidden">
+
+    <!-- Floating Multi-Contact Menu -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
+        <!-- Menu Items -->
+        <div id="chat-menu" class="flex flex-col gap-3 mb-2">
+            <a href="https://tiktok.com/@rinjaniwonderfull" target="_blank" class="chat-option flex items-center justify-center w-12 h-12 bg-black text-white rounded-full shadow-lg hover:scale-110 hover:bg-gray-800 transition-transform">
+                <i class="ph-fill ph-tiktok-logo text-2xl"></i>
+            </a>
+            <a href="https://instagram.com/rinjaniwonderfull" target="_blank" class="chat-option flex items-center justify-center w-12 h-12 bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white rounded-full shadow-lg hover:scale-110 transition-transform">
+                <i class="ph-fill ph-instagram-logo text-2xl"></i>
+            </a>
+            <a href="mailto:rinjaniwonderfull@gmail.com" class="chat-option flex items-center justify-center w-12 h-12 bg-[#EA4335] text-white rounded-full shadow-lg hover:scale-110 hover:bg-[#d33c2f] transition-transform">
+                <i class="ph-fill ph-envelope-simple text-2xl"></i>
+            </a>
+            <a href="#" class="chat-option flex items-center justify-center w-12 h-12 bg-[#09B83E] text-white rounded-full shadow-lg hover:scale-110 transition-transform">
+                <i class="ph-fill ph-wechat-logo text-2xl"></i>
+            </a>
+            <a href="https://wa.me/6285929141746?text=Hello%20Rinjani%20Wonderfull,%20I%20would%20like%20to%20book%20the%20Lake%20and%20Hot%20Spring%203D2N%20Senaru-Torean%20Package." target="_blank" class="chat-option flex items-center justify-center w-12 h-12 bg-[#25D366] text-white rounded-full shadow-lg hover:scale-110 hover:bg-[#1ebe5d] transition-transform">
+                <i class="ph-fill ph-whatsapp-logo text-2xl"></i>
+            </a>
+        </div>
+        
+        <!-- Main Toggle Button -->
+        <button id="chat-toggle" class="flex items-center justify-center w-14 h-14 bg-primary text-white rounded-full shadow-2xl hover:bg-primaryDark transition-all duration-300 hover:shadow-primary/50 group">
+            <i id="chat-icon" class="ph-fill ph-chat-teardrop-dots text-3xl group-hover:scale-110 transition-transform duration-300"></i>
+        </button>
+    </div>
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full z-40 transition-all duration-300 bg-white shadow-sm py-2" id="navbar">
+        <div class="container mx-auto px-4 lg:px-12">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex-shrink-0 z-50 py-2">
+                    <img src="images/logo.png" alt="Rinjani Wonderfull" class="h-12 w-auto object-contain onerror='this.style.display=\"none\";'">
+                    <div class="font-bold text-2xl text-textDark tracking-tight" style="display: none;">RINJANI<br><span class="text-xs font-normal tracking-widest text-textGray">WONDERFULL</span></div>
+                </a>
+
+                <nav class="hidden lg:flex items-center gap-8 text-textDark font-medium text-sm">
+                    <a href="index.html" class="hover:text-primary transition-colors pb-1">HOME</a>
+                    <a href="packages.html" class="text-primary font-bold border-b-2 border-primary pb-1">PACKAGES</a>
+                    <a href="blog.html" class="hover:text-primary transition-colors pb-1">BLOG</a>
+                    <a href="index.html#about" class="hover:text-primary transition-colors pb-1">ABOUT</a>
+                    <a href="index.html#contact" class="hover:text-primary transition-colors pb-1">BOOK NOW</a>
+                </nav>
+                
+                <div class="hidden lg:flex items-center">
+                    <a href="index.html#contact" class="bg-primary text-white px-6 py-2.5 rounded hover:bg-primaryDark transition-all text-sm font-semibold tracking-wide shadow-md">EXPLORE RINJANI</a>
+                </div>
+
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-textDark z-50 p-2">
+                        <i class="ph ph-list text-3xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-30 lg:hidden flex flex-col justify-center items-center pt-20">
+        <nav class="flex flex-col items-center gap-6 text-textDark font-medium text-xl w-full px-6">
+            <a href="index.html" class="mobile-link hover:text-primary transition-colors py-2 border-b border-gray-100 w-full text-center">Home</a>
+            <a href="packages.html" class="mobile-link text-primary font-bold py-2 border-b border-gray-100 w-full text-center">Packages</a>
+            <a href="blog.html" class="mobile-link hover:text-primary transition-colors py-2 border-b border-gray-100 w-full text-center">Blog</a>
+            <a href="index.html#about" class="mobile-link hover:text-primary transition-colors py-2 border-b border-gray-100 w-full text-center">About</a>
+            <a href="index.html#contact" class="mobile-link bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-primaryDark transition-all shadow-md mt-6">Book Now</a>
+        </nav>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main class="container mx-auto px-4 lg:px-12 pt-32 pb-20">
+        
+        <!-- Breadcrumb -->
+        <div class="text-[11px] font-bold text-gray-400 uppercase tracking-widest mb-3 flex items-center gap-2">
+            <a href="index.html" class="hover:text-primary transition-colors">Home</a> <i class="ph-bold ph-caret-right text-[10px]"></i>
+            <a href="packages.html" class="hover:text-primary transition-colors">Packages</a> <i class="ph-bold ph-caret-right text-[10px]"></i>
+            <span class="text-primary">Senaru to Torean Route</span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-textDark mb-8 leading-tight max-w-4xl">
+            Lake and Hot Spring Expedition (3 Days 2 Nights Senaru to Torean)
+        </h1>
+
+        <!-- Layout Grid: Left (Content) / Right (Sidebar Booking) -->
+        <div class="flex flex-col lg:flex-row gap-8 relative">
+            
+            <!-- LEFT COLUMN (Content) -->
+            <div class="w-full lg:w-2/3">
+                
+                <!-- Image Gallery Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mb-8 h-auto md:h-[450px]">
+                    <!-- Main Big Image (Using image reference 2f1d0b) -->
+                    <div class="md:col-span-2 h-64 md:h-full rounded-2xl overflow-hidden bg-gray-200 shadow-sm group relative">
+                        <div class="absolute top-4 left-4 z-10 bg-primary text-white text-sm font-bold px-3 py-1.5 rounded shadow-md">
+                            3 Days 2 Nights
+                        </div>
+                        <img src="image_2f1d0b.jpg" alt="Lake and Hot Spring Torean Route" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <!-- Right Column Images -->
+                    <div class="flex flex-col gap-3 h-full">
+                        <div class="h-48 md:h-1/2 rounded-2xl overflow-hidden bg-gray-200 shadow-sm group">
+                            <img src="images/torean-3d2nlake.jpg" alt="Segara Anak Lake" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" onerror="this.src='https://placehold.co/400x300/1e293b/ffffff?text=Segara+Anak+Lake'">
+                        </div>
+                        <div class="h-48 md:h-1/2 rounded-2xl overflow-hidden bg-gray-200 shadow-sm group">
+                            <img src="images/senaru-2d1ncrater.jpg" alt="Senaru Crater Rim" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" onerror="this.src='https://placehold.co/400x300/1e293b/ffffff?text=Senaru+Rim'">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Intro Description -->
+                <div class="text-textGray leading-relaxed mb-10 text-base">
+                    <p class="mb-4">
+                        Experience the ultimate nature wellness journey without the extreme physical demands of a summit climb. This 3 Days 2 Nights expedition combines the lush rainforest ascent of Senaru with the mystical, jaw-dropping canyon landscapes of the Torean trail.
+                    </p>
+                    <p>
+                        Begin by trekking through cool jungle canopies to reach the stunning Senaru Crater Rim for sunset. On day two, descend directly into the turquoise caldera of Segara Anak Lake, where you can spend hours soaking in the natural geothermal hot springs. Finally, exit via Torean—a breathtaking route framed by towering vertical cliffs, roaring waterfalls, and lush river valleys reminiscent of Jurassic Park.
+                    </p>
+                </div>
+
+                <!-- Quick Info Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+                    <div class="border border-gray-200 rounded-xl p-5 bg-white shadow-sm flex flex-col justify-center">
+                        <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Duration</p>
+                        <p class="font-bold text-textDark text-sm">3 days / 4 days total</p>
+                        <p class="text-xs text-gray-500 mt-1">(one night hotel before trek)</p>
+                    </div>
+                    <div class="border border-gray-200 rounded-xl p-5 bg-white shadow-sm flex flex-col justify-center">
+                        <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Difficulty</p>
+                        <p class="font-bold text-textDark text-sm">Moderate (No Summit)</p>
+                    </div>
+                    <div class="border border-gray-200 rounded-xl p-5 bg-white shadow-sm flex flex-col justify-center">
+                        <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Route</p>
+                        <p class="font-bold text-textDark text-sm">Start Senaru, Exit Torean</p>
+                    </div>
+                </div>
+
+                <!-- About this activity -->
+                <div class="border border-gray-200 rounded-2xl p-6 md:p-8 bg-white shadow-sm mb-10">
+                    <h3 class="text-2xl font-bold text-textDark mb-6">About this activity</h3>
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-4">
+                            <i class="ph-bold ph-check text-primary text-xl mt-0.5"></i>
+                            <div>
+                                <p class="font-bold text-textDark text-sm">Hot Springs & Lake Immersion</p>
+                                <p class="text-sm text-textGray mt-1">Spend abundant time relaxing by Segara Anak Lake and soaking in the therapeutic natural hot springs.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <i class="ph-bold ph-check text-primary text-xl mt-0.5"></i>
+                            <div>
+                                <p class="font-bold text-textDark text-sm">Stunning Vertical Canyons</p>
+                                <p class="text-sm text-textGray mt-1">Traverse the magnificent Torean canyon route with dramatic waterfalls and cliffside river trails.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <i class="ph-bold ph-check text-primary text-xl mt-0.5"></i>
+                            <div>
+                                <p class="font-bold text-textDark text-sm">Free cancellation & Reserve now, pay later</p>
+                                <p class="text-sm text-textGray mt-1">Flexible planning with no upfront payment required.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Package Options (Accordion Style) -->
+                <h3 class="text-2xl font-bold text-textDark mb-6">Package Options</h3>
+                <div class="space-y-4 mb-10">
+                    
+                    <!-- Private Package -->
+                    <div class="border border-green-500 rounded-2xl bg-green-50/30 overflow-hidden shadow-sm transition-all duration-300">
+                        <div class="accordion-header active flex items-center justify-between p-5 md:p-6 cursor-pointer bg-green-50 border-b border-green-200" onclick="toggleAccordion(this)">
+                            <div class="flex items-center gap-3">
+                                <div class="bg-green-500 text-white w-8 h-8 rounded-lg flex items-center justify-center"><i class="ph-bold ph-package"></i></div>
+                                <h4 class="font-bold text-textDark text-lg">Private Expedition</h4>
+                            </div>
+                            <div class="bg-green-500 text-white px-3 py-1.5 rounded text-xs font-bold flex items-center gap-1 transition-colors hover:bg-green-600">
+                                <span class="btn-text">Hide</span> <i class="ph-bold ph-caret-up accordion-icon"></i>
+                            </div>
+                        </div>
+                        <div class="accordion-content expanded px-5 md:px-8 py-6 md:py-8 border-x border-b border-green-200 rounded-b-2xl">
+                            <p class="text-sm text-textGray mb-6 leading-relaxed">
+                                Experience the lake and hot springs exclusively with your private group. Walk at your own pace, take uninterrupted photos of the majestic waterfalls, and enjoy tailored hospitality from your dedicated guide and porters.
+                            </p>
+                            
+                            <div class="mb-8">
+                                <h5 class="text-xl font-bold text-textDark mb-3">Premium Team Allocation</h5>
+                                <ul class="list-disc list-inside text-sm text-textGray space-y-2 ml-2">
+                                    <li>For a couple (2 people): <span class="font-bold text-textDark">1 Expert Guide + 2 Dedicated Porters</span>.</li>
+                                    <li>For 3-4 people: Maximum ratio of <span class="font-bold text-textDark">1 Guide + 3-4 Porters</span>.</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="bg-white rounded-xl border border-gray-200 overflow-hidden mb-6">
+                                <div class="bg-gray-50 border-b border-gray-200 p-4">
+                                    <h5 class="font-bold text-textDark text-base flex items-center gap-2"><i class="ph-fill ph-check-circle text-green-500 text-xl"></i> Include</h5>
+                                </div>
+                                <div class="p-5 md:p-6">
+                                    <ul class="text-sm text-textGray space-y-3">
+                                        <li class="flex gap-3"><i class="ph-bold ph-check text-green-500 mt-0.5 shrink-0"></i> <span>Private transport: Pick-up and drop-off from anywhere in Lombok.</span></li>
+                                        <li class="flex gap-3"><i class="ph-bold ph-check text-green-500 mt-0.5 shrink-0"></i> <span>1 Night pre-trek homestay/hotel in Senaru + 2 Nights premium camping.</span></li>
+                                        <li class="flex gap-3"><i class="ph-bold ph-check text-green-500 mt-0.5 shrink-0"></i> <span>Certified English-speaking guide and professional porters.</span></li>
+                                        <li class="flex gap-3"><i class="ph-bold ph-check text-green-500 mt-0.5 shrink-0"></i> <span>All meals (Breakfast, Lunch, Dinner) during trek, plus fresh fruits & hot drinks.</span></li>
+                                        <li class="flex gap-3"><i class="ph-bold ph-check text-green-500 mt-0.5 shrink-0"></i> <span>Complete camping gear (Tent, toilet tent, mattress, sleeping bags, chairs, table).</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="bg-white rounded-xl border border-gray-200 overflow-hidden">
+                                <div class="bg-gray-50 border-b border-gray-200 p-4">
+                                    <h5 class="font-bold text-textDark text-base flex items-center gap-2"><i class="ph-fill ph-x-circle text-red-500 text-xl"></i> Exclude</h5>
+                                </div>
+                                <div class="p-5 md:p-6">
+                                    <ul class="text-sm text-textGray space-y-3">
+                                        <li class="flex gap-3"><i class="ph-bold ph-x text-red-500 mt-0.5 shrink-0"></i> <span>National Park Entrance fee (e-Rinjani ticket).</span></li>
+                                        <li class="flex gap-3"><i class="ph-bold ph-x text-red-500 mt-0.5 shrink-0"></i> <span>Extra personal porter for daypack.</span></li>
+                                        <li class="flex gap-3"><i class="ph-bold ph-x text-red-500 mt-0.5 shrink-0"></i> <span>Tipping for Guide and Porters.</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Standard/Sharing Package -->
+                    <div class="border border-primary/20 rounded-2xl bg-white overflow-hidden shadow-sm transition-all duration-300">
+                        <div class="accordion-header flex items-center justify-between p-5 md:p-6 cursor-pointer hover:bg-gray-50" onclick="toggleAccordion(this)">
+                            <div class="flex items-center gap-3">
+                                <div class="bg-blue-100 text-primary w-8 h-8 rounded-lg flex items-center justify-center"><i class="ph-bold ph-users-three"></i></div>
+                                <h4 class="font-bold text-textDark text-lg">Standard Service (Sharing Group)</h4>
+                            </div>
+                            <div class="bg-blue-100 text-primary px-3 py-1.5 rounded text-xs font-bold flex items-center gap-1 transition-colors hover:bg-blue-200">
+                                <span class="btn-text">Show</span> <i class="ph-bold ph-caret-down accordion-icon"></i>
+                            </div>
+                        </div>
+                        <div class="accordion-content px-5 md:px-8 border-x border-primary/20 rounded-b-2xl">
+                            <div class="py-6 md:py-8">
+                                <p class="text-sm text-textGray mb-4">
+                                    Join a shared group of fellow travelers. A cost-effective way to experience the magical lake and canyon trails without sacrificing safety or quality service.
+                                </p>
+                                <div class="bg-blue-50 border border-blue-100 p-4 rounded-xl text-center">
+                                    <p class="text-sm text-primary font-medium">Please contact our team via WhatsApp to check group availability and precise inclusions for the Standard Service.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Itinerary Section -->
+                <div class="border border-gray-200 rounded-2xl bg-white shadow-sm overflow-hidden mb-10">
+                    <div class="p-6 md:p-8 border-b border-gray-100 flex items-center justify-between">
+                        <h3 class="text-2xl font-bold text-textDark flex items-center gap-3"><i class="ph-bold ph-map-trifold text-primary"></i> Detailed Itinerary</h3>
+                        <button class="text-primary text-xs font-bold uppercase tracking-widest hover:underline" onclick="toggleAllAccordions(this)">Expand All</button>
+                    </div>
+                    
+                    <!-- Day 1 -->
+                    <div class="border-b border-gray-100 itinerary-item">
+                        <div class="accordion-header active flex items-center justify-between p-5 md:px-8 md:py-6 cursor-pointer hover:bg-gray-50" onclick="toggleAccordion(this)">
+                            <h4 class="font-bold text-textDark text-base flex flex-col md:flex-row md:items-center gap-1 md:gap-3">
+                                <span class="text-primary whitespace-nowrap">Day 1</span> 
+                                <span class="hidden md:inline">-</span>
+                                <span>Senaru Village to Senaru Crater Rim</span>
+                            </h4>
+                            <i class="ph-bold ph-caret-up text-gray-400 accordion-icon shrink-0"></i>
+                        </div>
+                        <div class="accordion-content expanded px-5 md:px-8 pb-0">
+                            <div class="pb-6 md:pb-8">
+                                <ul class="text-sm text-textGray space-y-4 relative pl-4 border-l-2 border-primary/20 ml-2">
+                                    <li class="relative before:absolute before:-left-[21px] before:top-1.5 before:w-2.5 before:h-2.5 before:bg-primary before:rounded-full">
+                                        <span class="font-bold text-textDark">06:30 – 07:30</span>: Breakfast at your hotel in Senaru.
+                                    </li>
+                                    <li class="relative before:absolute before:-left-[21px] before:top-1.5 before:w-2.5 before:h-2.5 before:bg-primary before:rounded-full">
+                                        <span class="font-bold text-textDark">08:00</span>: Begin trekking through the lush tropical rainforest of Senaru.
+                                    </li>
+                                    <li class="relative before:absolute before:-left-[21px] before:top-1.5 before:w-2.5 before:h-2.5 before:bg-primary before:rounded-full">
+                                        <span class="font-bold text-textDark">12:00</span>: Lunch break at Pos 2 (Montong Satas, 1,500m).
+                                    </li>
+                                    <li class="relative before:absolute before:-left-[21px] before:top-1.5 before:w-2.5 before:h-2.5 before:bg-primary before:rounded-full">
+                                        <span class="font-bold text-textDark">16:30 – 17:00</span>: Arrive at Senaru Crater Rim (2,641m). Enjoy panoramic sunset views over Segara Anak Lake and camp overnight.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day 2 -->
+                    <div class="border-b border-gray-100 itinerary-item">
+                        <div class="accordion-header flex items-center justify-between p-5 md:px-8 md:py-6 cursor-pointer hover:bg-gray-50" onclick="toggleAccordion(this)">
+                            <h4 class="font-bold text-textDark text-base flex flex-col md:flex-row md:items-center gap-1 md:gap-3">
+                                <span class="text-primary whitespace-nowrap">Day 2</span> 
+                                <span class="hidden md:inline">-</span>
+                                <span>Crater Rim to Segara Anak Lake & Hot Springs</span>
+                            </h4>
+                            <i class="ph-bold ph-caret-down text-gray-400 accordion-icon shrink-0"></i>
+                        </div>
+                        <div class="accordion-content px-5 md:px-8 pb-0">
+                            <div class="pb-6 md:pb-8">
+                                <ul class="text-sm text-textGray space-y-4 relative pl-4 border-l-2 border-primary/20 ml-2">
+                                    <li class="relative before:absolute before:-left-[21px] before:top-1.5 before:w-2.5 before:h-2.5 before:bg-primary before:rounded-full">
+                                        <span class="font-bold text-textDark">07:00</span>: Breakfast with a view of the sunrise over the lake.
+                                    </li>
+                                    <li class="relative before:absolute before:-left-[21px] before:top-1.5 before:w-2.5 before:h-2.5 before:bg-primary before:rounded-full">
+                                        <span class="font-bold text-textDark">08:00 – 11:30</span>: Descend the steep and rocky trail down into the caldera to Segara Anak Lake (2,000m).
+                                    </li>
+                                    <li class="relative before:absolute before:-left-[21px] before:top-1.5 before:w-2.5 before:h-2.5 before:bg-primary before:rounded-full">
+                                        <span class="font-bold text-textDark">Afternoon</span>: Lunch at the lake. Spend the entire afternoon relaxing, fishing, and soaking in the natural geothermal hot springs (Aik Kalak). Camp overnight by the lake.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day 3 -->
+                    <div class="itinerary-item">
+                        <div class="accordion-header flex items-center justify-between p-5 md:px-8 md:py-6 cursor-pointer hover:bg-gray-50" onclick="toggleAccordion(this)">
+                            <h4 class="font-bold text-textDark text-base flex flex-col md:flex-row md:items-center gap-1 md:gap-3">
+                                <span class="text-primary whitespace-nowrap">Day 3</span> 
+                                <span class="hidden md:inline">-</span>
+                                <span>Segara Anak Lake to Torean Village (Exit)</span>
+                            </h4>
+                            <i class="ph-bold ph-caret-down text-gray-400 accordion-icon shrink-0"></i>
+                        </div>
+                        <div class="accordion-content px-5 md:px-8 pb-0">
+                            <div class="pb-6 md:pb-8">
+                                <ul class="text-sm text-textGray space-y-4 relative pl-4 border-l-2 border-primary/20 ml-2">
+                                    <li class="relative before:absolute before:-left-[21px] before:top-1.5 before:w-2.5 before:h-2.5 before:bg-primary before:rounded-full">
+                                        <span class="font-bold text-textDark">07:00</span>: Breakfast by the lakeside and pack up gear.
+                                    </li>
+                                    <li class="relative before:absolute before:-left-[21px] before:top-1.5 before:w-2.5 before:h-2.5 before:bg-primary before:rounded-full">
+                                        <span class="font-bold text-textDark">08:00</span>: Begin the descent along the Torean route. Marvel at the mystical vertical canyons, cascading waterfalls, and lush river gorges.
+                                    </li>
+                                    <li class="relative before:absolute before:-left-[21px] before:top-1.5 before:w-2.5 before:h-2.5 before:bg-primary before:rounded-full">
+                                        <span class="font-bold text-textDark">12:00</span>: Lunch stop along the river canyon.
+                                    </li>
+                                    <li class="relative before:absolute before:-left-[21px] before:top-1.5 before:w-2.5 before:h-2.5 before:bg-primary before:rounded-full">
+                                        <span class="font-bold text-textDark">15:00</span>: Arrive at Torean Village. Our transport will be waiting to transfer you to your next destination in Lombok.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div> <!-- END LEFT COLUMN -->
+
+            <!-- RIGHT COLUMN (Sidebar Booking Widget) -->
+            <div class="w-full lg:w-1/3">
+                <div class="sticky-sidebar bg-white border border-gray-200 rounded-3xl p-6 shadow-xl">
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-bold text-textDark leading-tight mb-2">Book This Adventure</h3>
+                        <p class="text-sm text-textGray">Secure your spot for the Lake & Hot Springs expedition. Connect with our local experts on WhatsApp to check availability and finalize logistics.</p>
+                    </div>
+                    
+                    <hr class="border-gray-100 mb-6">
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center gap-3">
+                            <div class="bg-primary/10 p-2 rounded-full text-primary shrink-0"><i class="ph-fill ph-check-circle text-lg"></i></div>
+                            <span class="text-textDark font-semibold text-sm">Flexible booking & easy rescheduling.</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="bg-primary/10 p-2 rounded-full text-primary shrink-0"><i class="ph-fill ph-calendar-plus text-lg"></i></div>
+                            <span class="text-textDark font-semibold text-sm">Reserve your dates now & finalize payment later.</span>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/6285929141746?text=Hello%20Rinjani%20Wonderfull,%20I%20am%20interested%20in%20booking%20the%20Lake%20and%20Hot%20Spring%203D2N%20Senaru-Torean%20Package." target="_blank" class="w-full bg-primary hover:bg-primaryDark text-white font-bold py-4 rounded-xl transition-all shadow-md flex justify-center items-center gap-2 mb-4 group">
+                        <i class="ph-bold ph-whatsapp-logo text-xl group-hover:scale-110 transition-transform"></i> Inquire Price & Book via WA
+                    </a>
+                    
+                    <p class="text-[11px] text-center text-gray-400 font-medium px-4">No payment required at this stage. Our experts usually reply within 5 minutes.</p>
+                </div>
+            </div> <!-- END RIGHT COLUMN -->
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-textDark text-white pt-10 pb-6 border-t border-gray-800 mt-10">
+        <div class="container mx-auto px-4 lg:px-12">
+            <div class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 gap-4">
+                <div class="font-bold text-xl text-white tracking-tight">RINJANI<span class="text-xs font-normal tracking-widest text-gray-400">WONDERFULL</span></div>
+                <div class="text-center">&copy; 2026 Rinjani Wonderfull. All rights reserved.</div>
+                <div class="flex justify-center items-center gap-6">
+                    <a href="https://instagram.com/rinjaniwonderfull" target="_blank" class="hover:text-white transition-colors"><i class="ph-fill ph-instagram-logo text-2xl"></i></a>
+                    <a href="https://tiktok.com/@rinjaniwonderfull" target="_blank" class="hover:text-white transition-colors"><i class="ph-fill ph-tiktok-logo text-2xl"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // Accordion Logic
+        function toggleAccordion(element) {
+            const header = element;
+            const content = header.nextElementSibling;
+            const icon = header.querySelector('.accordion-icon');
+            const btnText = header.querySelector('.btn-text');
+            
+            header.classList.toggle('active');
+            
+            if (content.classList.contains('expanded')) {
+                content.classList.remove('expanded');
+                if(btnText) btnText.textContent = "Show";
+                if(icon && !header.classList.contains('active')) icon.classList.replace('ph-caret-up', 'ph-caret-down');
+            } else {
+                content.classList.add('expanded');
+                if(btnText) btnText.textContent = "Hide";
+                if(icon) icon.classList.replace('ph-caret-down', 'ph-caret-up');
+            }
+        }
+
+        // Expand All Logic for Itinerary
+        function toggleAllAccordions(btn) {
+            const isExpanding = btn.textContent.trim() === "Expand All";
+            const headers = document.querySelectorAll('.itinerary-item .accordion-header');
+            
+            headers.forEach(header => {
+                const content = header.nextElementSibling;
+                const icon = header.querySelector('.accordion-icon');
+                
+                if (isExpanding) {
+                    header.classList.add('active');
+                    content.classList.add('expanded');
+                    if(icon) icon.classList.replace('ph-caret-down', 'ph-caret-up');
+                } else {
+                    header.classList.remove('active');
+                    content.classList.remove('expanded');
+                    if(icon) icon.classList.replace('ph-caret-up', 'ph-caret-down');
+                }
+            });
+            
+            btn.textContent = isExpanding ? "Collapse All" : "Expand All";
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Menu Toggle (Hamburger)
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            if(mobileMenuBtn && mobileMenu && menuIcon) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('open');
+                    if (mobileMenu.classList.contains('open')) {
+                        menuIcon.classList.replace('ph-list', 'ph-x');
+                    } else {
+                        menuIcon.classList.replace('ph-x', 'ph-list');
+                    }
+                });
+
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.remove('open');
+                        menuIcon.classList.replace('ph-x', 'ph-list');
+                    });
+                });
+            }
+
+            // Floating Chat Menu
+            const chatToggleBtn = document.getElementById('chat-toggle');
+            const chatMenu = document.getElementById('chat-menu');
+            const chatIcon = document.getElementById('chat-icon');
+
+            if(chatToggleBtn && chatMenu && chatIcon) {
+                chatToggleBtn.addEventListener('click', () => {
+                    chatMenu.classList.toggle('chat-menu-open');
+                    if (chatMenu.classList.contains('chat-menu-open')) {
+                        chatIcon.classList.replace('ph-chat-teardrop-dots', 'ph-x');
+                    } else {
+                        chatIcon.classList.replace('ph-x', 'ph-chat-teardrop-dots');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
