@@ -109,25 +109,22 @@
         </button>
     </div>
 
-    <!-- Header -->
-    <header class="fixed top-0 left-0 w-full z-40 transition-all duration-300 bg-white shadow-sm py-2" id="navbar">
-        <div class="container mx-auto px-4 lg:px-12">
-            <div class="flex items-center justify-between">
-                <!-- Logo -->
-                <a href="index.html" class="flex-shrink-0 z-50 py-2">
-                    <img src="images/logo.png" alt="Rinjani Wonderfull" class="h-12 w-auto object-contain onerror='this.style.display=\"none\";'">
-                    <div class="font-bold text-2xl text-textDark tracking-tight" style="display: none;">RINJANI<br><span class="text-xs font-normal tracking-widest text-textGray">WONDERFULL</span></div>
-                </a>
-
-                <!-- Desktop Nav -->
-                <nav class="hidden lg:flex items-center gap-8 text-textDark font-medium text-sm">
-                    <a href="index.html" class="hover:text-primary transition-colors pb-1">HOME</a>
-                    <a href="packages.html" class="text-primary font-bold border-b-2 border-primary pb-1">PACKAGES</a>
-                    <a href="blog-tips.html" class="hover:text-primary transition-colors pb-1">BLOG & TIPS</a>
-                    <a href="index.html#experience-wonder" class="hover:text-primary transition-colors pb-1">ABOUT</a>
-                    <a href="booking-transport.html" class="text-primary font-semibold">TRANSPORT</a>
-                </nav>
-                
+    <!-- Header / Navbar -->
+    <header class="bg-white sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-4 lg:px-12 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2">
+                <img src="images/logo.png" alt="Logo" class="h-16 lg:h-20 w-auto object-contain">
+            </a>
+            <nav class="hidden lg:flex items-center gap-8 font-medium text-sm">
+                <a href="index.html" class="hover:text-primary transition-colors">HOME</a>
+                <a href="packages.html" class="hover:text-primary transition-colors">PACKAGES</a>
+                <a href="blog-tips.html" class="hover:text-primary transition-colors">BLOG</a>
+                <a href="index.html#experience-wonder" class="hover:text-primary transition-colors pb-1">ABOUT</a>
+                <a href="booking-transport.html" class="text-primary font-semibold">TRANSPORT</a>
+            </nav>
+            <a href="index.html#booking-form" class="bg-primary text-white px-5 py-2.5 rounded-full font-medium text-sm shadow-md hover:bg-sky-700 transition-all">BOOK RINJANI TREKK</a>
+        </div>
+    </header>
                 <!-- Desktop Actions -->
                 <div class="hidden lg:flex items-center">
                     <a href="index.html#contact" class="bg-primary text-white px-6 py-2.5 rounded hover:bg-primaryDark transition-all text-sm font-semibold tracking-wide shadow-md">BOOK NOW</a>
