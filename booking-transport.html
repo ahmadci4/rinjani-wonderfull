@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transport & Shuttle Booking | Rinjani Wonderfull</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0284c7',
+                        dark: '#0f172a',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans">
+
+    <!-- Header / Navbar -->
+    <header class="bg-white sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-4 lg:px-12 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2">
+                <img src="images/rinjaniwonderfull-logo.png" alt="Logo" class="h-16 lg:h-20 w-auto object-contain">
+            </a>
+            <nav class="hidden lg:flex items-center gap-8 font-medium text-sm">
+                <a href="index.html" class="hover:text-primary transition-colors">Home</a>
+                <a href="packages.html" class="hover:text-primary transition-colors">Packages</a>
+                <a href="blog.html" class="hover:text-primary transition-colors">Blog</a>
+                <a href="about.html" class="hover:text-primary transition-colors">About</a>
+                <a href="booking-transport.html" class="text-primary font-semibold">Transport</a>
+            </nav>
+            <a href="index.html#booking-form" class="bg-primary text-white px-5 py-2.5 rounded-full font-medium text-sm shadow-md hover:bg-sky-700 transition-all">Book Now</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative py-16 bg-slate-900 text-white text-center">
+        <div class="absolute inset-0 opacity-40 bg-cover bg-center" style="background-image: url('images/transport.jpg');"></div>
+        <div class="relative container mx-auto px-4 max-w-3xl">
+            <h1 class="text-3xl lg:text-4xl font-bold mb-4">Lombok Airport Transfer & Shuttle Services</h1>
+            <p class="text-slate-200 text-sm lg:text-base">Reliable, comfortable, and safe private transfers across Lombok. From airport pickups to direct drop-offs at Senaru, Sembalun, Senggigi, and Bangsal Harbour.</p>
+        </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section class="py-12 px-4 container mx-auto max-w-4xl">
+        <div class="bg-white rounded-2xl shadow-xl p-6 lg:p-10 border border-slate-100">
+            <h2 class="text-2xl font-bold text-slate-900 mb-2 text-center">Book Your Transport Route</h2>
+            <p class="text-slate-500 text-center text-sm mb-8">Fill out the route details below. We will instantly connect you with our team via WhatsApp.</p>
+
+            <form id="transport-form" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-2">Your Full Name</label>
+                        <input type="text" id="t-name" required placeholder="e.g. John Doe" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-primary focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-2">WhatsApp Number</label>
+                        <input type="text" id="t-wa" required placeholder="e.g. +44 7123 456789" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-primary focus:outline-none">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-2">Pick-up Location</label>
+                        <select id="t-pickup" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-primary focus:outline-none bg-white">
+                            <option value="Lombok International Airport (LOP)">Lombok International Airport (LOP)</option>
+                            <option value="Senggigi Area">Senggigi Area</option>
+                            <option value="Mataram / City Center">Mataram / City Center</option>
+                            <option value="Bangsal Harbour">Bangsal Harbour</option>
+                            <option value="Senaru Village">Senaru Village</option>
+                            <option value="Sembalun Village">Sembalun Village</option>
+                            <option value="Kuta Mandalika">Kuta Mandalika</option>
+                            <option value="Other Location">Other Location (Specify in chat)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-2">Drop-off Destination</label>
+                        <select id="t-dropoff" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-primary focus:outline-none bg-white">
+                            <option value="Senaru Village">Senaru Village</option>
+                            <option value="Sembalun Village">Sembalun Village</option>
+                            <option value="Lombok International Airport (LOP)">Lombok International Airport (LOP)</option>
+                            <option value="Senggigi Area">Senggigi Area</option>
+                            <option value="Bangsal Harbour">Bangsal Harbour</option>
+                            <option value="Mataram / City Center">Mataram / City Center</option>
+                            <option value="Kuta Mandalika">Kuta Mandalika</option>
+                            <option value="Other Destination">Other Destination (Specify in chat)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-2">Date of Transfer</label>
+                        <input type="date" id="t-date" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-primary focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-2">Number of Passengers</label>
+                        <select id="t-passengers" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-primary focus:outline-none bg-white">
+                            <option value="1-2 Persons">1 - 2 Persons (Standard Car)</option>
+                            <option value="3-4 Persons">3 - 4 Persons (SUV / Avanza)</option>
+                            <option value="5-6 Persons">5 - 6 Persons (Innova Reborn)</option>
+                            <option value="7+ Persons">7+ Persons (HiAce / Minibus)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-2">Vehicle Type</label>
+                        <select id="t-vehicle" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-primary focus:outline-none bg-white">
+                            <option value="Standard Private Car (Avanza/Xenia)">Standard Private Car</option>
+                            <option value="Comfort SUV (Innova)">Comfort SUV (Innova)</option>
+                            <option value="Group Minibus (Toyota HiAce)">Group Minibus (HiAce)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-slate-700 mb-2">Additional Notes / Flight Number (Optional)</label>
+                    <textarea id="t-notes" rows="3" placeholder="e.g. Flight number GA432, arrival time 14:30" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-primary focus:outline-none"></textarea>
+                </div>
+
+                <div id="form-msg" class="hidden bg-emerald-50 text-emerald-700 p-4 rounded-xl text-center text-sm font-medium">
+                    Redirecting to WhatsApp to complete your transport reservation...
+                </div>
+
+                <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-4 rounded-xl shadow-lg transition-all flex items-center justify-center gap-2">
+                    <i class="ph ph-whatsapp-logo text-xl"></i> Book Transport via WhatsApp
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 mt-16 text-sm">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2026 Rinjani Wonderfull. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('transport-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('t-name').value;
+            const wa = document.getElementById('t-wa').value;
+            const pickup = document.getElementById('t-pickup').value;
+            const dropoff = document.getElementById('t-dropoff').value;
+            const date = document.getElementById('t-date').value;
+            const passengers = document.getElementById('t-passengers').value;
+            const vehicle = document.getElementById('t-vehicle').value;
+            const notes = document.getElementById('t-notes').value;
+            const msgEl = document.getElementById('form-msg');
+
+            const text = `Hello Rinjani Wonderfull, I would like to book a transport service:%0A%0A*Name:* ${name}%0A*WhatsApp:* ${wa}%0A*Pick-up:* ${pickup}%0A*Drop-off:* ${dropoff}%0A*Date:* ${date}%0A*Passengers:* ${passengers}%0A*Vehicle:* ${vehicle}%0A*Notes:* ${notes || 'None'}`;
+            const waUrl = `https://wa.me/6285929141746?text=${text}`;
+
+            msgEl.classList.remove('hidden');
+            setTimeout(() => { msgEl.classList.add('hidden'); }, 3000);
+
+            window.open(waUrl, '_blank');
+        });
+    </script>
+</body>
+</html>
