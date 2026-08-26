@@ -71,6 +71,19 @@
         .chat-menu-open .chat-option:nth-child(4) { transition-delay: 0.2s; }
         .chat-menu-open .chat-option:nth-child(5) { transition-delay: 0.25s; }
 
+        /* Article Expand Transitions */
+        .article-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, margin 0.5s ease-in-out;
+            opacity: 0;
+        }
+        .article-content.expanded {
+            max-height: 2000px; /* Large enough to hold the content */
+            opacity: 1;
+            margin-top: 1rem;
+        }
+
         .line-clamp-2 {
             display: -webkit-box;
             -webkit-line-clamp: 2;
@@ -111,8 +124,7 @@
         </button>
     </div>
 
-    <!-- Header -->
-     <!-- Header / Navbar -->
+    <!-- Header / Navbar -->
     <header class="bg-white sticky top-0 z-50 shadow-sm">
         <div class="container mx-auto px-4 lg:px-12 py-4 flex items-center justify-between">
             <a href="index.html" class="flex items-center gap-2">
@@ -166,65 +178,131 @@
                 <p class="text-textGray text-base">Unfiltered advice and deep-dive stories to prepare your mind and soul for Lombok’s crowning glory.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
                 
                 <!-- Blog 1 -->
                 <article class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl transition-shadow flex flex-col group">
-                    <div class="relative h-60 bg-gray-200 overflow-hidden">
-                        <img src="images/sembalun-2d1nsummit.jpg" alt="Why Sembalun is the Ultimate Gateway" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="relative h-60 bg-gray-200 overflow-hidden shrink-0">
+                        <img src="images/sembalun-2d1nsummit.jpg" alt="Torean vs Senaru" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                         <div class="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded">Expedition Guide</div>
                     </div>
                     <div class="p-6 flex flex-col flex-grow">
-                        <div class="text-xs text-gray-400 mb-2 flex items-center gap-2"><i class="ph ph-calendar-blank"></i> February 15, 2026 • 5 min read</div>
+                        <div class="text-xs text-gray-400 mb-2 flex items-center gap-2"><i class="ph ph-calendar-blank"></i> August 25, 2026 • 5 min read</div>
                         <h3 class="text-xl font-bold text-textDark mb-3 group-hover:text-primary transition-colors leading-tight">
-                            Why Sembalun is the Undisputed King of Rinjani Trekking Routes
+                            Torean vs Senaru Route: Which is Better for Beginners?
                         </h3>
-                        <p class="text-sm text-textGray mb-6 flex-grow line-clamp-3">
-                            Wondering where to start your climb? Discover why starting your journey across the high-altitude savannas of Sembalun gives you the highest success rate for conquering the 3,726m summit.
+                        
+                        <!-- Initial Preview Text -->
+                        <p class="text-sm text-textGray mb-4 line-clamp-3" id="preview-1">
+                            Choosing a Mount Rinjani trekking route for the first time often feels more nerve-wracking than the climb itself. You probably already know that Sembalun is the mandatory starting point for chasing the summit, but the big question arises when it's time to head back down to civilization...
                         </p>
-                        <a href="https://wa.me/6285929141746?text=Hello%20Rinjani%20Wonderfull,%20I%20read%20your%20article%20about%20Sembalun%20and%20want%20to%20book%20an%20expedition!" target="_blank" class="inline-flex items-center gap-2 text-primary font-bold text-sm hover:underline">
-                            <span>Inquire via WhatsApp</span> <i class="ph-bold ph-arrow-right"></i>
-                        </a>
+
+                        <!-- Hidden Full Content -->
+                        <div class="article-content text-sm text-textGray space-y-4" id="content-1">
+                            <p>Choosing a Mount Rinjani trekking route for the first time often feels more nerve-wracking than the climb itself. You probably already know that Sembalun is the mandatory starting point for chasing the summit, but the big question arises when it's time to head back down to civilization: should you take the legendary Senaru route, or the currently viral Torean trail with its Jurassic Park-like scenery? If you are a beginner hiker weighing your physical limits against the desire for the best photos, let's break down both trails realistically without the sugarcoating.</p>
+
+                            <h4 class="font-bold text-textDark text-base mt-2">The Senaru Route: The Predictable Classic Trail</h4>
+                            <p>Senaru is the traditional route that has been safely used for decades. The main characteristic of this trail is its dense tropical rainforest. You will walk under the shade of a lush tree canopy, completely shielded from the scorching sun—a luxury you will deeply appreciate after the exhausting summit push.</p>
+                            <p>The terrain in Senaru is much more predictable. The path is dominated by solid dirt and a network of tree roots that form natural staircases. For those not yet accustomed to reading wild terrains, the certainty of this path really helps in pacing your breath and footing. There are no steep cliffs that require crawling or scrambling. Even so, be prepared for a constant, long descent; your knees and toes will work overtime if you navigate this trail without proper trekking poles.</p>
+                    
+                            <h4 class="font-bold text-textDark text-base mt-2">The Torean Route: Spectacular But Mentally Demanding</h4>
+                            <p>Torean is the new darling among hikers. Its green valleys sandwiched between towering cliffs, warm sulfur rivers, and the magnificent Penimbungan Waterfall make this route feel like stepping into a prehistoric world. Walking through Torean is an unmatched visual experience.</p>
+                            <p>Beneath its beauty, however, Torean hides serious challenges for a beginner. The terrain is highly fluctuating—you will frequently face sharp ascents immediately followed by steep drops. The most demanding part is the nature of the trail itself; you will spend a lot of time hugging narrow cliff walls with a gaping abyss on one side. You need extra body balance, high-level caution, and mental composure, especially when fog rolls in or rain turns the clay and rocks incredibly slippery. This is not a trail where you can casually stroll and chat.</p>
+                    
+                            <h4 class="font-bold text-textDark text-base mt-2">Which One is Better for You?</h4>
+                            <p>If this is your first major mountain climb, or if you aren't completely confident in your body's balance on the edge of a ravine, Senaru is the absolute winner. The safety and regularity of its terrain will give you a calmer and more enjoyable trekking experience, without being overshadowed by anxiety. You will still get extraordinary visual satisfaction from the Segara Anak Lake area before finally entering the tranquility of the Senaru forest.</p>
+                            <p>You should save Torean for your second climb. This cliffside route demands mature reflex responses and mental endurance that are usually only built after you are accustomed to the harsh rhythms of the wilderness. Don't let viral photos force an ambition that sacrifices your safety and the comfort of your first steps on a mountain as beautiful as Rinjani.</p>
+                            <p>Preparing your physical fitness well in advance is the main key to ensuring you can still smile in your summit photos, regardless of which route you eventually take. Based on the terrain breakdown above, are you planning to take a 3-day, 2-night package to try the Senaru route, or are you more interested in planning a longer, more relaxed trek?</p>
+                        </div>
+
+                        <!-- Read More Button -->
+                        <button onclick="toggleArticle(1)" id="btn-1" class="inline-flex items-center gap-2 text-primary font-bold text-sm hover:underline mt-auto self-start">
+                            <span>Read More</span> <i class="ph-bold ph-caret-down transition-transform duration-300" id="icon-1"></i>
+                        </button>
                     </div>
                 </article>
 
                 <!-- Blog 2 -->
                 <article class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl transition-shadow flex flex-col group">
-                    <div class="relative h-60 bg-gray-200 overflow-hidden">
-                        <img src="images/torean-3d2nlake.jpg" alt="Torean Canyon" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded">Hidden Gems</div>
+                    <div class="relative h-60 bg-gray-200 overflow-hidden shrink-0">
+                        <img src="images/torean-3d2nlake.jpg" alt="Packing List" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded">Preparation</div>
                     </div>
                     <div class="p-6 flex flex-col flex-grow">
-                        <div class="text-xs text-gray-400 mb-2 flex items-center gap-2"><i class="ph ph-calendar-blank"></i> February 10, 2026 • 6 min read</div>
+                        <div class="text-xs text-gray-400 mb-2 flex items-center gap-2"><i class="ph ph-calendar-blank"></i> August 20, 2026 • 6 min read</div>
                         <h3 class="text-xl font-bold text-textDark mb-3 group-hover:text-primary transition-colors leading-tight">
-                            The Torean Secret: Why This Waterfall Canyon Exit Feels Like Jurassic Park
+                            Ultimate Packing List for Rinjani: What You Actually Need
                         </h3>
-                        <p class="text-sm text-textGray mb-6 flex-grow line-clamp-3">
-                            Forget ordinary descents. Step into a mystical realm of vertical cliff faces, roaring multi-tiered waterfalls, and hanging suspension bridges that make Torean the most cinematic exit on earth.
+                        
+                        <!-- Initial Preview Text -->
+                        <p class="text-sm text-textGray mb-4 line-clamp-3" id="preview-2">
+                            You’ve booked your ticket, trained for months, and now you’re staring at an empty backpack with rising panic. Overpacking is the most common rookie mistake on Mount Rinjani, often resulting in unnecessary exhaustion before you even reach the crater rim...
                         </p>
-                        <a href="https://wa.me/6285929141746?text=Hello%20Rinjani%20Wonderfull,%20I%20want%20to%20experience%20the%20Torean%20canyon%20route!" target="_blank" class="inline-flex items-center gap-2 text-primary font-bold text-sm hover:underline">
-                            <span>Inquire via WhatsApp</span> <i class="ph-bold ph-arrow-right"></i>
-                        </a>
+
+                        <!-- Hidden Full Content -->
+                        <div class="article-content text-sm text-textGray space-y-4" id="content-2">
+                            <p>You’ve booked your ticket, trained for months, and now you’re staring at an empty backpack with rising panic. Overpacking is the most common rookie mistake on Mount Rinjani, often resulting in unnecessary exhaustion before you even reach the crater rim. You might think you need three pairs of pants and a massive winter coat to survive the elements, but let's cut the fluff. If you want to save your energy and enjoy the climb at 3,726 meters, we need to talk about what goes into your bag and what stays home.</p>
+
+                            <h4 class="font-bold text-textDark text-base mt-2">Mastering the Layering System</h4>
+                            <p>First, understand that your porter will carry the heavy camping gear, tents, and main food supplies. You only need to carry your personal daypack, which should ideally weigh no more than five to seven kilograms. The golden rule for mountain clothing is layering. Instead of bringing one heavy, bulky jacket that takes up half your bag and makes you sweat profusely during the day, bring a high-quality windbreaker, a lightweight fleece, and breathable thermal base layers.</p>
+                            <p>The temperature drops drastically during the 2 AM summit push, often hovering near freezing with biting winds. Layering allows you to adjust to your body heat dynamically as you climb. You can start with all layers on, and as your heart rate increases and your body warms up on the steep incline, you simply peel off the fleece or windbreaker and pack it away without breaking your momentum.</p>
+                    
+                            <h4 class="font-bold text-textDark text-base mt-2">Footwear: The Make or Break Factor</h4>
+                            <p>Next, let's talk about the most critical gear you will wear: your footwear. Leave your brand-new, straight-out-of-the-box hiking boots at home unless you want agonizing blisters by the end of day two. The Rinjani terrain is unforgiving, ranging from slippery roots to deep volcanic ash. You need boots that you have already thoroughly broken in, ideally with good ankle support to prevent sprains on the uneven descents.</p>
+                            <p>In addition to your main hiking boots, do not forget to pack a pair of lightweight trekking sandals or comfortable slip-ons. Your feet will absolutely beg to breathe after a grueling ten-hour trek. You will be incredibly grateful for these when you are navigating the rocky paths around the campsite, walking to the toilet tent at night, or carefully stepping into the natural hot springs near the lake.</p>
+                    
+                            <h4 class="font-bold text-textDark text-base mt-2">Nutrition and Smart Packing</h4>
+                            <p>Do not rely solely on the provided meals for your immediate energy needs. While our team cooks excellent, hearty food for breakfast, lunch, and dinner, you need instant sugar hits for those steep, physically draining climbs. Bring your favorite energy bars, trail mix, or chocolate. Keep them easily accessible in your jacket or hip-belt pocket so you can grab a quick bite without having to stop and unpack your bag.</p>
+                            <p>Remember, every extra gram feels like a kilogram when you are hiking at a high altitude. Be ruthless with your packing list. Skip the heavy electronics, the extra changes of "just in case" clothes, and the full-sized toiletries. Stick to the absolute essentials, pack light, and trust that the mountain will provide the rest of the experience.</p>
+                            <p>Organizing your gear properly is a crucial step in ensuring your comfort and success on the mountain. Based on this packing strategy, are you feeling confident about assembling your daypack, or do you need a more detailed, itemized checklist before your arrival in Lombok?</p>
+                        </div>
+
+                        <!-- Read More Button -->
+                        <button onclick="toggleArticle(2)" id="btn-2" class="inline-flex items-center gap-2 text-primary font-bold text-sm hover:underline mt-auto self-start">
+                            <span>Read More</span> <i class="ph-bold ph-caret-down transition-transform duration-300" id="icon-2"></i>
+                        </button>
                     </div>
                 </article>
 
                 <!-- Blog 3 -->
                 <article class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl transition-shadow flex flex-col group">
-                    <div class="relative h-60 bg-gray-200 overflow-hidden">
-                        <img src="images/senaru-2d1ncrater.jpg" alt="Sunrise Above the Clouds" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded">Mindset & Training</div>
+                    <div class="relative h-60 bg-gray-200 overflow-hidden shrink-0">
+                        <img src="images/senaru-2d1ncrater.jpg" alt="Best Time to Climb" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded">Weather & Seasons</div>
                     </div>
                     <div class="p-6 flex flex-col flex-grow">
-                        <div class="text-xs text-gray-400 mb-2 flex items-center gap-2"><i class="ph ph-calendar-blank"></i> February 02, 2026 • 4 min read</div>
+                        <div class="text-xs text-gray-400 mb-2 flex items-center gap-2"><i class="ph ph-calendar-blank"></i> August 15, 2026 • 5 min read</div>
                         <h3 class="text-xl font-bold text-textDark mb-3 group-hover:text-primary transition-colors leading-tight">
-                            How to Train Your Body (and Mind) for the Brutal 3,726m Summit Push
+                            The Best Time to Climb Mount Rinjani: Avoiding Crowds and Rain
                         </h3>
-                        <p class="text-sm text-textGray mb-6 flex-grow line-clamp-3">
-                            The 2:00 AM summit attack is legendary. Learn the exact cardio habits, leg strengthening exercises, and mental hacks used by seasoned pros to conquer the final volcanic scree slope with ease.
+                        
+                        <!-- Initial Preview Text -->
+                        <p class="text-sm text-textGray mb-4 line-clamp-3" id="preview-3">
+                            Timing is everything when it comes to conquering a massive volcano like Mount Rinjani. Booking a trek in the wrong month can mean slipping on treacherous muddy trails, freezing in zero-visibility fog, or completely missing out on that iconic sunrise summit photo...
                         </p>
-                        <a href="https://wa.me/6285929141746?text=Hello%20Rinjani%20Wonderfull,%20I%20need%20expert%20training%20advice%20for%20my%20summit%20climb!" target="_blank" class="inline-flex items-center gap-2 text-primary font-bold text-sm hover:underline">
-                            <span>Inquire via WhatsApp</span> <i class="ph-bold ph-arrow-right"></i>
-                        </a>
+
+                        <!-- Hidden Full Content -->
+                        <div class="article-content text-sm text-textGray space-y-4" id="content-3">
+                            <p>Timing is everything when it comes to conquering a massive volcano like Mount Rinjani. Booking a trek in the wrong month can mean slipping on treacherous muddy trails, freezing in zero-visibility fog, or completely missing out on that iconic sunrise summit photo you traveled so far to get. With the mountain experiencing distinct weather patterns throughout the year, choosing your window carefully is crucial. Let's break down the seasonal variations so you can match your trekking goals with the reality of Lombok's climate.</p>
+
+                            <h4 class="font-bold text-textDark text-base mt-2">The Post-Monsoon Greenery: April and May</h4>
+                            <p>The Mount Rinjani National Park officially reopens for trekking in April after a three-month mandatory closure. If you are a photographer or someone who loves lush, vibrant green landscapes, April and May are spectacular months to visit. The recent rainy season has just finished washing the mountain, making the savanna grass incredibly vibrant and the waterfalls flow with immense power. The air is generally very clean and free of dust.</p>
+                            <p>The catch to this beautiful scenery is the lingering moisture. During these transition months, you might still encounter occasional afternoon showers or sudden cloud cover that rolls in quickly. The trails, especially on the Senaru descent, can be quite slippery due to the damp soil and wet roots. You will need to bring reliable waterproof gear and accept that the weather can be slightly unpredictable, though rarely severe enough to stop a climb.</p>
+                    
+                            <h4 class="font-bold text-textDark text-base mt-2">The Peak Dry Season: July and August</h4>
+                            <p>The peak climbing season hits full swing during July and August. This is when the weather is at its absolute best for high-altitude trekking—dry, crisp, and clear skies are almost guaranteed every single day. The paths are solid, the risk of rain is minimal, and the views from the summit stretching all the way to Bali and Sumbawa are largely unobstructed by clouds.</p>
+                            <p>However, this perfect weather comes with a significant trade-off: the crowds. This period aligns with European and North American summer holidays, meaning the trails and campsites are heavily congested. You will be sharing the mountain with hundreds of other hikers, which can slow down your pace on narrow paths and make finding a quiet, secluded camping spot near the crater rim quite challenging.</p>
+                    
+                            <h4 class="font-bold text-textDark text-base mt-2">Finding the Perfect Balance</h4>
+                            <p>If you want the perfect combination of great weather, dry trails, and a significantly quieter mountain experience, aim for late September or October. The massive summer crowds have mostly gone home, leaving the mountain feeling wild and remote again. The weather remains mostly dry, though the landscape will look more arid and brown compared to the lushness of May.</p>
+                            <p>One crucial detail to remember is that Rinjani is strictly closed to all climbing activity from January to March. This closure is heavily enforced due to extreme monsoon weather, which brings dangerous winds, flooding, and landslides, and also to allow the mountain's delicate ecosystem to naturally recover without human interference.</p>
+                            <p>Planning your trip around the right season will ultimately dictate the kind of memories you bring home from Indonesia. Looking at these distinct weather windows, are you leaning toward the lush, quiet trails of April, or the guaranteed clear skies of the busy August peak season?</p>
+                        </div>
+
+                        <!-- Read More Button -->
+                        <button onclick="toggleArticle(3)" id="btn-3" class="inline-flex items-center gap-2 text-primary font-bold text-sm hover:underline mt-auto self-start">
+                            <span>Read More</span> <i class="ph-bold ph-caret-down transition-transform duration-300" id="icon-3"></i>
+                        </button>
                     </div>
                 </article>
 
@@ -382,6 +460,28 @@
                 });
             }
         });
+
+        // Function to handle "Read More" expansion
+        function toggleArticle(id) {
+            const content = document.getElementById(`content-${id}`);
+            const preview = document.getElementById(`preview-${id}`);
+            const btnText = document.querySelector(`#btn-${id} span`);
+            const icon = document.getElementById(`icon-${id}`);
+
+            if (content.classList.contains('expanded')) {
+                // Collapse
+                content.classList.remove('expanded');
+                preview.classList.remove('hidden'); // Show preview again
+                btnText.textContent = 'Read More';
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                // Expand
+                content.classList.add('expanded');
+                preview.classList.add('hidden'); // Hide preview so it doesn't duplicate
+                btnText.textContent = 'Read Less';
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
     </script>
 </body>
 </html>
