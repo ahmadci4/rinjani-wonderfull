@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bayan Panorama Walk | Rinjani Wonderfull</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Experience the Bayan Panorama Walk with Rinjani Wonderfull. A 1-day tour exploring Sendang Gile waterfalls, ancient mosques, traditional weaving, and rice terraces.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1862be', 
+                        primaryDark: '#124d96',
+                        secondary: '#f5a623', /* Orange Accent */
+                        textDark: '#1e293b',
+                        textGray: '#475569'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(30, 41, 59, 0.6), rgba(30, 41, 59, 0.8)), url('images/bayan-panorama-walk.jpg');
+            background-position: center; 
+            background-size: cover; 
+            background-repeat: no-repeat;
+        }
+
+        /* Mobile Menu Transitions */
+        #mobile-menu {
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateX(100%);
+        }
+        #mobile-menu.open {
+            transform: translateX(0);
+        }
+
+        /* Floating Menu Transitions */
+        .chat-option {
+            opacity: 0;
+            transform: translateY(20px) scale(0.9);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            pointer-events: none;
+        }
+        .chat-menu-open .chat-option {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            pointer-events: auto;
+        }
+        .chat-menu-open .chat-option:nth-child(1) { transition-delay: 0.05s; }
+        .chat-menu-open .chat-option:nth-child(2) { transition-delay: 0.1s; }
+        .chat-menu-open .chat-option:nth-child(3) { transition-delay: 0.15s; }
+        .chat-menu-open .chat-option:nth-child(4) { transition-delay: 0.2s; }
+    </style>
+</head>
+<body class="font-sans text-textGray bg-gray-50 antialiased relative overflow-x-hidden">
+
+    <!-- Floating Multi-Contact Menu -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
+        <div id="chat-menu" class="flex flex-col gap-3 mb-2">
+            <a href="https://tiktok.com/@rinjaniwonderfull" target="_blank" class="chat-option flex items-center justify-center w-12 h-12 bg-black text-white rounded-full shadow-lg hover:scale-110 hover:bg-gray-800 transition-transform" aria-label="TikTok">
+                <i class="ph-fill ph-tiktok-logo text-2xl"></i>
+            </a>
+            <a href="https://instagram.com/rinjaniwonderfull" target="_blank" class="chat-option flex items-center justify-center w-12 h-12 bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white rounded-full shadow-lg hover:scale-110 transition-transform" aria-label="Instagram">
+                <i class="ph-fill ph-instagram-logo text-2xl"></i>
+            </a>
+            <a href="mailto:rinjaniwonderfull@gmail.com" class="chat-option flex items-center justify-center w-12 h-12 bg-[#EA4335] text-white rounded-full shadow-lg hover:scale-110 hover:bg-[#d33c2f] transition-transform" aria-label="Email">
+                <i class="ph-fill ph-envelope-simple text-2xl"></i>
+            </a>
+            <a href="https://wa.me/6285929141746?text=Hello%20Rinjani%20Wonderfull,%20I%20want%20to%20book%20the%20Bayan%20Panorama%20Walk!" target="_blank" class="chat-option flex items-center justify-center w-12 h-12 bg-[#25D366] text-white rounded-full shadow-lg hover:scale-110 hover:bg-[#1ebe5d] transition-transform" aria-label="WhatsApp">
+                <i class="ph-fill ph-whatsapp-logo text-2xl"></i>
+            </a>
+        </div>
+        
+        <button id="chat-toggle" class="flex items-center justify-center w-14 h-14 bg-primary text-white rounded-full shadow-2xl hover:bg-primaryDark transition-all duration-300 hover:shadow-primary/50 group" aria-label="Contact Us">
+            <i id="chat-icon" class="ph-fill ph-chat-teardrop-dots text-3xl group-hover:scale-110 transition-transform duration-300"></i>
+        </button>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header class="bg-white sticky top-0 z-40 shadow-sm border-b border-gray-100">
+        <div class="container mx-auto px-4 lg:px-12">
+            <div class="flex items-center justify-between py-4">
+                
+                <a href="index.html" class="flex items-center gap-2 flex-1 lg:flex-none">
+                    <img src="images/logo.png" alt="Rinjani Wonderfull Logo" class="h-14 lg:h-16 w-auto object-contain">
+                </a>
+
+                <nav class="hidden lg:flex items-center gap-8 font-semibold text-sm text-textGray">
+                    <a href="index.html" class="hover:text-secondary transition-colors pb-1">HOME</a>
+                    <a href="packages.html" class="text-secondary border-b-2 border-secondary pb-1 transition-colors">PACKAGES</a>
+                    <a href="blog-tips.html" class="hover:text-secondary transition-colors pb-1">BLOG</a>
+                    <a href="index.html#experience-wonder" class="hover:text-secondary transition-colors pb-1">ABOUT</a>
+                    <a href="booking-transport.html" class="hover:text-secondary transition-colors pb-1">TRANSPORT</a>
+                </nav>
+
+                <div class="hidden lg:flex flex-1 justify-end items-center">
+                    <a href="https://wa.me/6285929141746?text=Hello%20Rinjani%20Wonderfull,%20I%20want%20to%20book%20the%20Bayan%20Panorama%20Walk!" target="_blank" class="bg-primary text-white px-6 py-2.5 rounded-full hover:bg-primaryDark transition-all text-sm font-bold tracking-wide shadow-md">BOOK TOUR</a>
+                </div>
+
+                <div class="lg:hidden flex items-center justify-end">
+                    <button id="mobile-menu-btn" class="text-textDark z-50 p-2 shadow-sm rounded" aria-label="Menu">
+                        <i class="ph ph-list text-3xl font-bold" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-30 lg:hidden flex flex-col justify-center items-center pt-20">
+        <nav class="flex flex-col items-center gap-6 text-textDark font-medium text-xl w-full px-6">
+            <a href="index.html" class="mobile-link hover:text-secondary transition-colors py-2 border-b border-gray-100 w-full text-center">Home</a>
+            <a href="packages.html" class="mobile-link text-secondary font-bold py-2 border-b border-gray-100 w-full text-center">Packages</a>
+            <a href="blog-tips.html" class="mobile-link hover:text-secondary transition-colors py-2 border-b border-gray-100 w-full text-center">Blog & Tips</a>
+            <a href="index.html#experience-wonder" class="mobile-link hover:text-secondary transition-colors py-2 border-b border-gray-100 w-full text-center">About</a>
+            <a href="https://wa.me/6285929141746?text=Hello%20Rinjani%20Wonderfull,%20I%20want%20to%20book%20the%20Bayan%20Panorama%20Walk!" target="_blank" class="mobile-link bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-primaryDark transition-all shadow-md mt-6">Book Tour</a>
+        </nav>
+    </div>
+    
+    <!-- HERO SECTION -->
+    <section class="relative pt-24 pb-20 min-h-[60vh] flex items-center hero-bg text-center" style="background-image: linear-gradient(rgba(30, 41, 59, 0.5), rgba(30, 41, 59, 0.8)), url('images/bayan-panorama-walk.jpg');">
+        <div class="container mx-auto px-4 lg:px-12 relative z-20">
+            <span class="bg-secondary text-white text-xs font-bold px-3 py-1 rounded mb-4 inline-block uppercase tracking-wider">1 Day Tour</span>
+            <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-tight mb-6 drop-shadow-lg">
+                Bayan Panorama Walk
+            </h1>
+            <p class="text-base md:text-xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed drop-shadow">
+                Step beyond the mountain. Immerse yourself in the cultural heart of North Lombok, explore majestic twin waterfalls, and walk through endless rice terraces.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#itinerary" class="bg-primary hover:bg-primaryDark text-white font-bold px-8 py-3.5 rounded-full transition-all shadow-lg text-sm border border-primary">
+                    EXPLORE HIGHLIGHTS
+                </a>
+                <a href="https://wa.me/6285929141746?text=Hello%20Rinjani%20Wonderfull,%20I%20am%20interested%20in%20the%201-Day%20Bayan%20Panorama%20Walk!" target="_blank" class="bg-white/15 hover:bg-white/25 text-white border border-white/30 font-bold px-8 py-3.5 rounded-full transition-all backdrop-blur-sm text-sm flex items-center gap-2">
+                    <i class="ph-bold ph-whatsapp-logo text-lg"></i> BOOK NOW
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUICK INFO BAR -->
+    <div class="bg-white border-b border-gray-100 shadow-sm relative z-20 -mt-8 mx-4 lg:mx-12 rounded-xl py-6 px-8 flex flex-wrap justify-center md:justify-between gap-6">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-primary"><i class="ph-fill ph-clock text-xl"></i></div>
+            <div>
+                <p class="text-xs text-textGray font-semibold uppercase">Duration</p>
+                <p class="text-sm font-bold text-textDark">1 Full Day</p>
+            </div>
+        </div>
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-primary"><i class="ph-fill ph-chart-bar text-xl"></i></div>
+            <div>
+                <p class="text-xs text-textGray font-semibold uppercase">Difficulty</p>
+                <p class="text-sm font-bold text-textDark">Easy / Family Friendly</p>
+            </div>
+        </div>
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-primary"><i class="ph-fill ph-map-pin text-xl"></i></div>
+            <div>
+                <p class="text-xs text-textGray font-semibold uppercase">Location</p>
+                <p class="text-sm font-bold text-textDark">Senaru & Bayan, Lombok</p>
+            </div>
+        </div>
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-primary"><i class="ph-fill ph-camera text-xl"></i></div>
+            <div>
+                <p class="text-xs text-textGray font-semibold uppercase">Focus</p>
+                <p class="text-sm font-bold text-textDark">Nature & Culture</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 9 HIGHLIGHTS SECTION -->
+    <section id="itinerary" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 lg:px-12">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h4 class="text-secondary font-bold tracking-widest uppercase text-sm mb-2">TOUR ITINERARY</h4>
+                <h2 class="text-3xl md:text-4xl font-bold text-textDark mb-4">9 Experiences in 1 Day</h2>
+                <p class="text-textGray text-base">From the refreshing spray of the waterfalls to the rhythmic beat of traditional drums, discover the true soul of North Lombok.</p>
+            </div>
+
+            <!-- Grid 3x3 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Highlight 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl transition-all hover:-translate-y-1 group">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="images/senaru-2d1ncrater.jpg" alt="Twin Waterfalls" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" onerror="this.src='https://placehold.co/600x400/1862be/ffffff?text=Sendang+Gile+Waterfalls'">
+                        <div class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm w-8 h-8 rounded-full flex items-center justify-center text-primary font-bold text-sm shadow">1</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <i class="ph-fill ph-drop text-secondary text-xl"></i>
+                            <h3 class="text-lg font-bold text-textDark">Twin Waterfalls</h3>
+                        </div>
+                        <p class="text-sm text-textGray leading-relaxed">
+                            Begin your day with a light jungle trek to visit the majestic <strong>Sendang Gile</strong> and the breathtaking <strong>Tiu Kelep</strong> waterfalls. Feel the refreshing mist from the mountain springs.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Highlight 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl transition-all hover:-translate-y-1 group">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="images/hero.jpg" alt="Bayan Ancient Mosque" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" onerror="this.src='https://placehold.co/600x400/1e293b/ffffff?text=Masjid+Kuno+Bayan'">
+                        <div class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm w-8 h-8 rounded-full flex items-center justify-center text-primary font-bold text-sm shadow">2</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <i class="ph-fill ph-mosque text-secondary text-xl"></i>
+                            <h3 class="text-lg font-bold text-textDark">Bayan Ancient Mosque</h3>
+                        </div>
+                        <p class="text-sm text-textGray leading-relaxed">
+                            Step back in time at <strong>Masjid Kuno Bayan</strong>, the oldest historical mosque in Lombok. Discover the roots of the unique <em>Wetu Telu</em> Islamic heritage and architecture.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Highlight 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl transition-all hover:-translate-y-1 group">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="images/torean-3d2nlake.jpg" alt="Bayan Weaving" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" onerror="this.src='https://placehold.co/600x400/f5a623/ffffff?text=Traditional+Weaving'">
+                        <div class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm w-8 h-8 rounded-full flex items-center justify-center text-primary font-bold text-sm shadow">3</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <i class="ph-fill ph-scissors text-secondary text-xl"></i>
+                            <h3 class="text-lg font-bold text-textDark">Traditional Weaving</h3>
+                        </div>
+                        <p class="text-sm text-textGray leading-relaxed">
+                            Watch the skilled hands of local women practicing the ancient art of <strong>Kesenian Tenun Bayan</strong>. See how colorful threads are woven into beautiful traditional Sasak fabrics.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Highlight 4 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl transition-all hover:-translate-y-1 group relative">
+                    <div class="h-48 overflow-hidden relative bg-gray-200 flex items-center justify-center">
+                        <i class="ph-duotone ph-drum text-7xl text-gray-400 group-hover:scale-110 transition-transform duration-700"></i>
+                        <div class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm w-8 h-8 rounded-full flex items-center justify-center text-primary font-bold text-sm shadow">4</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <i class="ph-fill ph-music-notes text-secondary text-xl"></i>
+                            <h3 class="text-lg font-bold text-textDark">Gendang Beleq Music</h3>
+                        </div>
+                        <p class="text-sm text-textGray leading-relaxed">
+                            Experience the thunderous and highly rhythmic <strong>Gendang Beleq</strong>. This traditional Sasak drum ensemble was historically used to send warriors into battle. <br><span class="text-xs text-primary italic mt-1 inline-block">*Note: Subject to local events/availability.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Highlight 5 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl transition-all hover:-translate-y-1 group">
+                    <div class="h-48 overflow-hidden relative bg-gray-200 flex items-center justify-center">
+                        <i class="ph-duotone ph-sword text-7xl text-gray-400 group-hover:scale-110 transition-transform duration-700"></i>
+                        <div class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm w-8 h-8 rounded-full flex items-center justify-center text-primary font-bold text-sm shadow">5</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <i class="ph-fill ph-shield-check text-secondary text-xl"></i>
+                            <h3 class="text-lg font-bold text-textDark">Presean Art</h3>
+                        </div>
+                        <p class="text-sm text-textGray leading-relaxed">
+                            Witness <strong>Presean</strong>, the thrilling traditional martial art of Lombok where two fighters (pepadu) duel using rattan sticks and buffalo skin shields. <br><span class="text-xs text-primary italic mt-1 inline-block">*Note: Subject to local events/availability.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Highlight 6 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl transition-all hover:-translate-y-1 group">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="images/sembalun-2d1nsummit.jpg" alt="Traditional Houses" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" onerror="this.src='https://placehold.co/600x400/8b4513/ffffff?text=Traditional+Houses'">
+                        <div class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm w-8 h-8 rounded-full flex items-center justify-center text-primary font-bold text-sm shadow">6</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <i class="ph-fill ph-house-line text-secondary text-xl"></i>
+                            <h3 class="text-lg font-bold text-textDark">Sasak Traditional Houses</h3>
+                        </div>
+                        <p class="text-sm text-textGray leading-relaxed">
+                            Walk through authentic indigenous architecture. We will visit several traditional housing compounds located across <strong>Senaru Village</strong> and <strong>Karang Bajo Village</strong>.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Highlight 7 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl transition-all hover:-translate-y-1 group">
+                    <div class="h-48 overflow-hidden relative bg-gray-200 flex items-center justify-center">
+                        <img src="images/bayan-panorama-walk.jpg" alt="Rice Fields" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" onerror="this.src='https://placehold.co/600x400/228b22/ffffff?text=Rice+Terraces'">
+                        <div class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm w-8 h-8 rounded-full flex items-center justify-center text-primary font-bold text-sm shadow">7</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <i class="ph-fill ph-plant text-secondary text-xl"></i>
+                            <h3 class="text-lg font-bold text-textDark">Rice Terraces Panorama</h3>
+                        </div>
+                        <p class="text-sm text-textGray leading-relaxed">
+                            Take a serene and peaceful stroll traversing expanses of lush green <strong>rice fields (Hamparan Sawah)</strong>. Capture the perfect postcard picture with Mount Rinjani in the backdrop.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Highlight 8 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl transition-all hover:-translate-y-1 group">
+                    <div class="h-48 overflow-hidden relative bg-gray-200 flex items-center justify-center">
+                        <i class="ph-duotone ph-swimming-pool text-7xl text-blue-400 group-hover:scale-110 transition-transform duration-700"></i>
+                        <div class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm w-8 h-8 rounded-full flex items-center justify-center text-primary font-bold text-sm shadow">8</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <i class="ph-fill ph-waves text-secondary text-xl"></i>
+                            <h3 class="text-lg font-bold text-textDark">Mandala Spring Bath</h3>
+                        </div>
+                        <p class="text-sm text-textGray leading-relaxed">
+                            Wash away the tropical heat by bathing in a pristine, crystal-clear pool sourced directly from a natural mountain spring located in <strong>Dusun Mandala</strong>. 
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Highlight 9 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl transition-all hover:-translate-y-1 group">
+                    <div class="h-48 overflow-hidden relative bg-gray-200 flex items-center justify-center">
+                        <i class="ph-duotone ph-guitar text-7xl text-gray-400 group-hover:scale-110 transition-transform duration-700"></i>
+                        <div class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm w-8 h-8 rounded-full flex items-center justify-center text-primary font-bold text-sm shadow">9</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <i class="ph-fill ph-microphone-stage text-secondary text-xl"></i>
+                            <h3 class="text-lg font-bold text-textDark">Evening Live Music</h3>
+                        </div>
+                        <p class="text-sm text-textGray leading-relaxed">
+                            Wind down your day with good food, cold drinks, and cozy acoustic <strong>Live Music</strong> at one of the vibrant local cafes surrounding the Senaru area.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="py-16 bg-white relative overflow-hidden border-t border-gray-200">
+        <div class="container mx-auto px-4 lg:px-12 relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
+            <div class="text-center lg:text-left max-w-2xl">
+                <h2 class="text-3xl font-bold text-textDark mb-4">Book Your Cultural Escape</h2>
+                <p class="text-textGray text-base leading-relaxed">
+                    Perfect for families, couples, or as an acclimatization day before your big Rinjani climb. Our local expert guides will ensure you see the hidden sides of Lombok.
+                </p>
+            </div>
+            <div class="flex-shrink-0">
+                <a href="https://wa.me/6285929141746?text=Hello%20Rinjani%20Wonderfull,%20I%20want%20to%20book%20the%201-Day%20Bayan%20Panorama%20Walk!" target="_blank" class="bg-[#25D366] hover:bg-[#1ebe5d] text-white font-bold px-8 py-4 rounded-full transition-all shadow-xl text-sm inline-flex items-center gap-2 hover:-translate-y-1">
+                    <i class="ph-bold ph-whatsapp-logo text-xl"></i> BOOK VIA WHATSAPP
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-textDark text-white pt-10 pb-6 border-t border-gray-800">
+        <div class="container mx-auto px-4 lg:px-12">
+            <div class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 gap-4">
+                <div class="font-bold text-xl text-white tracking-tight">RINJANI<span class="text-xs font-normal tracking-widest text-gray-400">WONDERFULL</span></div>
+                <div class="text-center">&copy; 2026 Rinjani Wonderfull. All rights reserved.</div>
+                <div class="flex justify-center items-center gap-6">
+                    <a href="https://facebook.com" target="_blank" class="hover:text-secondary transition-colors"><i class="ph-fill ph-facebook-logo text-2xl"></i></a>
+                    <a href="https://instagram.com/rinjaniwonderfull" target="_blank" class="hover:text-secondary transition-colors"><i class="ph-fill ph-instagram-logo text-2xl"></i></a>
+                    <a href="https://tiktok.com/@rinjaniwonderfull" target="_blank" class="hover:text-secondary transition-colors"><i class="ph-fill ph-tiktok-logo text-2xl"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Menu Toggle (Hamburger)
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            if(mobileMenuBtn && mobileMenu && menuIcon) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('open');
+                    if (mobileMenu.classList.contains('open')) {
+                        menuIcon.classList.replace('ph-list', 'ph-x');
+                    } else {
+                        menuIcon.classList.replace('ph-x', 'ph-list');
+                    }
+                });
+
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.remove('open');
+                        menuIcon.classList.replace('ph-x', 'ph-list');
+                    });
+                });
+            }
+
+            // Floating Chat Menu
+            const chatToggleBtn = document.getElementById('chat-toggle');
+            const chatMenu = document.getElementById('chat-menu');
+            const chatIcon = document.getElementById('chat-icon');
+
+            if(chatToggleBtn && chatMenu && chatIcon) {
+                chatToggleBtn.addEventListener('click', () => {
+                    chatMenu.classList.toggle('chat-menu-open');
+                    if (chatMenu.classList.contains('chat-menu-open')) {
+                        chatIcon.classList.replace('ph-chat-teardrop-dots', 'ph-x');
+                    } else {
+                        chatIcon.classList.replace('ph-x', 'ph-chat-teardrop-dots');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
