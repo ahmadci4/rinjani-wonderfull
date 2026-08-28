@@ -86,10 +86,6 @@
     <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
         <!-- Menu Items -->
         <div id="chat-menu" class="flex flex-col gap-3 mb-2">
-            <a href="https://tiktok.com/@rinjaniwonderfull" target="_blank"
-                class="chat-option flex items-center justify-center w-12 h-12 bg-black text-white rounded-full shadow-lg hover:scale-110 hover:bg-gray-800 transition-transform">
-                <i class="ph-fill ph-tiktok-logo text-2xl"></i>
-            </a>
             <a href="https://instagram.com/rinjaniwonderfull" target="_blank"
                 class="chat-option flex items-center justify-center w-12 h-12 bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white rounded-full shadow-lg hover:scale-110 transition-transform">
                 <i class="ph-fill ph-instagram-logo text-2xl"></i>
@@ -172,35 +168,39 @@
             
             <!-- Logo (Ditarik ke atas dengan -mt-32) -->
             <img src="images/logo.png" alt="Rinjani Wonderfull" class="h-24 md:h-32 lg:h-40 w-auto object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.7)] -mt-32 mb-16">
-            
-            <!-- Teks Kutipan (Tetap di tengah) -->
-            <p class="text-white text-lg md:text-2xl font-medium tracking-wide max-w-xl mx-auto mb-10 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-                Reach 3,726 meters safely with 100% trusted local guides.<br>An officially certified agency for your ultimate Rinjani journey.
+            <!-- ==========================================
+                 TAGLINE / SEMBOYAN
+            =========================================== -->
+            <p class="text-white text-lg md:text-2xl font-light tracking-wide leading-relaxed max-w-2xl mx-auto mb-10 drop-shadow-[0_4px_6px_rgba(0,0,0,0.9)]">
+                <span class="font-semibold text-[#f5a623]">Reach 3,726 meters safely</span> with 100% trusted local guides.<br>
+                An officially certified agency for your <span class="italic font-medium">ultimate Rinjani journey</span>.
             </p>
-        
             <!-- Tombol Explore Now -->
-            <a href="#packages" class="inline-flex items-center justify-center gap-3 bg-white text-textDark px-8 py-3.5 rounded-full font-bold text-base md:text-lg hover:scale-105 transition-transform shadow-[0_4px_15px_rgba(0,0,0,0.3)] border-[3px] border-[#f5a623]">
+            <a href="#packages" class="inline-flex items-center justify-center gap-3 bg-white text-textDark px-8 py-3.5 rounded-full font-bold text-base hover:bg-gray-100 hover:scale-105 transition-all shadow-lg">
                 <i class="ph-fill ph-squares-four text-[#f5a623] text-xl"></i> Explore Now
             </a>
+
             <!-- ==========================================
-                logo support
+                 TRUST BADGES / SUPPORT LOGOS
             =========================================== -->
-            <div class="mt-12 md:mt-16 pt-6 border-t border-white/20 max-w-3xl mx-auto">
-                <p class="text-xs md:text-sm text-gray-300 uppercase tracking-widest mb-5 font-semibold">
+            <div class="mt-24 md:mt-32 pt-6 border-t border-white/20 max-w-3xl mx-auto mb-4 w-full px-4">
+                <p class="text-xs md:text-sm text-white uppercase tracking-widest mb-4 font-bold drop-shadow-md">
                     Officially Certified & Supported By
                 </p>
-                <div class="flex flex-wrap justify-center items-center gap-6 md:gap-12">
+                
+                <!-- Efek Frosted Glass agar logo terang & premium -->
+                <div class="flex flex-wrap justify-center items-center gap-6 md:gap-12 bg-white/10 backdrop-blur-md py-4 px-6 rounded-2xl border border-white/20 shadow-xl max-w-2xl mx-auto">
                     <!-- Logo TNGR -->
-                    <img src="images/logo-tngr.png" alt="Taman Nasional Gunung Rinjani" class="h-10 md:h-14 w-auto object-contain opacity-70 hover:opacity-100 hover:scale-110 transition-all duration-300">
+                    <img src="images/logo-tngr.png" alt="Taman Nasional Gunung Rinjani" class="h-10 md:h-14 w-auto object-contain opacity-100 drop-shadow hover:scale-110 transition-transform duration-300">
                     
                     <!-- Logo APGI -->
-                    <img src="images/logo-apgi.png" alt="Asosiasi Pemandu Gunung Indonesia" class="h-10 md:h-14 w-auto object-contain opacity-70 hover:opacity-100 hover:scale-110 transition-all duration-300">
+                    <img src="images/logo-apgi.png" alt="Asosiasi Pemandu Gunung Indonesia" class="h-10 md:h-14 w-auto object-contain opacity-100 drop-shadow hover:scale-110 transition-transform duration-300">
                     
                     <!-- Logo Wonderful Indonesia -->
-                    <img src="images/logo-wonderfull-indonesia.png" alt="Wonderful Indonesia" class="h-10 md:h-14 w-auto object-contain opacity-70 hover:opacity-100 hover:scale-110 transition-all duration-300">
-                    
-                    <!-- Logo Tripadvisor (Opsional/Sangat bagus untuk konversi) -->
-                    <img src="images/logo-kementerian-indonesia.png" alt="TripAdvisor Recommended" class="h-8 md:h-10 w-auto object-contain opacity-70 hover:opacity-100 hover:scale-110 transition-all duration-300">
+                    <img src="images/logo-wonderful-indonesia.png" alt="Wonderful Indonesia" class="h-10 md:h-14 w-auto object-contain opacity-100 drop-shadow hover:scale-110 transition-transform duration-300">
+                    <!-- Logo kementerian kehutanan Indonesia -->
+                    <img src="images/logo-kementerian-indonesia.png" alt="Wonderful Indonesia" class="h-10 md:h-14 w-auto object-contain opacity-100 drop-shadow hover:scale-110 transition-transform duration-300">
+                
                 </div>
             </div>
         </div>
