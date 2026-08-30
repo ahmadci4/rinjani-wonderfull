@@ -146,20 +146,37 @@
         </button>
     </div>
 
-     <!-- Header / Navbar -->
+    <!-- Header / Navbar -->
     <header class="bg-white sticky top-0 z-50 shadow-sm">
         <div class="container mx-auto px-4 lg:px-12 py-4 flex items-center justify-between">
+            
+            <!-- Logo -->
             <a href="index.html" class="flex items-center gap-2">
                 <img src="images/logo.png" alt="Logo" class="h-16 lg:h-20 w-auto object-contain">
             </a>
+            
+            <!-- Desktop Nav -->
             <nav class="hidden lg:flex items-center gap-8 font-medium text-sm">
                 <a href="index.html" class="hover:text-primary transition-colors">HOME</a>
                 <a href="packages.html" class="hover:text-primary transition-colors">PACKAGES</a>
-                <a href="blog-tips.html" class="hover:text-primary transition-colors">BLOG</a>
+                <!-- Penanda Aktif di Desktop -->
+                <a href="blog-tips.html" class="text-primary font-semibold hover:text-primary transition-colors border-b-2 border-primary pb-1">BLOG & TIPS</a>
                 <a href="index.html#experience-wonder" class="hover:text-primary transition-colors pb-1">ABOUT</a>
-                <a href="booking-transport.html" class="text-primary font-semibold">TRANSPORT</a>
+                <a href="booking-transport.html" class="hover:text-primary transition-colors">TRANSPORT</a>
             </nav>
-            <a href="index.html#booking-form" class="bg-primary text-white px-5 py-2.5 rounded-full font-medium text-sm shadow-md hover:bg-sky-700 transition-all">BOOK RINJANI TREKK</a>
+            
+            <!-- Desktop Actions -->
+            <div class="hidden lg:flex items-center">
+                <a href="index.html#booking-form" class="bg-primary text-white px-6 py-2.5 rounded-full font-medium text-sm tracking-wide shadow-md hover:bg-primaryDark transition-all">BOOK RINJANI TREKK</a>
+            </div>
+
+            <!-- Mobile Hamburger -->
+            <div class="lg:hidden flex items-center">
+                <button id="mobile-menu-btn" class="text-textDark z-50 p-2">
+                    <i class="ph ph-list text-3xl" id="menu-icon"></i>
+                </button>
+            </div>
+            
         </div>
     </header>
 
@@ -168,12 +185,12 @@
         <nav class="flex flex-col items-center gap-6 text-textDark font-medium text-xl w-full px-6">
             <a href="index.html" class="mobile-link hover:text-secondary transition-colors py-2 border-b border-gray-100 w-full text-center">Home</a>
             <a href="packages.html" class="mobile-link hover:text-secondary transition-colors py-2 border-b border-gray-100 w-full text-center">Packages</a>
+            <!-- Penanda Aktif di Mobile -->
             <a href="blog-tips.html" class="mobile-link text-secondary font-bold py-2 border-b border-gray-100 w-full text-center">Blog & Tips</a>
             <a href="index.html#experience-wonder" class="mobile-link hover:text-secondary transition-colors py-2 border-b border-gray-100 w-full text-center">About</a>
             <a href="index.html#contact" class="mobile-link bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-primaryDark transition-all shadow-md mt-6">Book Now</a>
         </nav>
     </div>
-    
     <!-- HERO SECTION -->
     <section class="relative pt-24 pb-20 min-h-[50vh] flex items-center hero-bg text-center">
         <div class="container mx-auto px-4 lg:px-12 relative z-20">
@@ -537,6 +554,8 @@
                 btn.classList.add('bg-gray-100');
             }
         }
+        // Chatbase AI Integration
+        (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="z-dWdVKSDRhsT4Z9aQ2nu";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
     </script>
 </body>
 </html>
